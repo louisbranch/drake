@@ -1,0 +1,17 @@
+{{ define "content" }}
+<div class="pure-u">
+    <h1>Latest Sessions</h1>
+    {{ if .Sessions }}
+        <ol>
+        {{ range .Sessions }}
+            <li><a href="/{{.Name}}">{{.Name}} ({{.MinutesSince}} mins ago)</a></li>
+        {{ end }}
+        </ol>
+    {{ else }}
+    No available sessions :(
+    {{ end }}
+    <div>
+        <a href="/">Back</a>
+    </div>
+</div>
+{{ end }}

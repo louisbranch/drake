@@ -2,6 +2,7 @@ package server
 
 import (
 	"fmt"
+	"math/rand"
 	"net/http"
 
 	"github.com/louisbranch/drake"
@@ -11,6 +12,7 @@ import (
 type Server struct {
 	DB       drake.Database
 	Template web.Template
+	Random   *rand.Rand
 }
 
 func (srv *Server) NewServeMux() *http.ServeMux {
@@ -19,9 +21,10 @@ func (srv *Server) NewServeMux() *http.ServeMux {
 	fs := http.FileServer(http.Dir("web/assets"))
 	mux.Handle("/assets/", http.StripPrefix("/assets/", fs))
 
-	mux.HandleFunc("/", srv.index)
-
 	mux.HandleFunc("/sessions/", srv.sessions)
+	mux.HandleFunc("/results/", srv.results)
+
+	mux.HandleFunc("/", srv.index)
 
 	return mux
 }
@@ -52,21 +55,59 @@ func (srv *Server) renderNotFound(w http.ResponseWriter) {
 	w.WriteHeader(http.StatusNotFound)
 	page := web.Page{
 		Title:    "Not Found",
-		Partials: []string{"400"},
+		Partials: []string{"404"},
 	}
 	srv.render(w, page)
 }
 
 func (srv *Server) index(w http.ResponseWriter, r *http.Request) {
-	if r.Method != "GET" {
-		w.WriteHeader(http.StatusMethodNotAllowed)
+	name := r.URL.Path[len("/"):]
+	if name == "" {
+		if r.Method != "GET" {
+			w.WriteHeader(http.StatusMethodNotAllowed)
+			return
+		}
+
+		page := web.Page{
+			Title:      "Drake Equation",
+			ActiveMenu: "index",
+			Partials:   []string{"index"},
+		}
+		srv.render(w, page)
 		return
 	}
-	page := web.Page{
-		Title:      "Index",
-		ActiveMenu: "index",
-		//Content:    content,
-		Partials: []string{"index"},
+
+	// TODO: get survey access token from cookies
+	// TODO: move below to sessions server
+
+	switch r.Method {
+	case "GET":
+		session, err := srv.DB.FindSession(name)
+		if err != nil {
+			srv.renderError(w, err)
+			return
+		}
+
+		content := struct {
+			Session drake.Session
+		}{
+			Session: session,
+		}
+
+		// TODO: render content based on the current question
+
+		page := web.Page{
+			Title:      fmt.Sprintf("Drake Equation - %s", name),
+			ActiveMenu: "sessions",
+			Content:    content,
+			Partials:   []string{"session"},
+		}
+		srv.render(w, page)
+	case "POST":
+		// TODO: create/update survey
+		// TODO: set survery access token cookie
+		http.Redirect(w, r, name, http.StatusFound)
+	default:
+		w.WriteHeader(http.StatusMethodNotAllowed)
 	}
-	srv.render(w, page)
 }

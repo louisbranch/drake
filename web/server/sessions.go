@@ -1,28 +1,66 @@
 package server
 
 import (
-	"errors"
+	"fmt"
 	"net/http"
+	"time"
 
+	"github.com/louisbranch/drake"
 	"github.com/louisbranch/drake/web"
 )
+
+var alphanum = []rune("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+
+func (srv *Server) newSession() drake.Session {
+	b := make([]rune, 6)
+	for i := range b {
+		b[i] = alphanum[srv.Random.Intn(len(alphanum))]
+	}
+	name := fmt.Sprintf("%s-%s", string(b[:3]), string(b[3:]))
+
+	session := drake.Session{
+		Name:      name,
+		CreatedAt: time.Now(),
+	}
+
+	return session
+}
 
 func (srv *Server) sessions(w http.ResponseWriter, r *http.Request) {
 	switch r.Method {
 	case "GET":
+		sessions, err := srv.DB.FindSessions()
+		if err != nil {
+			srv.renderError(w, err)
+			return
+		}
+
+		content := struct {
+			Sessions []drake.Session
+		}{
+			Sessions: sessions,
+		}
+
 		page := web.Page{
 			Title:      "Sessions",
 			ActiveMenu: "sessions",
-			//Content:    content,
-			Partials: []string{"sessions"},
+			Content:    content,
+			Partials:   []string{"sessions"},
 		}
 		srv.render(w, page)
 	case "POST":
-		srv.renderError(w, errors.New("not implemented"))
-	case "":
-		srv.renderNotFound(w)
+		session := srv.newSession()
+
+		err := srv.DB.CreateSession(&session)
+		if err != nil {
+			srv.renderError(w, err)
+			return
+		}
+
+		uri := fmt.Sprintf("/results/%s", session.Name)
+
+		http.Redirect(w, r, uri, http.StatusFound)
 	default:
 		w.WriteHeader(http.StatusMethodNotAllowed)
-		return
 	}
 }

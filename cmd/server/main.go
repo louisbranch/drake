@@ -3,7 +3,9 @@ package main
 import (
 	"fmt"
 	"log"
+	"math/rand"
 	"net/http"
+	"time"
 
 	"github.com/louisbranch/drake/sqlite"
 	"github.com/louisbranch/drake/web/html"
@@ -12,14 +14,14 @@ import (
 
 func main() {
 	db, err := sqlite.New("drake.db")
-
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	srv := &server.Server{
-		DB:                 db,
-		Template:           html.New("web/templates"),
+		DB:       db,
+		Template: html.New("web/templates"),
+		Random:   rand.New(rand.NewSource(time.Now().UnixNano())),
 	}
 	mux := srv.NewServeMux()
 

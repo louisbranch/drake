@@ -1,13 +1,12 @@
 body {
-  padding-top: 50px;
+  padding-top: 20px;
 }
 
-tr.positive td.transaction-amount {
-  color: green;
-  font-weight: bold;
+.center {
+    justify-content: center;
+    text-align: center;
 }
 
-tr.negative td.transaction-amount {
-  color: red;
-  font-weight: bold;
+form {
+    margin-bottom: 20px;
 }

@@ -1,6 +1,8 @@
 package web
 
-import "io"
+import (
+	"io"
+)
 
 type Page struct {
 	Title      string

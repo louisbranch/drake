@@ -1,4 +1,13 @@
 {{ define "content" }}
-<button>Create Session</button>
-<button>Join Session</button>
+<div class="pure-u">
+    <h1>Drake Equation</h1>
+    <div class="center">
+        <form action="/sessions/new" method="post">
+            <button class="pure-button pure-button-primary" type="submit">Create Session</button>
+        </form>
+    </div>
+    <form action="/sessions" method="get" class="center">
+        <button class="pure-button" type="submit">Join Session</button>
+    </form>
+</div>
 {{ end }}
