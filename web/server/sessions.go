@@ -29,25 +29,52 @@ func (srv *Server) newSession() drake.Session {
 func (srv *Server) sessions(w http.ResponseWriter, r *http.Request) {
 	switch r.Method {
 	case "GET":
-		sessions, err := srv.DB.FindSessions()
+
+		name := r.URL.Path[len("/sessions/"):]
+		if name == "" {
+			sessions, err := srv.DB.FindSessions()
+			if err != nil {
+				srv.renderError(w, err)
+				return
+			}
+
+			content := struct {
+				Sessions []drake.Session
+			}{
+				Sessions: sessions,
+			}
+
+			page := web.Page{
+				Title:      "Sessions",
+				ActiveMenu: "sessions",
+				Content:    content,
+				Partials:   []string{"sessions"},
+			}
+
+			srv.render(w, page)
+			return
+		}
+
+		session, err := srv.DB.FindSession(name)
 		if err != nil {
 			srv.renderError(w, err)
 			return
 		}
 
 		content := struct {
-			Sessions []drake.Session
+			Session drake.Session
 		}{
-			Sessions: sessions,
+			Session: session,
 		}
 
 		page := web.Page{
-			Title:      "Sessions",
+			Title:      fmt.Sprintf("Session %s", name),
 			ActiveMenu: "sessions",
 			Content:    content,
-			Partials:   []string{"sessions"},
+			Partials:   []string{"session"},
 		}
 		srv.render(w, page)
+
 	case "POST":
 		session := srv.newSession()
 
@@ -57,7 +84,7 @@ func (srv *Server) sessions(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 
-		uri := fmt.Sprintf("/results/%s", session.Name)
+		uri := fmt.Sprintf("/sessions/%s", session.Name)
 
 		http.Redirect(w, r, uri, http.StatusFound)
 	default:
