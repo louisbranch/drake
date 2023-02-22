@@ -1,0 +1,164 @@
+{{ define "content" }}
+<div class="pure-u">
+    <h2>Select the choice that best agrees with what YOU think.</h2>
+    <form action="/{{ .Session.Name }}" method="post" class="pure-form">
+
+        {{ if eq .Survey.PresurveyFamiliarity nil}}
+        <h2>Have you heard about the Drake Equation before?</h2>
+        <label class="pure-radio">
+            <input type="radio" name="presurvey_familiarity" value="true" /> Yes
+        </label>
+        <label class="pure-radio">
+            <input type="radio" name="presurvey_familiarity" value="false" /> No
+        </label>
+
+        {{ else if eq .Survey.PresurveyAssessment nil }}
+        <h2>How many technological advanced civilizations exist in the Milky Way?</h2>
+        <label class="pure-radio">
+            <input type="radio" name="presurvey_assessment" value="1" /> Only us, we are all alone
+        </label>
+        <label class="pure-radio">
+            <input type="radio" name="presurvey_assessment" value="10" /> A few dozens
+        </label>
+        <label class="pure-radio">
+            <input type="radio" name="presurvey_assessment" value="100" /> A few hundreds
+        </label>
+        <label class="pure-radio">
+            <input type="radio" name="presurvey_assessment" value="1_000" /> A few thousands
+        </label>
+        <label class="pure-radio">
+            <input type="radio" name="presurvey_assessment" value="1_000_000" /> A few millions
+        </label>
+
+        {{ else if eq .Survey.R nil }}
+        <h2>About how many stars are there in our galaxy?</h2>
+        <label class="pure-radio">
+            <input type="radio" name="r" value="100" /> A few hundred
+        </label>
+        <label class="pure-radio">
+            <input type="radio" name="r" value="100_000" /> A few hundred thousand
+        </label>
+        <label class="pure-radio">
+            <input type="radio" name="r" value="100_000_000" /> A few hundred million
+        </label>
+        <label class="pure-radio">
+            <input type="radio" name="r" value="100_000_000_000" /> A few hundred billion
+        </label>
+        <label class="pure-radio">
+            <input type="radio" name="r" value="100_000_000_000_000" /> A few hundred trillion
+        </label>
+
+        {{ else if eq .Survey.Fp nil }}
+        <h2>Approximately what percentage of the stars in our galaxy have planets in orbit?</h2>
+        <label class="pure-radio">
+            <input type="radio" name="fp" value="0.01" /> Very few stars have planets in orbit
+        </label>
+        <label class="pure-radio">
+            <input type="radio" name="fp" value="0.2" /> 20%
+        </label>
+        <label class="pure-radio">
+            <input type="radio" name="fp" value="0.4" /> 40%
+        </label>
+        <label class="pure-radio">
+            <input type="radio" name="fp" value="0.6" /> 60%
+        </label>
+        <label class="pure-radio">
+            <input type="radio" name="fp" value="0.85" /> 80%-90%
+        </label>
+
+        {{ else if eq .Survey.Ne nil }}
+        <h2>On average, how many habitable (Earth-like) planets are there per planetary system?</h2>
+        <label class="pure-radio">
+            <input type="radio" name="ne" value="0.1" /> Very few (not even one in every solar system)
+        </label>
+        <label class="pure-radio">
+            <input type="radio" name="ne" value="1" /> 1
+        </label>
+        <label class="pure-radio">
+            <input type="radio" name="ne" value="2.5" /> 2 or 3
+        </label>
+        <label class="pure-radio">
+            <input type="radio" name="ne" value="4.5" /> 4 or 5
+        </label>
+        <label class="pure-radio">
+            <input type="radio" name="ne" value="5.5" /> More than 5
+        </label>
+
+        {{ else if eq .Survey.Fl nil }}
+        <h2>On what fraction of habitable planets will life develop?</h2>
+        <label class="pure-radio">
+            <input type="radio" name="fl" value="0.001" /> A very small percentage, life is very rare
+        </label>
+        <label class="pure-radio">
+            <input type="radio" name="fl" value="0.2" /> 20%
+        </label>
+        <label class="pure-radio">
+            <input type="radio" name="fl" value="0.5" /> 50%
+        </label>
+        <label class="pure-radio">
+            <input type="radio" name="fl" value="0.8" /> 80%
+        </label>
+        <label class="pure-radio">
+            <input type="radio" name="fl" value="1" /> 100%, if conditions are favorable, life is inevitable
+        </label>
+
+        {{ else if eq .Survey.Fi nil }}
+        <h2>On what fraction of planets on which life develops will life evolve to intelligence?</h2>
+        <label class="pure-radio">
+            <input type="radio" name="fi" value="0.001" />  A very small percentage
+        </label>
+        <label class="pure-radio">
+            <input type="radio" name="fi" value="0.05" />  1%-10%
+        </label>
+        <label class="pure-radio">
+            <input type="radio" name="fi" value="0.5" />  50%
+        </label>
+        <label class="pure-radio">
+            <input type="radio" name="fi" value="0.8" />  80%
+        </label>
+        <label class="pure-radio">
+            <input type="radio" name="fi" value="1" />  100%
+        </label>
+
+        {{ else if eq .Survey.Fc nil }}
+        <h2>What fraction of planets on which life evolves to intelligence will the intelligence develop a technological
+civilization capable of radio communication?</h2>
+        <label class="pure-radio">
+            <input type="radio" name="fc" value="0.001" />  &#60; 1%
+        </label>
+        <label class="pure-radio">
+            <input type="radio" name="fc" value="0.1" />  About 10%
+        </label>
+        <label class="pure-radio">
+            <input type="radio" name="fc" value="0.25" />  20%-30%
+        </label>
+        <label class="pure-radio">
+            <input type="radio" name="fc" value="0.55" />  50%-60%
+        </label>
+        <label class="pure-radio">
+            <input type="radio" name="fc" value="1" />  100%, a technological civilization will always eventually develop if life is present
+        </label>
+
+        {{ else if eq .Survey.L nil }}
+        <h2>What is the average lifetime of a technological civilization capable of communication?</h2>
+        <label class="pure-radio">
+            <input type="radio" name="l" value="100" />  100 years
+        </label>
+        <label class="pure-radio">
+            <input type="radio" name="l" value="1_000" />  1,000 years
+        </label>
+        <label class="pure-radio">
+            <input type="radio" name="l" value="10_000" />  10,000 years
+        </label>
+        <label class="pure-radio">
+            <input type="radio" name="l" value="100_000" />  100,000 years
+        </label>
+        <label class="pure-radio">
+            <input type="radio" name="l" value="1_000_000" />  1,000,000 years or more
+        </label>
+
+        {{ end }}
+        <button type="submit" class="pure-button pure-button-primary">Next</button>
+    </form>
+</div>
+{{ end }}

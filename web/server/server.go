@@ -62,6 +62,7 @@ func (srv *Server) renderNotFound(w http.ResponseWriter) {
 
 func (srv *Server) index(w http.ResponseWriter, r *http.Request) {
 	name := r.URL.Path[len("/"):]
+
 	if name == "" {
 		if r.Method != "GET" {
 			w.WriteHeader(http.StatusMethodNotAllowed)
@@ -77,37 +78,5 @@ func (srv *Server) index(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// TODO: get survey access token from cookies
-	// TODO: move below to sessions server
-
-	switch r.Method {
-	case "GET":
-		session, err := srv.DB.FindSession(name)
-		if err != nil {
-			srv.renderError(w, err)
-			return
-		}
-
-		content := struct {
-			Session drake.Session
-		}{
-			Session: session,
-		}
-
-		// TODO: render content based on the current question
-
-		page := web.Page{
-			Title:      fmt.Sprintf("Drake Equation - %s", name),
-			ActiveMenu: "sessions",
-			Content:    content,
-			Partials:   []string{"session"},
-		}
-		srv.render(w, page)
-	case "POST":
-		// TODO: create/update survey
-		// TODO: set survery access token cookie
-		http.Redirect(w, r, name, http.StatusFound)
-	default:
-		w.WriteHeader(http.StatusMethodNotAllowed)
-	}
+	srv.surveys(w, r, name)
 }

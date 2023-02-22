@@ -6,6 +6,8 @@ import (
 	sqlite3 "github.com/mattn/go-sqlite3"
 )
 
+var ErrNotFound = sql.ErrNoRows
+
 type DB struct {
 	*sql.DB
 }
@@ -44,7 +46,7 @@ func New(path string) (*DB, error) {
             session_id INTEGER NOT NULL,
             access_token TEXT NOT NULL CHECK(access_token <> ''),
 
-            presuvery_familiarity INTEGER,
+            presurvey_familiarity INTEGER,
             presurvey_assessment REAL CHECK(presurvey_assessment > 0),
             r_star_formation REAL CHECK(r_star_formation > 0),
             fp_planetary_systems REAL CHECK(fp_planetary_systems > 0),
