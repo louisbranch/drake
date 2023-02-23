@@ -30,19 +30,24 @@ type Survey struct {
 	L  *float64
 	N  *float64
 
-	PresurveyFamiliarity *bool
-	PresurveyAssessment  *int64
-	PostsurveyDifference *int64
-	PostsurveyLearnGain  *int64
-	PostsurveyReason     *string
+	PresurveyAssessment *float64
+	PostsurveyLearnGain *bool
+	PostsurveyReason    *string
 
 	CreatedAt time.Time
 	UpdatedAt time.Time
 }
 
-func (s Survey) Result() float64 {
-	// TODO: round?
-	return *s.R * *s.Fp * *s.Ne * *s.Fl * *s.Fi * *s.Fc * *s.Fc
+func (s *Survey) Result() {
+	n := *s.R * *s.Fp * *s.Ne * *s.Fl * *s.Fi * *s.Fc * *s.Fc
+	s.N = &n
+}
+
+func (s Survey) Difference() int64 {
+	n := math.Log10(*s.N)
+	a := math.Log10(*s.PresurveyAssessment)
+	diff := math.Floor(math.Abs(n - a))
+	return int64(diff)
 }
 
 type Database interface {

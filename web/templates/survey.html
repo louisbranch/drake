@@ -1,18 +1,12 @@
 {{ define "content" }}
 <div class="pure-u-1 pure-u-md-1-3">
-    <h2>Select the choice that best agrees with what YOU think.</h2>
+    <h1>The Drake Equation</h1>
     <form action="/{{ .Session.Name }}" method="post" class="pure-form">
+        {{if eq .Survey.N nil}}
+        <h3>Select the choice that best agrees with what YOU think.</h3>
+        {{ end }}
 
-        {{ if eq .Survey.PresurveyFamiliarity nil}}
-        <h2>Have you heard about the Drake Equation before?</h2>
-        <label class="pure-radio">
-            <input type="radio" name="presurvey_familiarity" value="true" /> Yes
-        </label>
-        <label class="pure-radio">
-            <input type="radio" name="presurvey_familiarity" value="false" /> No
-        </label>
-
-        {{ else if eq .Survey.PresurveyAssessment nil }}
+        {{ if eq .Survey.PresurveyAssessment nil }}
         <h2>How many technological advanced civilizations exist in the Milky Way?</h2>
         <label class="pure-radio">
             <input type="radio" name="presurvey_assessment" value="1" /> Only us, we are all alone
@@ -157,8 +151,29 @@ civilization capable of radio communication?</h2>
             <input type="radio" name="l" value="1_000_000" />  1,000,000 years or more
         </label>
 
+        {{ else if eq .Survey.PostsurveyLearnGain nil }}
+
+        <h2>You have estimated that there are {{ number .Survey.N }} civilizations in the Milky Way.</h2>
+        <h3>This is a difference of {{ .Survey.Difference }} orders of magnitude from your initial prediction of {{ number .Survey.PresurveyAssessment }}.</h3>
+        <h3>Do you agree with your most recent estimation?</h3>
+        <label class="pure-radio">
+            <input type="radio" name="learn_gain" value="true" />  Yes, I am more confident using the Drake Equation calculation
+        </label>
+        <label class="pure-radio">
+            <input type="radio" name="learn_gain" value="true" />  Yes, the Drake Equation includes factors I didn't think during my initial prediction
+        </label>
+        <label class="pure-radio">
+            <input type="radio" name="learn_gain" value="false" />  No, I am more confident with my initial prediction
+        </label>
+        <label class="pure-radio">
+            <input type="radio" name="learn_gain" value="false" />  No, any guess is good as mine
+        </label>
+
         {{ end }}
+
+        {{if eq .Survey.PostsurveyLearnGain nil }}
         <button type="submit" class="pure-button pure-button-primary">Next</button>
+        {{ end }}
     </form>
 </div>
 {{ end }}

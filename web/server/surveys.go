@@ -77,23 +77,16 @@ func (srv *Server) surveys(w http.ResponseWriter, r *http.Request, name string) 
 
 		form := r.PostForm
 
-		pf := form.Get("presurvey_familiarity")
-		if pf == "true" {
-			survey.PresurveyFamiliarity = ptrBool(true)
-		} else if pf == "false" {
-			survey.PresurveyFamiliarity = ptrBool(false)
-		}
-
-		if val := ipow(form.Get("presurvey_assessment")); val != nil {
+		if val := powers(form.Get("presurvey_assessment")); val != nil {
 			survey.PresurveyAssessment = val
 		}
-		if val := fpow(form.Get("r")); val != nil {
+		if val := powers(form.Get("r")); val != nil {
 			survey.R = val
 		}
 		if val := fraction(form.Get("fp")); val != nil {
 			survey.Fp = val
 		}
-		if val := fpow(form.Get("ne")); val != nil {
+		if val := powers(form.Get("ne")); val != nil {
 			survey.Ne = val
 		}
 		if val := fraction(form.Get("fl")); val != nil {
@@ -105,10 +98,9 @@ func (srv *Server) surveys(w http.ResponseWriter, r *http.Request, name string) 
 		if val := fraction(form.Get("fc")); val != nil {
 			survey.Fc = val
 		}
-		if val := fpow(form.Get("l")); val != nil {
+		if val := powers(form.Get("l")); val != nil {
 			survey.L = val
-			n := survey.Result()
-			survey.N = &n
+			survey.Result()
 		}
 		survey.UpdatedAt = time.Now()
 
@@ -124,7 +116,7 @@ func (srv *Server) surveys(w http.ResponseWriter, r *http.Request, name string) 
 	}
 }
 
-func fpow(value string) *float64 {
+func powers(value string) *float64 {
 	if value == "" {
 		return nil
 	}
@@ -139,17 +131,4 @@ func fraction(value string) *float64 {
 	}
 	n, _ := strconv.ParseFloat(value, 64)
 	return &n
-}
-
-func ipow(value string) *int64 {
-	if value == "" {
-		return nil
-	}
-	n := strings.Count(value, "0")
-	p := int64(math.Pow(10, float64(n)))
-	return &p
-}
-
-func ptrBool(b bool) *bool {
-	return &b
 }

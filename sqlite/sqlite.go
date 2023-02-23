@@ -46,7 +46,6 @@ func New(path string) (*DB, error) {
             session_id INTEGER NOT NULL,
             access_token TEXT NOT NULL CHECK(access_token <> ''),
 
-            presurvey_familiarity INTEGER,
             presurvey_assessment REAL CHECK(presurvey_assessment > 0),
             r_star_formation REAL CHECK(r_star_formation > 0),
             fp_planetary_systems REAL CHECK(fp_planetary_systems > 0),
@@ -56,7 +55,6 @@ func New(path string) (*DB, error) {
             fc_technology_emergence REAL CHECK(fc_technology_emergence > 0),
             l_lifespan REAL CHECK(l_lifespan > 0),
             n_civilizations REAL CHECK(n_civilizations > 0),
-            postsurvey_difference INTEGER,
             postsurvey_learn_gain INTEGER,
             postsurvey_reason TEXT,
 

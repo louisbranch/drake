@@ -1,7 +1,6 @@
 package html
 
 import (
-	"fmt"
 	"html/template"
 	"io"
 	"path"
@@ -9,6 +8,9 @@ import (
 	"sort"
 	"strings"
 	"sync"
+
+	"golang.org/x/text/language"
+	"golang.org/x/text/message"
 
 	"github.com/louisbranch/drake/web"
 )
@@ -45,8 +47,7 @@ func (h *HTML) Render(w io.Writer, page web.Page) error {
 }
 
 var fns = template.FuncMap{
-	"currency": currency,
-	"contains": contains,
+	"number": number,
 }
 
 func (h *HTML) parse(names ...string) (tpl *template.Template, err error) {
@@ -67,39 +68,15 @@ func (h *HTML) parse(names ...string) (tpl *template.Template, err error) {
 			return nil, err
 		}
 		h.sync.Lock()
-		//TODO h.cache[id] = tpl
+		h.cache[id] = tpl
 		h.sync.Unlock()
 	}
 
 	return tpl, nil
 }
 
-func currency(val int64) string {
-	symbol := "$"
-	if val < 0 {
-		symbol = "-" + symbol
-		val *= -1
-	}
+func number(val float64) string {
+	p := message.NewPrinter(language.English)
 
-	res := fmt.Sprintf(".%02d", val%100)
-
-	val = val / 100
-
-	for val >= 1000 {
-		res = fmt.Sprintf(",%03d", val%1000) + res
-		val = val / 1000
-	}
-
-	res = fmt.Sprintf("%s%d", symbol, val) + res
-
-	return res
-}
-
-func contains(list []string, item string) bool {
-	for _, i := range list {
-		if i == item {
-			return true
-		}
-	}
-	return false
+	return p.Sprintf("%.f", val)
 }
