@@ -12,14 +12,14 @@ import (
 type Server struct {
 	DB       drake.Database
 	Template web.Template
+	Assets   http.Handler
 	Random   *rand.Rand
 }
 
 func (srv *Server) NewServeMux() *http.ServeMux {
 	mux := http.NewServeMux()
 
-	fs := http.FileServer(http.Dir("web/assets"))
-	mux.Handle("/assets/", http.StripPrefix("/assets/", fs))
+	mux.Handle("/assets/", http.StripPrefix("/assets/", srv.Assets))
 
 	mux.HandleFunc("/sessions/", srv.sessions)
 	mux.HandleFunc("/results/", srv.results)

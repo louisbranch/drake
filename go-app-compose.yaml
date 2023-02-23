@@ -1,10 +1,14 @@
 version: '3'
 services:
-  go-web-app:
+  server:
     restart: always
     build:
       dockerfile: Dockerfile
       context: .
+    ports:
+      - "8080:80"
     environment:
       - VIRTUAL_HOST=your_domain
       - LETSENCRYPT_HOST=your_domain
+      - PORT=80
+      - FILES_PATH=/var/www
