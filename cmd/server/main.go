@@ -5,6 +5,7 @@ import (
 	"log"
 	"math/rand"
 	"net/http"
+	"os"
 	"time"
 
 	"github.com/louisbranch/drake/sqlite"
@@ -13,6 +14,11 @@ import (
 )
 
 func main() {
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+	}
+
 	db, err := sqlite.New("drake.db")
 	if err != nil {
 		log.Fatal(err)
@@ -25,6 +31,6 @@ func main() {
 	}
 	mux := srv.NewServeMux()
 
-	fmt.Println("Server listening on port 8080")
-	log.Fatal(http.ListenAndServe(":8080", mux))
+	fmt.Printf("Server listening on port %s\n", port)
+	log.Fatal(http.ListenAndServe(":"+port, mux))
 }
