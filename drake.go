@@ -105,6 +105,9 @@ func (r Result) PresurveyData() []int {
 	data := make([]int, len(r.Buckets()))
 
 	for _, s := range r.Surveys {
+		if s.PresurveyAssessment == nil {
+			continue
+		}
 		n := int(math.Log10(*s.PresurveyAssessment))
 		data[n] += 1
 	}
@@ -116,6 +119,9 @@ func (r Result) PostsurveyData() []int {
 	data := make([]int, len(r.Buckets()))
 
 	for _, s := range r.Surveys {
+		if s.N == nil {
+			continue
+		}
 		n := int(math.Log10(*s.N))
 		data[n] += 1
 	}
