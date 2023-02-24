@@ -1,0 +1,77 @@
+{{ define "content" }}
+
+<h2>Initial Guesses</h2>
+<div style="position: relative; height: 50vh;">
+    <canvas id="pre-survey"></canvas>
+</div>
+{{ if ne .Survey.PresurveyAssessment nil }}
+<h3>You guessed {{ number .Survey.PresurveyAssessment }} civilizations</h3>
+{{ end }}
+<hr>
+<h2>Final Results</h2>
+<div style="position: relative; height: 50vh;">
+    <canvas id="post-survey"></canvas>
+</div>
+{{ if ne .Survey.N nil }}
+<h3>You estimated {{ number .Survey.N }} civilizations</h3>
+{{ end }}
+
+<script>
+  const buckets = {{ .Buckets }};
+  const predata = {{ .PresurveyData }};
+  const postdata = {{ .PostsurveyData }};
+
+  const options = {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          display: false
+        }
+      },
+      scales: {
+        x: {
+          title: {
+            display: true,
+            text: 'Civilizations'
+          }
+        },
+        y: {
+          beginAtZero: true,
+          title: {
+            display: true,
+            text: '# Participants'
+          },
+          ticks: {
+            stepSize: 1
+          }
+        }
+      }
+    };
+
+  new Chart(document.getElementById('pre-survey'), {
+    type: 'bar',
+    data: {
+      labels: buckets,
+      datasets: [{
+        data: predata,
+        borderWidth: 1
+      }]
+    },
+    options: options
+  });
+
+  new Chart(document.getElementById('post-survey'), {
+    type: 'bar',
+    data: {
+      labels: buckets,
+      datasets: [{
+        data: postdata,
+        borderWidth: 1
+      }]
+    },
+    options: options
+  });
+
+</script>
+{{ end }}

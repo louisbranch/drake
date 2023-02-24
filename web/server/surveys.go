@@ -1,6 +1,7 @@
 package server
 
 import (
+	"database/sql"
 	"errors"
 	"fmt"
 	"math"
@@ -11,7 +12,6 @@ import (
 	"time"
 
 	"github.com/louisbranch/drake"
-	"github.com/louisbranch/drake/db/sqlite"
 	"github.com/louisbranch/drake/web"
 )
 
@@ -39,7 +39,7 @@ func (srv *Server) surveys(w http.ResponseWriter, r *http.Request, name string) 
 	}
 
 	survey, err := srv.DB.FindSurvey(session.ID, token)
-	if errors.Is(err, sqlite.ErrNotFound) {
+	if errors.Is(err, sql.ErrNoRows) {
 		err = srv.DB.CreateSurvey(&drake.Survey{
 			SessionID:   session.ID,
 			AccessToken: token,

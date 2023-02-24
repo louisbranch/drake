@@ -76,6 +76,53 @@ func (s Survey) Difference() int64 {
 	return int64(diff)
 }
 
+type Result struct {
+	Surveys []Survey
+}
+
+func (r Result) Participants() int {
+	return len(r.Surveys)
+}
+
+func (r Result) Buckets() []string {
+	supers := []rune{'⁰', '¹', '²', '³', '⁴', '⁵', '⁶', '⁷', '⁸', '⁹'}
+	buckets := make([]string, 14)
+
+	for i := 0; i < 14; i++ {
+		val := "10"
+		if i > 10 {
+			val += string(supers[1]) + string(supers[i%10])
+		} else {
+			val += string(supers[i%10])
+		}
+		buckets[i] = val
+	}
+
+	return buckets
+}
+
+func (r Result) PresurveyData() []int {
+	data := make([]int, len(r.Buckets()))
+
+	for _, s := range r.Surveys {
+		n := int(math.Log10(*s.PresurveyAssessment))
+		data[n] += 1
+	}
+
+	return data
+}
+
+func (r Result) PostsurveyData() []int {
+	data := make([]int, len(r.Buckets()))
+
+	for _, s := range r.Surveys {
+		n := int(math.Log10(*s.N))
+		data[n] += 1
+	}
+
+	return data
+}
+
 type Database interface {
 	CreateSession(*Session) error
 	FindSessions() ([]Session, error)
@@ -84,4 +131,5 @@ type Database interface {
 	CreateSurvey(*Survey) error
 	UpdateSurvey(*Survey) error
 	FindSurvey(string, string) (Survey, error)
+	FindSurveys(string) ([]Survey, error)
 }

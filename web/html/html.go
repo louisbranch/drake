@@ -1,6 +1,8 @@
 package html
 
 import (
+	"encoding/json"
+	"html"
 	"html/template"
 	"io"
 	"path"
@@ -47,8 +49,9 @@ func (h *HTML) Render(w io.Writer, page web.Page) error {
 }
 
 var fns = template.FuncMap{
-	"number": number,
-	"add":    add,
+	"number":  number,
+	"add":     add,
+	"marshal": marshal,
 }
 
 func (h *HTML) parse(names ...string) (tpl *template.Template, err error) {
@@ -84,4 +87,9 @@ func number(val float64) string {
 
 func add(a, b int) int {
 	return a + b
+}
+
+func marshal(v any) string {
+	s, _ := json.Marshal(v)
+	return html.UnescapeString(string(s))
 }

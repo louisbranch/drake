@@ -6,8 +6,6 @@ import (
 	sqlite3 "github.com/mattn/go-sqlite3"
 )
 
-var ErrNotFound = sql.ErrNoRows
-
 type DB struct {
 	*sql.DB
 }
