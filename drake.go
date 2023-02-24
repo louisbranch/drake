@@ -57,6 +57,8 @@ func (s Survey) NextQuestion() string {
 		return "Fc"
 	case s.L == nil:
 		return "L"
+	case s.PostsurveyLearnGain == nil:
+		return "LearnGain"
 	default:
 		return ""
 	}

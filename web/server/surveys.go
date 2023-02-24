@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"math"
 	"net/http"
+	"net/url"
 	"strconv"
 	"strings"
 	"time"
@@ -48,6 +49,12 @@ func (srv *Server) surveys(w http.ResponseWriter, r *http.Request, name string) 
 	}
 	if err != nil {
 		srv.renderError(w, err)
+		return
+	}
+
+	if survey.NextQuestion() == "" {
+		uri, _ := url.JoinPath("", "results", name)
+		http.Redirect(w, r, uri, http.StatusFound)
 		return
 	}
 
@@ -101,6 +108,12 @@ func (srv *Server) surveys(w http.ResponseWriter, r *http.Request, name string) 
 			survey.L = val
 			survey.Result()
 		}
+		if val := prtBool(form.Get("learn_gain")); val != nil {
+			survey.PostsurveyLearnGain = val
+		}
+		if val := prtTxt(form.Get("reason")); val != nil {
+			survey.PostsurveyReason = val
+		}
 		survey.UpdatedAt = time.Now()
 
 		err = srv.DB.UpdateSurvey(&survey)
@@ -130,4 +143,24 @@ func fraction(value string) *float64 {
 	}
 	n, _ := strconv.ParseFloat(value, 64)
 	return &n
+}
+
+func prtBool(value string) *bool {
+	switch value {
+	case "true":
+		b := true
+		return &b
+	case "false":
+		b := false
+		return &b
+	default:
+		return nil
+	}
+}
+
+func prtTxt(value string) *string {
+	if value == "" {
+		return nil
+	}
+	return &value
 }

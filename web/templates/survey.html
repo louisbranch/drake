@@ -3,7 +3,7 @@
     <header>
         <h1>Drake Equation</h1>
         <div class="chalk">
-            {{ if eq .Survey.NextQuestion "" }}
+            {{ if or (eq .Survey.NextQuestion "Assessment") (eq .Survey.NextQuestion "LearnGain") }}
                 <mark>N</mark>
             {{ else }}
                 N
@@ -54,10 +54,10 @@
     </header>
     <form action="/{{ .Session.Name }}" method="post" class="pure-form">
         {{ if eq .Survey.N nil }}
-        <h3>Select the choice that best agrees with what YOU think.</h3>
+        <h4>Select the choice that best agrees with what YOU think.</h4>
         {{ end }}
         {{ if eq .Survey.PresurveyAssessment nil }}
-        <h2>How many technological advanced civilizations exist in the Milky Way?</h2>
+        <h3>How many technological advanced civilizations exist in the Milky Way?</h3>
         <label class="pure-radio">
             <input type="radio" name="presurvey_assessment" value="1" /> Only us, we are all alone
         </label>
@@ -75,7 +75,7 @@
         </label>
 
         {{ else if eq .Survey.R nil }}
-        <h2>About how many stars are there in our galaxy?</h2>
+        <h3>About how many stars are there in our galaxy?</h3>
         <label class="pure-radio">
             <input type="radio" name="r" value="100" /> A few hundred
         </label>
@@ -93,7 +93,7 @@
         </label>
 
         {{ else if eq .Survey.Fp nil }}
-        <h2>Approximately what percentage of the stars in our galaxy have planets in orbit?</h2>
+        <h3>Approximately what percentage of the stars in our galaxy have planets in orbit?</h3>
         <label class="pure-radio">
             <input type="radio" name="fp" value="0.01" /> Very few stars have planets in orbit
         </label>
@@ -111,7 +111,7 @@
         </label>
 
         {{ else if eq .Survey.Ne nil }}
-        <h2>On average, how many habitable (Earth-like) planets are there per planetary system?</h2>
+        <h3>On average, how many habitable (Earth-like) planets are there per planetary system?</h3>
         <label class="pure-radio">
             <input type="radio" name="ne" value="0.1" /> Very few (not even one in every solar system)
         </label>
@@ -129,7 +129,7 @@
         </label>
 
         {{ else if eq .Survey.Fl nil }}
-        <h2>On what fraction of habitable planets will life develop?</h2>
+        <h3>On what fraction of habitable planets will life develop?</h3>
         <label class="pure-radio">
             <input type="radio" name="fl" value="0.001" /> A very small percentage, life is very rare
         </label>
@@ -147,7 +147,7 @@
         </label>
 
         {{ else if eq .Survey.Fi nil }}
-        <h2>On what fraction of planets on which life develops will life evolve to intelligence?</h2>
+        <h3>On what fraction of planets on which life develops will life evolve to intelligence?</h3>
         <label class="pure-radio">
             <input type="radio" name="fi" value="0.001" />  A very small percentage
         </label>
@@ -165,8 +165,8 @@
         </label>
 
         {{ else if eq .Survey.Fc nil }}
-        <h2>What fraction of planets on which life evolves to intelligence will the intelligence develop a technological
-civilization capable of radio communication?</h2>
+        <h3>What fraction of planets on which life evolves to intelligence will the intelligence develop a technological
+civilization capable of radio communication?</h3>
         <label class="pure-radio">
             <input type="radio" name="fc" value="0.001" />  &#60; 1%
         </label>
@@ -184,7 +184,7 @@ civilization capable of radio communication?</h2>
         </label>
 
         {{ else if eq .Survey.L nil }}
-        <h2>What is the average lifetime of a technological civilization capable of communication?</h2>
+        <h3>What is the average lifetime of a technological civilization capable of communication?</h3>
         <label class="pure-radio">
             <input type="radio" name="l" value="100" />  100 years
         </label>
@@ -203,20 +203,24 @@ civilization capable of radio communication?</h2>
 
         {{ else if eq .Survey.PostsurveyLearnGain nil }}
 
-        <h2>You have estimated that there are {{ number .Survey.N }} civilizations in the Milky Way.</h2>
-        <h3>This is a difference of {{ .Survey.Difference }} orders of magnitude from your initial prediction of {{ number .Survey.PresurveyAssessment }}.</h3>
+        <h3>You have estimated that there are {{ number .Survey.N }} civilizations in the Milky Way.</h3>
+        <h4>This is a difference of {{ .Survey.Difference }} orders of magnitude from your initial prediction of {{ number .Survey.PresurveyAssessment }}.</h4>
         <h3>Do you agree with your most recent estimation?</h3>
         <label class="pure-radio">
             <input type="radio" name="learn_gain" value="true" />  Yes, I am more confident using the Drake Equation calculation
+            <input type="hidden" name="reason" value="confident">
         </label>
         <label class="pure-radio">
             <input type="radio" name="learn_gain" value="true" />  Yes, the Drake Equation includes factors I didn't think during my initial prediction
+            <input type="hidden" name="reason" value="expansive">
         </label>
         <label class="pure-radio">
             <input type="radio" name="learn_gain" value="false" />  No, I am more confident with my initial prediction
+            <input type="hidden" name="reason" value="hesitant">
         </label>
         <label class="pure-radio">
             <input type="radio" name="learn_gain" value="false" />  No, any guess is good as mine
+            <input type="hidden" name="reason" value="distrustful">
         </label>
 
         {{ end }}
