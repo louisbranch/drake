@@ -45,10 +45,9 @@ func (srv *Server) sessions(w http.ResponseWriter, r *http.Request) {
 			}
 
 			page := web.Page{
-				Title:      "Sessions",
-				ActiveMenu: "sessions",
-				Content:    content,
-				Partials:   []string{"sessions"},
+				Title:    "Sessions",
+				Content:  content,
+				Partials: []string{"sessions"},
 			}
 
 			srv.render(w, page)
@@ -68,10 +67,9 @@ func (srv *Server) sessions(w http.ResponseWriter, r *http.Request) {
 		}
 
 		page := web.Page{
-			Title:      fmt.Sprintf("Session %s", name),
-			ActiveMenu: "sessions",
-			Content:    content,
-			Partials:   []string{"session"},
+			Title:    fmt.Sprintf("Session %s", name),
+			Content:  content,
+			Partials: []string{"session"},
 		}
 		srv.render(w, page)
 

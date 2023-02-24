@@ -74,9 +74,8 @@ func (srv *Server) index(w http.ResponseWriter, r *http.Request) {
 	}
 
 	page := web.Page{
-		Title:      "Drake Equation",
-		ActiveMenu: "index",
-		Partials:   []string{"index"},
+		Title:    "Drake Equation",
+		Partials: []string{"index"},
 	}
 
 	srv.render(w, page)

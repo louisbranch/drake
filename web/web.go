@@ -5,11 +5,10 @@ import (
 )
 
 type Page struct {
-	Title      string
-	ActiveMenu string
-	Layout     string
-	Partials   []string
-	Content    interface{}
+	Title    string
+	Layout   string
+	Partials []string
+	Content  interface{}
 }
 
 type Template interface {

@@ -62,10 +62,9 @@ func (srv *Server) surveys(w http.ResponseWriter, r *http.Request, name string) 
 		}
 
 		page := web.Page{
-			Title:      fmt.Sprintf("Drake Equation - %s", name),
-			ActiveMenu: "sessions",
-			Content:    content,
-			Partials:   []string{"survey"},
+			Title:    fmt.Sprintf("Drake Equation - %s", name),
+			Content:  content,
+			Partials: []string{"survey"},
 		}
 		srv.render(w, page)
 	case "POST":
