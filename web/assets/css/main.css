@@ -1,8 +1,59 @@
-.center {
+.pure-g.center {
+    margin: .5em;
     justify-content: center;
+}
+
+header {
+    text-align: center;
+}
+
+header h1 {
+    margin: .2em 0;
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 3em;
+    font-weight: normal;
+}
+
+nav {
+    margin-top: 1em;
+}
+
+nav ul {
+    margin:0;
+    padding:0;
+    list-style-type:none;
+    text-align:center;
+}
+
+nav ul li button, nav ul li a {
+    min-width: 50%;
+    margin: .5em 0;
 }
 
 .chalk {
     font-family: 'Fredericka the Great', cursive;
-    font-size: 2em;
+    font-size: 1.5em;
+}
+
+table.pure-table {
+    margin-bottom: .5em;
+    width: 100%;
+}
+
+form.pure-form > input {
+    width: 100%;
+    margin-bottom: .5em;
+}
+
+.hero {
+    margin: 2em 0;
+}
+
+.hero h2 {
+    text-align: center;
+}
+
+.hero p {
+    font-size: 1.2em;
+    text-align: justify;
 }

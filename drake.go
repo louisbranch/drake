@@ -6,9 +6,10 @@ import (
 )
 
 type Session struct {
-	ID        string
-	Name      string
-	CreatedAt time.Time
+	ID           string
+	Name         string
+	Participants int64
+	CreatedAt    time.Time
 }
 
 func (s Session) MinutesSince() int64 {

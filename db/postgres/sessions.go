@@ -33,8 +33,11 @@ func (db *DB) FindSession(name string) (drake.Session, error) {
 func (db *DB) FindSessions() ([]drake.Session, error) {
 	var sessions []drake.Session
 
-	query := `SELECT id, name, created_at FROM sessions ORDER BY created_at DESC
-    LIMIT 10`
+	query := `SELECT sessions.id, name, COUNT(surveys.id) AS participants,
+    sessions.created_at FROM sessions
+    LEFT JOIN surveys ON surveys.session_id=sessions.id
+    GROUP BY sessions.id ORDER BY sessions.created_at DESC LIMIT 10
+    `
 
 	rows, err := db.Query(query)
 	if err != nil {
@@ -44,7 +47,7 @@ func (db *DB) FindSessions() ([]drake.Session, error) {
 
 	for rows.Next() {
 		s := drake.Session{}
-		err = rows.Scan(&s.ID, &s.Name, &s.CreatedAt)
+		err = rows.Scan(&s.ID, &s.Name, &s.Participants, &s.CreatedAt)
 		if err != nil {
 			return nil, errors.Wrap(err, "scan sessions")
 		}

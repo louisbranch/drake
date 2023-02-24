@@ -1,7 +1,7 @@
 {{ define "content" }}
 <div class="pure-u-1 pure-u-md-1-3">
-    <div class="survey-header">
-        <h1>The Drake Equation</h1>
+    <header>
+        <h1>Drake Equation</h1>
         <div class="chalk">
             {{ if eq .Survey.NextQuestion "" }}
                 <mark>N</mark>
@@ -51,7 +51,7 @@
                 L
             {{ end }}
         </div>
-    </div>
+    </header>
     <form action="/{{ .Session.Name }}" method="post" class="pure-form">
         {{ if eq .Survey.N nil }}
         <h3>Select the choice that best agrees with what YOU think.</h3>

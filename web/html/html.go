@@ -48,6 +48,7 @@ func (h *HTML) Render(w io.Writer, page web.Page) error {
 
 var fns = template.FuncMap{
 	"number": number,
+	"add":    add,
 }
 
 func (h *HTML) parse(names ...string) (tpl *template.Template, err error) {
@@ -79,4 +80,8 @@ func number(val float64) string {
 	p := message.NewPrinter(language.English)
 
 	return p.Sprintf("%.f", val)
+}
+
+func add(a, b int) int {
+	return a + b
 }
