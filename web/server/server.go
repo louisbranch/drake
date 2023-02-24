@@ -63,20 +63,21 @@ func (srv *Server) renderNotFound(w http.ResponseWriter) {
 func (srv *Server) index(w http.ResponseWriter, r *http.Request) {
 	name := r.URL.Path[len("/"):]
 
-	if name == "" {
-		if r.Method != "GET" {
-			w.WriteHeader(http.StatusMethodNotAllowed)
-			return
-		}
-
-		page := web.Page{
-			Title:      "Drake Equation",
-			ActiveMenu: "index",
-			Partials:   []string{"index"},
-		}
-		srv.render(w, page)
+	if name != "" {
+		srv.surveys(w, r, name)
 		return
 	}
 
-	srv.surveys(w, r, name)
+	if r.Method != "GET" {
+		w.WriteHeader(http.StatusMethodNotAllowed)
+		return
+	}
+
+	page := web.Page{
+		Title:      "Drake Equation",
+		ActiveMenu: "index",
+		Partials:   []string{"index"},
+	}
+
+	srv.render(w, page)
 }

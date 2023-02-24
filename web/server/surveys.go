@@ -33,7 +33,7 @@ func (srv *Server) surveys(w http.ResponseWriter, r *http.Request, name string) 
 		http.SetCookie(w, &http.Cookie{
 			Name:   "access_token",
 			Value:  token,
-			MaxAge: 24 * 60 * 60,
+			MaxAge: 24 * 60 * 60, // 24 hours
 		})
 	}
 

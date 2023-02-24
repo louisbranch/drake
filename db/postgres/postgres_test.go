@@ -8,5 +8,4 @@ import (
 
 func TestDBInterface(t *testing.T) {
 	var _ drake.Database = &DB{}
-
 }
