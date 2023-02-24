@@ -38,6 +38,29 @@ type Survey struct {
 	UpdatedAt time.Time
 }
 
+func (s Survey) NextQuestion() string {
+	switch {
+	case s.PresurveyAssessment == nil:
+		return "Assessment"
+	case s.R == nil:
+		return "R"
+	case s.Fp == nil:
+		return "Fp"
+	case s.Ne == nil:
+		return "Ne"
+	case s.Fl == nil:
+		return "Fl"
+	case s.Fi == nil:
+		return "Fi"
+	case s.Fc == nil:
+		return "Fc"
+	case s.L == nil:
+		return "L"
+	default:
+		return ""
+	}
+}
+
 func (s *Survey) Result() {
 	n := *s.R * *s.Fp * *s.Ne * *s.Fl * *s.Fi * *s.Fc * *s.Fc
 	s.N = &n

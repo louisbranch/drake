@@ -1,11 +1,61 @@
 {{ define "content" }}
 <div class="pure-u-1 pure-u-md-1-3">
-    <h1>The Drake Equation</h1>
+    <div class="survey-header">
+        <h1>The Drake Equation</h1>
+        <div class="chalk">
+            {{ if eq .Survey.NextQuestion "" }}
+                <mark>N</mark>
+            {{ else }}
+                N
+            {{ end }}
+            =
+            {{ if eq .Survey.NextQuestion "R" }}
+                <mark>R<sub>*</sub></mark>
+            {{ else }}
+                R<sub>*</sub>
+            {{ end }}
+            &times;
+            {{ if eq .Survey.NextQuestion "Fp" }}
+                <mark>F<sub>p</sub></mark>
+            {{ else }}
+                F<sub>p</sub>
+            {{ end }}
+            &times;
+            {{ if eq .Survey.NextQuestion "Ne" }}
+                <mark>N<sub>e</sub></mark>
+            {{ else }}
+                N<sub>e</sub>
+            {{ end }}
+            &times;
+            {{ if eq .Survey.NextQuestion "Fl" }}
+                <mark>F<sub>l</sub></mark>
+            {{ else }}
+                F<sub>l</sub>
+            {{ end }}
+            &times;
+            {{ if eq .Survey.NextQuestion "Fi" }}
+                <mark>F<sub>i</sub></mark>
+            {{ else }}
+                F<sub>i</sub>
+            {{ end }}
+            &times;
+            {{ if eq .Survey.NextQuestion "Fc" }}
+                <mark>F<sub>c</sub></mark>
+            {{ else }}
+                F<sub>c</sub>
+            {{ end }}
+            &times;
+            {{ if eq .Survey.NextQuestion "L" }}
+                <mark>L</mark>
+            {{ else }}
+                L
+            {{ end }}
+        </div>
+    </div>
     <form action="/{{ .Session.Name }}" method="post" class="pure-form">
-        {{if eq .Survey.N nil}}
+        {{ if eq .Survey.N nil }}
         <h3>Select the choice that best agrees with what YOU think.</h3>
         {{ end }}
-
         {{ if eq .Survey.PresurveyAssessment nil }}
         <h2>How many technological advanced civilizations exist in the Milky Way?</h2>
         <label class="pure-radio">

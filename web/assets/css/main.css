@@ -1,11 +1,8 @@
-body {
-  padding-top: 20px;
-}
-
 .center {
     justify-content: center;
 }
 
-form {
-    margin-bottom: 20px;
+.chalk {
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 2em;
 }
