@@ -1,32 +1,27 @@
 {{ define "content" }}
-<div class="pure-u-1 pure-u-md-1-3">
-    <header>
-        <h1>Drake Equation</h1>
-    </header>
-    <h2>Latest Sessions</h2>
-    {{ if .Sessions }}
-        <table class="pure-table pure-table-horizontal">
-            <thead>
-                <th>#</th>
-                <th>Name</th>
-                <th>Participants</th>
-                <th>Created</th>
-            </thead>
-            <tbody>
-                {{ range $i, $el := .Sessions }}
-                <tr>
-                    <td>{{ add $i 1 }}</td>
-                    <td><a href="/{{ $el.Name }}">{{ $el.Name }}</a></td>
-                    <td style="text-align: center;">{{ $el.Participants }}</td>
-                    <td>{{.MinutesSince}} mins ago</td>
-                </tr>
-                {{ end }}
-            </tbody>
-        </table>
-    {{ else }}
-    No available sessions :(
-    {{ end }}
+<h2>Latest Sessions</h2>
+{{ if .Sessions }}
+    <table class="pure-table pure-table-horizontal">
+        <thead>
+            <th>#</th>
+            <th>Name</th>
+            <th>Participants</th>
+            <th>Created</th>
+        </thead>
+        <tbody>
+            {{ range $i, $el := .Sessions }}
+            <tr>
+                <td>{{ add $i 1 }}</td>
+                <td><a href="/{{ $el.Name }}">{{ $el.Name }}</a></td>
+                <td style="text-align: center;">{{ $el.Participants }}</td>
+                <td>{{.MinutesSince}} mins ago</td>
+            </tr>
+            {{ end }}
+        </tbody>
+    </table>
+{{ else }}
+No available sessions :(
+{{ end }}
 
-    <a href="/" class="pure-button">Back</a>
-</div>
+<a href="/" class="pure-button">Back</a>
 {{ end }}

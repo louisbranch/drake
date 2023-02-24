@@ -1,13 +1,8 @@
 {{ define "content" }}
-<div class="pure-u-1 pure-u-md-1-3">
-    <header>
-        <h1>Drake Equation</h1>
-    </header>
-    <h2>Share Link:</h2>
-    <form class="pure-form">
-        <input type="text" value="astronomy.education/drake/{{ .Session.Name }}" readonly>
-    </form>
-    <a class="pure-button pure-button-primary" href="/{{ .Session.Name }}">Join</a>
-    <a class="pure-button" href="/results/{{ .Session.Name }}">See Results</a>
-</div>
+<h2>Share Link:</h2>
+<form class="pure-form">
+    <input type="text" value="astronomy.education/drake/{{ .Session.Name }}" readonly>
+</form>
+<a class="pure-button pure-button-primary" href="/{{ .Session.Name }}">Join</a>
+<a class="pure-button" href="/results/{{ .Session.Name }}">See Results</a>
 {{ end }}

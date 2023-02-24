@@ -1,37 +1,32 @@
 {{ define "content" }}
-<div class="pure-u-1 pure-u-md-1-3">
-    <header>
-        <h1>Drake Equation</h1>
-            <div class="chalk">
-                N = R<sub>*</sub> &times;
-                    F<sub>p</sub> &times;
-                    N<sub>e</sub> &times;
-                    F<sub>l</sub> &times;
-                    F<sub>i</sub> &times;
-                    F<sub>c</sub> &times;
-                    L
-            </div>
-    </header>
-    <div class="hero">
-        <h2>Are we alone in the Universe?</h2>
-        <p>Estimate the number of detectable alien civilizations in the Milky Way using the Drake Equation.</p>
-        <h3>Learning Goals:</h3>
-        <ul>
-            <li>to think about the size and composition of the galaxy and how it affects the possibility of intelligent life</li>
-            <li>to understand and estimate the terms of the Drake Equation</li>
-        </ul>
-    </div>
-    <nav>
-        <ul>
-            <li>
-                <form action="/sessions/new" method="post">
-                    <button class="pure-button pure-button-primary" type="submit">Create Session</button>
-                </form>
-            </li>
-            <li>
-                <a class="pure-button" href="/sessions">Join Session</a>
-            </li>
-        </ul>
-    </nav>
+<div class="chalk">
+    N = R<sub>*</sub> &times;
+        F<sub>p</sub> &times;
+        N<sub>e</sub> &times;
+        F<sub>l</sub> &times;
+        F<sub>i</sub> &times;
+        F<sub>c</sub> &times;
+        L
 </div>
+<div class="hero">
+    <h2>Are we alone in the Universe?</h2>
+    <p>Estimate the number of detectable alien civilizations in the Milky Way using the Drake Equation.</p>
+    <h3>Learning Goals:</h3>
+    <ul>
+        <li>to think about the size and composition of the galaxy and how it affects the possibility of intelligent life</li>
+        <li>to understand and estimate the terms of the Drake Equation</li>
+    </ul>
+</div>
+<nav>
+    <ul>
+        <li>
+            <form action="/sessions/new" method="post">
+                <button class="pure-button pure-button-primary" type="submit">Create Session</button>
+            </form>
+        </li>
+        <li>
+            <a class="pure-button" href="/sessions">Join Session</a>
+        </li>
+    </ul>
+</nav>
 {{ end }}
