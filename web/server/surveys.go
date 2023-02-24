@@ -10,7 +10,7 @@ import (
 	"time"
 
 	"github.com/louisbranch/drake"
-	"github.com/louisbranch/drake/sqlite"
+	"github.com/louisbranch/drake/db/sqlite"
 	"github.com/louisbranch/drake/web"
 )
 
