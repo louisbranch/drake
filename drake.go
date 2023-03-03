@@ -109,6 +109,9 @@ func (r Result) PresurveyData() []int {
 			continue
 		}
 		n := int(math.Log10(*s.PresurveyAssessment))
+		if n < 1 {
+			n = 0
+		}
 		data[n] += 1
 	}
 
@@ -123,6 +126,9 @@ func (r Result) PostsurveyData() []int {
 			continue
 		}
 		n := int(math.Log10(*s.N))
+		if n < 1 {
+			n = 0
+		}
 		data[n] += 1
 	}
 
