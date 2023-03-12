@@ -6,6 +6,7 @@ import (
 
 type Page struct {
 	Title    string
+	Website  string
 	Layout   string
 	Partials []string
 	Content  interface{}

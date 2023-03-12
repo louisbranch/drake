@@ -1,0 +1,70 @@
+{
+    "language": "pt-BR",
+    "messages": [
+        {
+            "id": "{Val}",
+            "message": "{Val}",
+            "translation": "",
+            "placeholders": [
+                {
+                    "id": "Val",
+                    "string": "%.[1]f",
+                    "type": "float64",
+                    "underlyingType": "float64",
+                    "argNum": 1,
+                    "expr": "val"
+                }
+            ]
+        },
+        {
+            "id": "Astronomy Education",
+            "message": "Astronomy Education",
+            "translation": "Educação em Astronomia"
+        },
+        {
+            "id": "Drake Equation",
+            "message": "Drake Equation",
+            "translation": "A Equação Drake"
+        },
+        {
+            "id": "Are we alone in the Universe?",
+            "message": "Are we alone in the Universe?",
+            "translation": "Estamos sozinhos no Universo?"
+        },
+        {
+            "id": "Estimate the number of detectable alien civilizations in the Milky Way using the Drake Equation.",
+            "message": "Estimate the number of detectable alien civilizations in the Milky Way using the Drake Equation.",
+            "translation": "Estime o número de civilizações alienígenas detectáveis na Via Láctea usando a Equação de Drake."
+        },
+        {
+            "id": "Learning Goals:",
+            "message": "Learning Goals:",
+            "translation": "Objetivos de Aprendizado:"
+        },
+        {
+            "id": "to think about the size and composition of the galaxy and how it affects the possibility of intelligent life",
+            "message": "to think about the size and composition of the galaxy and how it affects the possibility of intelligent life",
+            "translation": "pensar sobre o tamanho e composição da galaxia e como afeta a possibilidade de vida inteligente"
+        },
+        {
+            "id": "to understand and estimate the terms of the Drake Equation",
+            "message": "to understand and estimate the terms of the Drake Equation",
+            "translation": "entender e estimar os termos da Equação de Drake"
+        },
+        {
+            "id": "to compare your initial guess with the final value",
+            "message": "to compare your initial guess with the final value",
+            "translation": "comparar seu palpite inicial com o valor final"
+        },
+        {
+            "id": "Create Session",
+            "message": "Create Session",
+            "translation": "Criar Sessão"
+        },
+        {
+            "id": "Join Session",
+            "message": "Join Session",
+            "translation": "Entra na Sessão"
+        }
+    ]
+}

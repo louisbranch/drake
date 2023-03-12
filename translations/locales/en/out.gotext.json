@@ -1,0 +1,92 @@
+{
+    "language": "en",
+    "messages": [
+        {
+            "id": "{Val}",
+            "message": "{Val}",
+            "translation": "{Val}",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "Val",
+                    "string": "%.[1]f",
+                    "type": "float64",
+                    "underlyingType": "float64",
+                    "argNum": 1,
+                    "expr": "val"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "Astronomy Education",
+            "message": "Astronomy Education",
+            "translation": "Astronomy Education",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Drake Equation",
+            "message": "Drake Equation",
+            "translation": "Drake Equation",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Are we alone in the Universe?",
+            "message": "Are we alone in the Universe?",
+            "translation": "Are we alone in the Universe?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Estimate the number of detectable alien civilizations in the Milky Way using the Drake Equation.",
+            "message": "Estimate the number of detectable alien civilizations in the Milky Way using the Drake Equation.",
+            "translation": "Estimate the number of detectable alien civilizations in the Milky Way using the Drake Equation.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Learning Goals:",
+            "message": "Learning Goals:",
+            "translation": "Learning Goals:",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "to think about the size and composition of the galaxy and how it affects the possibility of intelligent life",
+            "message": "to think about the size and composition of the galaxy and how it affects the possibility of intelligent life",
+            "translation": "to think about the size and composition of the galaxy and how it affects the possibility of intelligent life",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "to understand and estimate the terms of the Drake Equation",
+            "message": "to understand and estimate the terms of the Drake Equation",
+            "translation": "to understand and estimate the terms of the Drake Equation",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "to compare your initial guess with the final value",
+            "message": "to compare your initial guess with the final value",
+            "translation": "to compare your initial guess with the final value",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Create Session",
+            "message": "Create Session",
+            "translation": "Create Session",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Join Session",
+            "message": "Join Session",
+            "translation": "Join Session",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        }
+    ]
+}

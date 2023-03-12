@@ -73,9 +73,29 @@ func (srv *Server) index(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	page := web.Page{
-		Title:    "Drake Equation",
-		Partials: []string{"index"},
+	printer, page := srv.i18n(w, r)
+	page.Title = printer.Sprintf("Drake Equation")
+	page.Partials = []string{"index"}
+	page.Content = struct {
+		Title     string
+		Subtitle  string
+		Intro     string
+		Goals     string
+		GoalItems []string
+		Create    string
+		Join      string
+	}{
+		Title:    printer.Sprintf("Drake Equation"),
+		Subtitle: printer.Sprintf("Are we alone in the Universe?"),
+		Intro:    printer.Sprintf("Estimate the number of detectable alien civilizations in the Milky Way using the Drake Equation."),
+		Goals:    printer.Sprintf("Learning Goals:"),
+		GoalItems: []string{
+			printer.Sprintf("to think about the size and composition of the galaxy and how it affects the possibility of intelligent life"),
+			printer.Sprintf("to understand and estimate the terms of the Drake Equation"),
+			printer.Sprintf("to compare your initial guess with the final value"),
+		},
+		Create: printer.Sprintf("Create Session"),
+		Join:   printer.Sprintf("Join Session"),
 	}
 
 	srv.render(w, page)
