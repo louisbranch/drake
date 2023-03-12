@@ -1,8 +1,8 @@
 {{ define "content" }}
-<h2>Share Link:</h2>
+<h2>{{ .Share }}</h2>
 <form class="pure-form">
     <input type="text" value="astronomy.education/drake/{{ .Session.Name }}" readonly>
 </form>
-<a class="pure-button pure-button-primary" href="/{{ .Session.Name }}">Join</a>
-<a class="pure-button" href="/results/{{ .Session.Name }}">See Results</a>
+<a class="pure-button pure-button-primary" href="/{{ .Session.Name }}">{{ .Join }}</a>
+<a class="pure-button" href="/results/{{ .Session.Name }}">{{ .Results }}</a>
 {{ end }}

@@ -38,6 +38,7 @@ func (s *Server) i18n(w http.ResponseWriter, r *http.Request) (*message.Printer,
 	printer := message.NewPrinter(lang)
 
 	page := web.Page{
+		Header:  printer.Sprintf("Drake Equation"),
 		Website: printer.Sprintf("Astronomy Education"),
 	}
 

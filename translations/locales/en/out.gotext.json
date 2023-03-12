@@ -19,6 +19,13 @@
             "fuzzy": true
         },
         {
+            "id": "Drake Equation",
+            "message": "Drake Equation",
+            "translation": "Drake Equation",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
             "id": "Astronomy Education",
             "message": "Astronomy Education",
             "translation": "Astronomy Education",
@@ -43,13 +50,6 @@
             "id": "Home",
             "message": "Home",
             "translation": "Home",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Drake Equation",
-            "message": "Drake Equation",
-            "translation": "Drake Equation",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
@@ -106,6 +106,93 @@
             "id": "Join Session",
             "message": "Join Session",
             "translation": "Join Session",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Sessions",
+            "message": "Sessions",
+            "translation": "Sessions",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Latest Sessions",
+            "message": "Latest Sessions",
+            "translation": "Latest Sessions",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Name",
+            "message": "Name",
+            "translation": "Name",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Participants",
+            "message": "Participants",
+            "translation": "Participants",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Created",
+            "message": "Created",
+            "translation": "Created",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "No available sessions",
+            "message": "No available sessions",
+            "translation": "No available sessions",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Back",
+            "message": "Back",
+            "translation": "Back",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Session {Name}",
+            "message": "Session {Name}",
+            "translation": "Session {Name}",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "Name",
+                    "string": "%[1]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "name"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "Share Link:",
+            "message": "Share Link:",
+            "translation": "Share Link:",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Join",
+            "message": "Join",
+            "translation": "Join",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "See Results",
+            "message": "See Results",
+            "translation": "See Results",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         }

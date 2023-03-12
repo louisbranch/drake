@@ -41,52 +41,73 @@ func init() {
 var messageKeyToIndex = map[string]int{
 	"%.f":                           0,
 	"Are we alone in the Universe?": 6,
-	"Astronomy Education":           1,
+	"Astronomy Education":           2,
+	"Back":                          20,
 	"Create Session":                12,
-	"Drake Equation":                5,
+	"Created":                       18,
+	"Drake Equation":                1,
 	"Estimate the number of detectable alien civilizations in the Milky Way using the Drake Equation.": 7,
-	"Home":                  4,
-	"Internal Server Error": 2,
+	"Home":                  5,
+	"Internal Server Error": 3,
+	"Join":                  23,
 	"Join Session":          13,
+	"Latest Sessions":       15,
 	"Learning Goals:":       8,
-	"Page Not Found":        3,
+	"Name":                  16,
+	"No available sessions": 19,
+	"Page Not Found":        4,
+	"Participants":          17,
+	"See Results":           24,
+	"Session %s":            21,
+	"Sessions":              14,
+	"Share Link:":           22,
 	"to compare your initial guess with the final value":                                                           11,
 	"to think about the size and composition of the galaxy and how it affects the possibility of intelligent life": 9,
 	"to understand and estimate the terms of the Drake Equation":                                                   10,
 }
 
-var enIndex = []uint32{ // 15 elements
-	0x00000000, 0x00000007, 0x0000001b, 0x00000031,
-	0x00000040, 0x00000045, 0x00000054, 0x00000072,
+var enIndex = []uint32{ // 26 elements
+	0x00000000, 0x00000007, 0x00000016, 0x0000002a,
+	0x00000040, 0x0000004f, 0x00000054, 0x00000072,
 	0x000000d3, 0x000000e3, 0x00000150, 0x0000018b,
-	0x000001be, 0x000001cd, 0x000001da,
-} // Size: 84 bytes
+	0x000001be, 0x000001cd, 0x000001da, 0x000001e3,
+	0x000001f3, 0x000001f8, 0x00000205, 0x0000020d,
+	0x00000223, 0x00000228, 0x00000236, 0x00000242,
+	0x00000247, 0x00000253,
+} // Size: 128 bytes
 
-const enData string = "" + // Size: 474 bytes
-	"\x02%.[1]f\x02Astronomy Education\x02Internal Server Error\x02Page Not F" +
-	"ound\x02Home\x02Drake Equation\x02Are we alone in the Universe?\x02Estim" +
+const enData string = "" + // Size: 595 bytes
+	"\x02%.[1]f\x02Drake Equation\x02Astronomy Education\x02Internal Server E" +
+	"rror\x02Page Not Found\x02Home\x02Are we alone in the Universe?\x02Estim" +
 	"ate the number of detectable alien civilizations in the Milky Way using " +
 	"the Drake Equation.\x02Learning Goals:\x02to think about the size and co" +
 	"mposition of the galaxy and how it affects the possibility of intelligen" +
 	"t life\x02to understand and estimate the terms of the Drake Equation\x02" +
 	"to compare your initial guess with the final value\x02Create Session\x02" +
-	"Join Session"
+	"Join Session\x02Sessions\x02Latest Sessions\x02Name\x02Participants\x02C" +
+	"reated\x02No available sessions\x02Back\x02Session %[1]s\x02Share Link:" +
+	"\x02Join\x02See Results"
 
-var pt_BRIndex = []uint32{ // 15 elements
-	0x00000000, 0x00000000, 0x00000019, 0x00000032,
-	0x0000004a, 0x00000052, 0x00000064, 0x00000082,
+var pt_BRIndex = []uint32{ // 26 elements
+	0x00000000, 0x00000000, 0x00000012, 0x0000002b,
+	0x00000044, 0x0000005c, 0x00000064, 0x00000082,
 	0x000000eb, 0x00000105, 0x00000167, 0x0000019a,
-	0x000001c9, 0x000001d7, 0x000001e8,
-} // Size: 84 bytes
+	0x000001c9, 0x000001d7, 0x000001e8, 0x000001f1,
+	0x00000203, 0x00000208, 0x00000216, 0x0000021d,
+	0x00000239, 0x00000240, 0x0000024e, 0x00000265,
+	0x0000026b, 0x0000027a,
+} // Size: 128 bytes
 
-const pt_BRData string = "" + // Size: 488 bytes
-	"\x02Educação em Astronomia\x02Erro Interno do Servidor\x02Página Não Enc" +
-	"ontrada\x02Início\x02A Equação Drake\x02Estamos sozinhos no Universo?" +
+const pt_BRData string = "" + // Size: 634 bytes
+	"\x02A Equação Drake\x02Educação em Astronomia\x02Erro Interno do Servido" +
+	"r\x02Página Não Encontrada\x02Início\x02Estamos sozinhos no Universo?" +
 	"\x02Estime o número de civilizações alienígenas detectáveis na Via Lácte" +
 	"a usando a Equação de Drake.\x02Objetivos de Aprendizado:\x02pensar sobr" +
 	"e o tamanho e composição da galaxia e como afeta a possibilidade de vida" +
 	" inteligente\x02entender e estimar os termos da Equação de Drake\x02comp" +
 	"arar seu palpite inicial com o valor final\x02Criar Sessão\x02Entra na S" +
-	"essão"
+	"essão\x02Sessões\x02Últimas Sessões\x02Nome\x02Participantes\x02Criado" +
+	"\x02Nenhuma sessão disponível\x02Voltar\x02Sessão %[1]s\x02Compartilhe E" +
+	"ndereço:\x02Entre\x02Ver Resultados"
 
-	// Total table size 1130 bytes (1KiB); checksum: C175546D
+	// Total table size 1485 bytes (1KiB); checksum: C171CE40

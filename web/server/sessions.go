@@ -6,7 +6,6 @@ import (
 	"time"
 
 	"github.com/louisbranch/drake"
-	"github.com/louisbranch/drake/web"
 )
 
 var alphanum = []rune("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ")
@@ -27,6 +26,8 @@ func (srv *Server) newSession() drake.Session {
 }
 
 func (srv *Server) sessions(w http.ResponseWriter, r *http.Request) {
+	printer, page := srv.i18n(w, r)
+
 	switch r.Method {
 	case "GET":
 
@@ -38,16 +39,24 @@ func (srv *Server) sessions(w http.ResponseWriter, r *http.Request) {
 				return
 			}
 
-			content := struct {
-				Sessions []drake.Session
+			page.Title = printer.Sprintf("Sessions")
+			page.Partials = []string{"sessions"}
+			page.Content = struct {
+				Sessions     []drake.Session
+				Latest       string
+				Name         string
+				Participants string
+				Created      string
+				None         string
+				Back         string
 			}{
-				Sessions: sessions,
-			}
-
-			page := web.Page{
-				Title:    "Sessions",
-				Content:  content,
-				Partials: []string{"sessions"},
+				Sessions:     sessions,
+				Latest:       printer.Sprintf("Latest Sessions"),
+				Name:         printer.Sprintf("Name"),
+				Participants: printer.Sprintf("Participants"),
+				Created:      printer.Sprintf("Created"),
+				None:         printer.Sprintf("No available sessions"),
+				Back:         printer.Sprintf("Back"),
 			}
 
 			srv.render(w, page)
@@ -60,17 +69,20 @@ func (srv *Server) sessions(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 
-		content := struct {
+		page.Title = printer.Sprintf("Session %s", name)
+		page.Partials = []string{"session"}
+		page.Content = struct {
 			Session drake.Session
+			Share   string
+			Join    string
+			Results string
 		}{
 			Session: session,
+			Share:   printer.Sprintf("Share Link:"),
+			Join:    printer.Sprintf("Join"),
+			Results: printer.Sprintf("See Results"),
 		}
 
-		page := web.Page{
-			Title:    fmt.Sprintf("Session %s", name),
-			Content:  content,
-			Partials: []string{"session"},
-		}
 		srv.render(w, page)
 
 	case "POST":

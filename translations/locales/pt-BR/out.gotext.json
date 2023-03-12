@@ -17,6 +17,11 @@
             ]
         },
         {
+            "id": "Drake Equation",
+            "message": "Drake Equation",
+            "translation": "A Equação Drake"
+        },
+        {
             "id": "Astronomy Education",
             "message": "Astronomy Education",
             "translation": "Educação em Astronomia"
@@ -35,11 +40,6 @@
             "id": "Home",
             "message": "Home",
             "translation": "Início"
-        },
-        {
-            "id": "Drake Equation",
-            "message": "Drake Equation",
-            "translation": "A Equação Drake"
         },
         {
             "id": "Are we alone in the Universe?",
@@ -80,6 +80,71 @@
             "id": "Join Session",
             "message": "Join Session",
             "translation": "Entra na Sessão"
+        },
+        {
+            "id": "Sessions",
+            "message": "Sessions",
+            "translation": "Sessões"
+        },
+        {
+            "id": "Latest Sessions",
+            "message": "Latest Sessions",
+            "translation": "Últimas Sessões"
+        },
+        {
+            "id": "Name",
+            "message": "Name",
+            "translation": "Nome"
+        },
+        {
+            "id": "Participants",
+            "message": "Participants",
+            "translation": "Participantes"
+        },
+        {
+            "id": "Created",
+            "message": "Created",
+            "translation": "Criado"
+        },
+        {
+            "id": "No available sessions",
+            "message": "No available sessions",
+            "translation": "Nenhuma sessão disponível"
+        },
+        {
+            "id": "Back",
+            "message": "Back",
+            "translation": "Voltar"
+        },
+        {
+            "id": "Session {Name}",
+            "message": "Session {Name}",
+            "translation": "Sessão {Name}",
+            "placeholders": [
+                {
+                    "id": "Name",
+                    "string": "%[1]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "name"
+                }
+            ]
+        },
+        {
+            "id": "Share Link:",
+            "message": "Share Link:",
+            "translation": "Compartilhe Endereço:"
+        },
+        {
+            "id": "Join",
+            "message": "Join",
+            "translation": "Entre"
+        },
+        {
+            "id": "See Results",
+            "message": "See Results",
+            "translation": "Ver Resultados"
         }
     ]
 }

@@ -1,12 +1,12 @@
 {{ define "content" }}
-<h2>Latest Sessions</h2>
+<h2>{{ .Latest }}</h2>
 {{ if .Sessions }}
     <table class="pure-table pure-table-horizontal">
         <thead>
             <th>#</th>
-            <th>Name</th>
-            <th style="text-align: center;">Participants</th>
-            <th>Created</th>
+            <th>{{ .Name }}</th>
+            <th style="text-align: center;">{{ .Participants }}</th>
+            <th>{{ .Created }}</th>
         </thead>
         <tbody>
             {{ range $i, $el := .Sessions }}
@@ -20,8 +20,8 @@
         </tbody>
     </table>
 {{ else }}
-No available sessions :(
+    {{ .None }}
 {{ end }}
 
-<a href="/" class="pure-button">Back</a>
+<a href="/" class="pure-button">{{ .Back }}</a>
 {{ end }}
