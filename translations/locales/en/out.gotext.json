@@ -26,6 +26,27 @@
             "fuzzy": true
         },
         {
+            "id": "Internal Server Error",
+            "message": "Internal Server Error",
+            "translation": "Internal Server Error",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Page Not Found",
+            "message": "Page Not Found",
+            "translation": "Page Not Found",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Home",
+            "message": "Home",
+            "translation": "Home",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
             "id": "Drake Equation",
             "message": "Drake Equation",
             "translation": "Drake Equation",

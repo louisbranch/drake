@@ -34,7 +34,7 @@ func (srv *Server) sessions(w http.ResponseWriter, r *http.Request) {
 		if name == "" {
 			sessions, err := srv.DB.FindSessions()
 			if err != nil {
-				srv.renderError(w, err)
+				srv.renderError(w, r, err)
 				return
 			}
 
@@ -56,7 +56,7 @@ func (srv *Server) sessions(w http.ResponseWriter, r *http.Request) {
 
 		session, err := srv.DB.FindSession(name)
 		if err != nil {
-			srv.renderError(w, err)
+			srv.renderError(w, r, err)
 			return
 		}
 
@@ -78,7 +78,7 @@ func (srv *Server) sessions(w http.ResponseWriter, r *http.Request) {
 
 		err := srv.DB.CreateSession(&session)
 		if err != nil {
-			srv.renderError(w, err)
+			srv.renderError(w, r, err)
 			return
 		}
 

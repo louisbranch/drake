@@ -19,10 +19,10 @@ func (srv *Server) surveys(w http.ResponseWriter, r *http.Request, name string) 
 
 	session, err := srv.DB.FindSession(name)
 	if errors.Is(err, sql.ErrNoRows) {
-		srv.renderNotFound(w)
+		srv.renderNotFound(w, r)
 		return
 	} else if err != nil {
-		srv.renderError(w, err)
+		srv.renderError(w, r, err)
 		return
 	}
 
@@ -51,7 +51,7 @@ func (srv *Server) surveys(w http.ResponseWriter, r *http.Request, name string) 
 		})
 	}
 	if err != nil {
-		srv.renderError(w, err)
+		srv.renderError(w, r, err)
 		return
 	}
 
@@ -80,7 +80,7 @@ func (srv *Server) surveys(w http.ResponseWriter, r *http.Request, name string) 
 	case "POST":
 		err := r.ParseForm()
 		if err != nil {
-			srv.renderError(w, err)
+			srv.renderError(w, r, err)
 			return
 		}
 
@@ -121,7 +121,7 @@ func (srv *Server) surveys(w http.ResponseWriter, r *http.Request, name string) 
 
 		err = srv.DB.UpdateSurvey(&survey)
 		if err != nil {
-			srv.renderError(w, err)
+			srv.renderError(w, r, err)
 			return
 		}
 

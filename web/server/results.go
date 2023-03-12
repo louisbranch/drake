@@ -17,7 +17,7 @@ func (srv *Server) results(w http.ResponseWriter, r *http.Request) {
 
 	session, err := srv.DB.FindSession(name)
 	if err != nil {
-		srv.renderError(w, err)
+		srv.renderError(w, r, err)
 		return
 	}
 
@@ -29,13 +29,13 @@ func (srv *Server) results(w http.ResponseWriter, r *http.Request) {
 
 	survey, err := srv.DB.FindSurvey(session.ID, token)
 	if err != nil && !errors.Is(err, sql.ErrNoRows) {
-		srv.renderError(w, err)
+		srv.renderError(w, r, err)
 		return
 	}
 
 	surveys, err := srv.DB.FindSurveys(session.ID)
 	if err != nil {
-		srv.renderError(w, err)
+		srv.renderError(w, r, err)
 		return
 	}
 

@@ -41,25 +41,6 @@ func (srv *Server) render(w http.ResponseWriter, page web.Page) {
 	}
 }
 
-func (srv *Server) renderError(w http.ResponseWriter, err error) {
-	w.WriteHeader(http.StatusInternalServerError)
-	page := web.Page{
-		Title:    "500",
-		Content:  err,
-		Partials: []string{"500"},
-	}
-	srv.render(w, page)
-}
-
-func (srv *Server) renderNotFound(w http.ResponseWriter) {
-	w.WriteHeader(http.StatusNotFound)
-	page := web.Page{
-		Title:    "Not Found",
-		Partials: []string{"404"},
-	}
-	srv.render(w, page)
-}
-
 func (srv *Server) index(w http.ResponseWriter, r *http.Request) {
 	name := r.URL.Path[len("/"):]
 

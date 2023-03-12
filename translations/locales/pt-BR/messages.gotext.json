@@ -22,6 +22,21 @@
             "translation": "Educação em Astronomia"
         },
         {
+            "id": "Internal Server Error",
+            "message": "Internal Server Error",
+            "translation": "Erro Interno do Servidor"
+        },
+        {
+            "id": "Page Not Found",
+            "message": "Page Not Found",
+            "translation": "Página Não Encontrada"
+        },
+        {
+            "id": "Home",
+            "message": "Home",
+            "translation": "Início"
+        },
+        {
             "id": "Drake Equation",
             "message": "Drake Equation",
             "translation": "A Equação Drake"
