@@ -51,7 +51,6 @@ func (srv *Server) renderError(w http.ResponseWriter, err error) {
 	srv.render(w, page)
 }
 
-/*
 func (srv *Server) renderNotFound(w http.ResponseWriter) {
 	w.WriteHeader(http.StatusNotFound)
 	page := web.Page{
@@ -60,7 +59,6 @@ func (srv *Server) renderNotFound(w http.ResponseWriter) {
 	}
 	srv.render(w, page)
 }
-*/
 
 func (srv *Server) index(w http.ResponseWriter, r *http.Request) {
 	name := r.URL.Path[len("/"):]

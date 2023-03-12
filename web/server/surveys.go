@@ -18,7 +18,10 @@ import (
 func (srv *Server) surveys(w http.ResponseWriter, r *http.Request, name string) {
 
 	session, err := srv.DB.FindSession(name)
-	if err != nil {
+	if errors.Is(err, sql.ErrNoRows) {
+		srv.renderNotFound(w)
+		return
+	} else if err != nil {
 		srv.renderError(w, err)
 		return
 	}
