@@ -4,12 +4,10 @@ import (
 	"database/sql"
 	"encoding/json"
 	"errors"
-	"fmt"
 	"html/template"
 	"net/http"
 
 	"github.com/louisbranch/drake"
-	"github.com/louisbranch/drake/web"
 )
 
 func (srv *Server) results(w http.ResponseWriter, r *http.Request) {
@@ -52,24 +50,44 @@ func (srv *Server) results(w http.ResponseWriter, r *http.Request) {
 	s, _ = json.Marshal(result.PostsurveyData())
 	postdata := template.JS(string(s))
 
-	content := struct {
+	printer, page := srv.i18n(w, r)
+	page.Title = printer.Sprintf("Results for Session %s", name)
+	page.Partials = []string{"result"}
+	page.Content = struct {
 		Session        drake.Session
 		Survey         drake.Survey
 		Buckets        template.JS
 		PresurveyData  template.JS
 		PostsurveyData template.JS
+		Guesses        string
+		Guess          string
+		Results        string
+		Estimation     string
+		Civilizations  string
+		Participants   string
 	}{
 		Session:        session,
 		Survey:         survey,
 		Buckets:        buckets,
 		PresurveyData:  predata,
 		PostsurveyData: postdata,
+		Guesses:        printer.Sprintf("Initial Guesses"),
+		Guess: printer.Sprintf("You guessed %d civilizations",
+			fprtToInt(survey.PresurveyAssessment)),
+		Results: printer.Sprintf("Final Results"),
+		Estimation: printer.Sprintf("You estimated %d civilizations",
+			fprtToInt(survey.N)),
+		Civilizations: printer.Sprintf("Civilizations"),
+		Participants:  printer.Sprintf("Participants"),
 	}
 
-	page := web.Page{
-		Title:    fmt.Sprintf("Results for Session %s", name),
-		Content:  content,
-		Partials: []string{"result"},
-	}
 	srv.render(w, page)
+}
+
+func fprtToInt(n *float64) int {
+	if n == nil {
+		return 0
+	}
+
+	return int(*n)
 }

@@ -1,19 +1,19 @@
 {{ define "content" }}
 
-<h2>Initial Guesses</h2>
+<h2>{{ .Guesses }}</h2>
 <div style="position: relative; height: 50vh;">
     <canvas id="pre-survey"></canvas>
 </div>
 {{ if ne .Survey.PresurveyAssessment nil }}
-<h3>You guessed {{ number .Survey.PresurveyAssessment }} civilizations</h3>
+<h3>{{ .Guess }}</h3>
 {{ end }}
 <hr>
-<h2>Final Results</h2>
+<h2>{{ .Results }}</h2>
 <div style="position: relative; height: 50vh;">
     <canvas id="post-survey"></canvas>
 </div>
 {{ if ne .Survey.N nil }}
-<h3>You estimated {{ number .Survey.N }} civilizations</h3>
+<h3>{{ .Estimation }}</h3>
 {{ end }}
 
 <script>
@@ -33,14 +33,14 @@
         x: {
           title: {
             display: true,
-            text: 'Civilizations'
+            text: {{ .Civilizations }}
           }
         },
         y: {
           beginAtZero: true,
           title: {
             display: true,
-            text: '# Participants'
+            text: {{ .Participants }}
           },
           ticks: {
             stepSize: 1

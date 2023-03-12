@@ -42,6 +42,97 @@
             "translation": "Início"
         },
         {
+            "id": "Results for Session {Name}",
+            "message": "Results for Session {Name}",
+            "translation": "Resultados para Sessão {Name}",
+            "placeholders": [
+                {
+                    "id": "Name",
+                    "string": "%[1]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "name"
+                }
+            ]
+        },
+        {
+            "id": "Initial Guesses",
+            "message": "Initial Guesses",
+            "translation": "Palpites Iniciais"
+        },
+        {
+            "id": "You guessed {PresurveyAssessment} civilizations",
+            "message": "You guessed {PresurveyAssessment} civilizations",
+            "translation": {
+                "select": {
+                    "feature": "plural",
+                    "arg": "PresurveyAssessment",
+                    "cases": {
+                        "=1": {
+                            "msg": "Você adivinhou 1 civilização"
+                        },
+                        "other": {
+                            "msg": "Você adivinhou {PresurveyAssessment} civilizações"
+                        }
+                    }
+                }
+            },
+            "placeholders": [
+                {
+                    "id": "PresurveyAssessment",
+                    "string": "%[1]d",
+                    "type": "int",
+                    "underlyingType": "int",
+                    "argNum": 1,
+                    "expr": "fprtToInt(survey.PresurveyAssessment)"
+                }
+            ]
+        },
+        {
+            "id": "Final Results",
+            "message": "Final Results",
+            "translation": "Resultados Finais"
+        },
+        {
+            "id": "You estimated {N} civilizations",
+            "message": "You estimated {N} civilizations",
+            "translation": {
+                "select": {
+                    "feature": "plural",
+                    "arg": "N",
+                    "cases": {
+                        "=1": {
+                            "msg": "Você estimou 1 civilização"
+                        },
+                        "other": {
+                            "msg": "Você estimou {N} civilizações"
+                        }
+                    }
+                }
+            },
+            "placeholders": [
+                {
+                    "id": "N",
+                    "string": "%[1]d",
+                    "type": "int",
+                    "underlyingType": "int",
+                    "argNum": 1,
+                    "expr": "fprtToInt(survey.N)"
+                }
+            ]
+        },
+        {
+            "id": "Civilizations",
+            "message": "Civilizations",
+            "translation": "Civilizações"
+        },
+        {
+            "id": "Participants",
+            "message": "Participants",
+            "translation": "Participantes"
+        },
+        {
             "id": "Are we alone in the Universe?",
             "message": "Are we alone in the Universe?",
             "translation": "Estamos sozinhos no Universo?"
@@ -95,11 +186,6 @@
             "id": "Name",
             "message": "Name",
             "translation": "Nome"
-        },
-        {
-            "id": "Participants",
-            "message": "Participants",
-            "translation": "Participantes"
         },
         {
             "id": "Created",

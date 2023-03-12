@@ -40,74 +40,90 @@ func init() {
 
 var messageKeyToIndex = map[string]int{
 	"%.f":                           0,
-	"Are we alone in the Universe?": 6,
+	"Are we alone in the Universe?": 13,
 	"Astronomy Education":           2,
-	"Back":                          20,
-	"Create Session":                12,
-	"Created":                       18,
+	"Back":                          26,
+	"Civilizations":                 11,
+	"Create Session":                19,
+	"Created":                       24,
 	"Drake Equation":                1,
-	"Estimate the number of detectable alien civilizations in the Milky Way using the Drake Equation.": 7,
-	"Home":                  5,
-	"Internal Server Error": 3,
-	"Join":                  23,
-	"Join Session":          13,
-	"Latest Sessions":       15,
-	"Learning Goals:":       8,
-	"Name":                  16,
-	"No available sessions": 19,
-	"Page Not Found":        4,
-	"Participants":          17,
-	"See Results":           24,
-	"Session %s":            21,
-	"Sessions":              14,
-	"Share Link:":           22,
-	"to compare your initial guess with the final value":                                                           11,
-	"to think about the size and composition of the galaxy and how it affects the possibility of intelligent life": 9,
-	"to understand and estimate the terms of the Drake Equation":                                                   10,
+	"Estimate the number of detectable alien civilizations in the Milky Way using the Drake Equation.": 14,
+	"Final Results":                  9,
+	"Home":                           5,
+	"Initial Guesses":                7,
+	"Internal Server Error":          3,
+	"Join":                           29,
+	"Join Session":                   20,
+	"Latest Sessions":                22,
+	"Learning Goals:":                15,
+	"Name":                           23,
+	"No available sessions":          25,
+	"Page Not Found":                 4,
+	"Participants":                   12,
+	"Results for Session %s":         6,
+	"See Results":                    30,
+	"Session %s":                     27,
+	"Sessions":                       21,
+	"Share Link:":                    28,
+	"You estimated %d civilizations": 10,
+	"You guessed %d civilizations":   8,
+	"to compare your initial guess with the final value":                                                           18,
+	"to think about the size and composition of the galaxy and how it affects the possibility of intelligent life": 16,
+	"to understand and estimate the terms of the Drake Equation":                                                   17,
 }
 
-var enIndex = []uint32{ // 26 elements
+var enIndex = []uint32{ // 32 elements
 	0x00000000, 0x00000007, 0x00000016, 0x0000002a,
-	0x00000040, 0x0000004f, 0x00000054, 0x00000072,
-	0x000000d3, 0x000000e3, 0x00000150, 0x0000018b,
-	0x000001be, 0x000001cd, 0x000001da, 0x000001e3,
-	0x000001f3, 0x000001f8, 0x00000205, 0x0000020d,
-	0x00000223, 0x00000228, 0x00000236, 0x00000242,
-	0x00000247, 0x00000253,
-} // Size: 128 bytes
+	0x00000040, 0x0000004f, 0x00000054, 0x0000006e,
+	0x0000007e, 0x000000c3, 0x000000d1, 0x0000011a,
+	0x00000128, 0x00000135, 0x00000153, 0x000001b4,
+	0x000001c4, 0x00000231, 0x0000026c, 0x0000029f,
+	0x000002ae, 0x000002bb, 0x000002c4, 0x000002d4,
+	0x000002d9, 0x000002e1, 0x000002f7, 0x000002fc,
+	0x0000030a, 0x00000316, 0x0000031b, 0x00000327,
+} // Size: 152 bytes
 
-const enData string = "" + // Size: 595 bytes
+const enData string = "" + // Size: 807 bytes
 	"\x02%.[1]f\x02Drake Equation\x02Astronomy Education\x02Internal Server E" +
-	"rror\x02Page Not Found\x02Home\x02Are we alone in the Universe?\x02Estim" +
-	"ate the number of detectable alien civilizations in the Milky Way using " +
-	"the Drake Equation.\x02Learning Goals:\x02to think about the size and co" +
-	"mposition of the galaxy and how it affects the possibility of intelligen" +
-	"t life\x02to understand and estimate the terms of the Drake Equation\x02" +
-	"to compare your initial guess with the final value\x02Create Session\x02" +
-	"Join Session\x02Sessions\x02Latest Sessions\x02Name\x02Participants\x02C" +
-	"reated\x02No available sessions\x02Back\x02Session %[1]s\x02Share Link:" +
+	"rror\x02Page Not Found\x02Home\x02Results for Session %[1]s\x02Initial G" +
+	"uesses\x14\x01\x81\x01\x00=\x01\x1b\x02You guessed 1 civilization\x00 " +
+	"\x02You guessed %[1]d civilizations\x02Final Results\x14\x01\x81\x01\x00" +
+	"=\x01\x1d\x02You estimated 1 civilization\x00\x22\x02You estimated %[1]d" +
+	" civilizations\x02Civilizations\x02Participants\x02Are we alone in the U" +
+	"niverse?\x02Estimate the number of detectable alien civilizations in the" +
+	" Milky Way using the Drake Equation.\x02Learning Goals:\x02to think abou" +
+	"t the size and composition of the galaxy and how it affects the possibil" +
+	"ity of intelligent life\x02to understand and estimate the terms of the D" +
+	"rake Equation\x02to compare your initial guess with the final value\x02C" +
+	"reate Session\x02Join Session\x02Sessions\x02Latest Sessions\x02Name\x02" +
+	"Created\x02No available sessions\x02Back\x02Session %[1]s\x02Share Link:" +
 	"\x02Join\x02See Results"
 
-var pt_BRIndex = []uint32{ // 26 elements
+var pt_BRIndex = []uint32{ // 32 elements
 	0x00000000, 0x00000000, 0x00000012, 0x0000002b,
 	0x00000044, 0x0000005c, 0x00000064, 0x00000082,
-	0x000000eb, 0x00000105, 0x00000167, 0x0000019a,
-	0x000001c9, 0x000001d7, 0x000001e8, 0x000001f1,
-	0x00000203, 0x00000208, 0x00000216, 0x0000021d,
-	0x00000239, 0x00000240, 0x0000024e, 0x00000265,
-	0x0000026b, 0x0000027a,
-} // Size: 128 bytes
+	0x00000094, 0x000000e3, 0x000000f5, 0x00000140,
+	0x0000014f, 0x0000015d, 0x0000017b, 0x000001e4,
+	0x000001fe, 0x00000260, 0x00000293, 0x000002c2,
+	0x000002d0, 0x000002e1, 0x000002ea, 0x000002fc,
+	0x00000301, 0x00000308, 0x00000324, 0x0000032b,
+	0x00000339, 0x00000350, 0x00000356, 0x00000365,
+} // Size: 152 bytes
 
-const pt_BRData string = "" + // Size: 634 bytes
+const pt_BRData string = "" + // Size: 869 bytes
 	"\x02A Equação Drake\x02Educação em Astronomia\x02Erro Interno do Servido" +
-	"r\x02Página Não Encontrada\x02Início\x02Estamos sozinhos no Universo?" +
-	"\x02Estime o número de civilizações alienígenas detectáveis na Via Lácte" +
-	"a usando a Equação de Drake.\x02Objetivos de Aprendizado:\x02pensar sobr" +
-	"e o tamanho e composição da galaxia e como afeta a possibilidade de vida" +
-	" inteligente\x02entender e estimar os termos da Equação de Drake\x02comp" +
-	"arar seu palpite inicial com o valor final\x02Criar Sessão\x02Entra na S" +
-	"essão\x02Sessões\x02Últimas Sessões\x02Nome\x02Participantes\x02Criado" +
+	"r\x02Página Não Encontrada\x02Início\x02Resultados para Sessão %[1]s\x02" +
+	"Palpites Iniciais\x14\x01\x81\x01\x00=\x01 \x02Você adivinhou 1 civiliza" +
+	"ção\x00%\x02Você adivinhou %[1]d civilizações\x02Resultados Finais\x14" +
+	"\x01\x81\x01\x00=\x01\x1e\x02Você estimou 1 civilização\x00#\x02Você est" +
+	"imou %[1]d civilizações\x02Civilizações\x02Participantes\x02Estamos sozi" +
+	"nhos no Universo?\x02Estime o número de civilizações alienígenas detectá" +
+	"veis na Via Láctea usando a Equação de Drake.\x02Objetivos de Aprendizad" +
+	"o:\x02pensar sobre o tamanho e composição da galaxia e como afeta a poss" +
+	"ibilidade de vida inteligente\x02entender e estimar os termos da Equação" +
+	" de Drake\x02comparar seu palpite inicial com o valor final\x02Criar Ses" +
+	"são\x02Entra na Sessão\x02Sessões\x02Últimas Sessões\x02Nome\x02Criado" +
 	"\x02Nenhuma sessão disponível\x02Voltar\x02Sessão %[1]s\x02Compartilhe E" +
 	"ndereço:\x02Entre\x02Ver Resultados"
 
-	// Total table size 1485 bytes (1KiB); checksum: C171CE40
+	// Total table size 1980 bytes (1KiB); checksum: 29DAB701
