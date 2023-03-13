@@ -4,7 +4,7 @@
         {
             "id": "Drake Equation",
             "message": "Drake Equation",
-            "translation": "A Equação de Drake"
+            "translation": "Equação Drake"
         },
         {
             "id": "Astronomy Education",
@@ -220,7 +220,7 @@
         {
             "id": "Drake Equation - {Name}",
             "message": "Drake Equation - {Name}",
-            "translation": "A Equação Drake - {Name}",
+            "translation": "Equação Drake - {Name}",
             "placeholders": [
                 {
                     "id": "Name",

@@ -183,72 +183,72 @@ const enData string = "" + // Size: 2717 bytes
 
 var pt_BRIndex = []uint32{ // 72 elements
 	// Entry 0 - 1F
-	0x00000000, 0x00000015, 0x0000002e, 0x00000047,
-	0x0000005f, 0x00000067, 0x00000085, 0x00000097,
-	0x000000e8, 0x000000fa, 0x00000145, 0x00000154,
-	0x00000162, 0x00000180, 0x000001e9, 0x00000203,
-	0x00000265, 0x00000298, 0x000002c7, 0x000002d5,
-	0x000002e6, 0x000002ef, 0x00000301, 0x00000306,
-	0x0000030d, 0x00000329, 0x00000330, 0x0000033e,
-	0x00000355, 0x0000035b, 0x0000036a, 0x00000384,
+	0x00000000, 0x00000010, 0x00000029, 0x00000042,
+	0x0000005a, 0x00000062, 0x00000080, 0x00000092,
+	0x000000e3, 0x000000f5, 0x00000140, 0x0000014f,
+	0x0000015d, 0x0000017b, 0x000001e4, 0x000001fe,
+	0x00000260, 0x00000293, 0x000002c2, 0x000002d0,
+	0x000002e1, 0x000002ea, 0x000002fc, 0x00000301,
+	0x00000308, 0x00000324, 0x0000032b, 0x00000339,
+	0x00000350, 0x00000356, 0x00000365, 0x0000037d,
 	// Entry 20 - 3F
-	0x0000038f, 0x000003a2, 0x000003ab, 0x000003ea,
-	0x00000435, 0x00000461, 0x00000471, 0x00000482,
-	0x00000492, 0x000004a2, 0x000004ce, 0x000004df,
-	0x000004fc, 0x00000519, 0x00000536, 0x00000554,
-	0x000005b6, 0x000005e5, 0x00000646, 0x00000673,
-	0x0000067a, 0x00000681, 0x0000068b, 0x000006d3,
-	0x00000701, 0x00000743, 0x0000078f, 0x000007a7,
-	0x00000832, 0x0000083f, 0x00000850, 0x000008a7,
+	0x00000388, 0x0000039b, 0x000003a4, 0x000003e3,
+	0x0000042e, 0x0000045a, 0x0000046a, 0x0000047b,
+	0x0000048b, 0x0000049b, 0x000004c7, 0x000004d8,
+	0x000004f5, 0x00000512, 0x0000052f, 0x0000054d,
+	0x000005af, 0x000005de, 0x0000063f, 0x0000066c,
+	0x00000673, 0x0000067a, 0x00000684, 0x000006cc,
+	0x000006fa, 0x0000073c, 0x00000788, 0x000007a0,
+	0x0000082b, 0x00000838, 0x00000849, 0x000008a0,
 	// Entry 40 - 5F
-	0x00000904, 0x0000097f, 0x00000a3e, 0x00000a6e,
-	0x00000ab3, 0x00000b0b, 0x00000b40, 0x00000b70,
+	0x000008fd, 0x00000978, 0x00000a37, 0x00000a67,
+	0x00000aac, 0x00000b04, 0x00000b39, 0x00000b69,
 } // Size: 312 bytes
 
-const pt_BRData string = "" + // Size: 2928 bytes
-	"\x02A Equação de Drake\x02Educação em Astronomia\x02Erro Interno do Serv" +
-	"idor\x02Página Não Encontrada\x02Início\x02Resultados para Sessão %[1]s" +
-	"\x02Palpites Iniciais\x14\x01\x81\x01\x00=\x01 \x02Seu palpite foi 1 civ" +
-	"ilização\x00'\x02Seu palpite foram %[1]d civilizações\x02Resultados Fina" +
-	"is\x14\x01\x81\x01\x00=\x01\x1e\x02Você estimou 1 civilização\x00#\x02Vo" +
-	"cê estimou %[1]d civilizações\x02Civilizações\x02Participantes\x02Estamo" +
-	"s sozinhos no Universo?\x02Estime o número de civilizações alienígenas d" +
-	"etectáveis na Via Láctea usando a Equação de Drake.\x02Objetivos de Apre" +
-	"ndizado:\x02pensar sobre o tamanho e composição da galaxia e como afeta " +
-	"a possibilidade de vida inteligente\x02entender e estimar os termos da E" +
-	"quação de Drake\x02comparar seu palpite inicial com o valor final\x02Cri" +
-	"ar Sessão\x02Entra na Sessão\x02Sessões\x02Últimas Sessões\x02Nome\x02Cr" +
-	"iado\x02Nenhuma sessão disponível\x02Voltar\x02Sessão %[1]s\x02Compartil" +
-	"he Endereço:\x02Entre\x02Ver Resultados\x02A Equação Drake - %[1]s\x02%[" +
-	"1]d anos\x02%[1]d anos ou mais\x02Próximo\x02Selecione a opção que melho" +
-	"r concorde com o que você pensa.\x02Quantas civilizações tecnologicament" +
-	"e avançadas existem na Via Láctea?\x02Apenas nós, estamos completamente " +
-	"sozinhos\x02Algumas dezenas\x02Algumas centenas\x02Alguns milhares\x02Al" +
-	"guns milhões\x02Quantas estrelas existem em nossa galáxia?\x02Algumas ce" +
-	"ntenas\x02Algumas centenas de milhares\x02Algumas centenas de milhões" +
-	"\x02Algumas centenas de bilhões\x02Algumas centenas de trilhões\x02Aprox" +
-	"imadamente qual é a porcentagem de estrelas em nossa galáxia que têm pla" +
-	"netas em órbita?\x02Muito poucas estrelas têm planetas em órbita\x02Na m" +
-	"édia, quantos planetas habitáveis (parecidos com a Terra) existem por s" +
-	"istema planetário?\x02Muito poucos (menos de um por sistema solar)\x022 " +
-	"ou 3\x024 ou 5\x02Mais de 5\x02Qual a fração de planetas habitáveis que " +
-	"a vida irá se desenvolver?\x02Uma pequena porcentagem, a vida é muito ra" +
-	"ra\x02100%%, se as condições forem favoráveis, a vida é inevitável\x02Qu" +
-	"al a fração de planetas com vida na qual vida inteligente irá evoluir?" +
-	"\x02Uma pequena porcentagom\x02Qual a fração de planetas com vida inteli" +
-	"gente que irá desenvolver uma civilização tecnologicamente capaz de se c" +
-	"omunicar por rádio?\x02Menos de 1%%\x02Em torno de 10%%\x02100%%, uma ci" +
-	"vilização tecnologicamente capaz sempre se desenvolverá se houver vida" +
-	"\x02Qual é o tempo de vida médio de uma civilização tecnologicamente cap" +
-	"az de comunicação?\x14\x01\x81\x01\x00=\x016\x02Você estimou que há 1 ci" +
-	"vilização na Via Láctea.\x00;\x02Você estimou que há %[1]d civilizações " +
-	"na Via Láctea.\x14\x01\x81\x01\x00=\x01X\x02Existe uma diferença de 1 or" +
-	"dem de magnitude a partir do seu palpite inicial de %[2]d.\x00]\x02Exist" +
-	"e uma diferença de %[1]d ordens de magnitude a partir do seu palpite ini" +
-	"cial de %[2]d.\x02Você concoda com essa estimativa mais recente?\x02Sim," +
-	" eu estou mais confiante usando o cálculo da Equação de Drake\x02Sim, a " +
-	"Equação de Drake inclui fatores que eu não pensei durante meu palpite in" +
-	"icial\x02Não, eu estou mais confiante no meu palpite inicial\x02Não, qua" +
-	"lquer palpite é tão bom quanto o meu"
+const pt_BRData string = "" + // Size: 2921 bytes
+	"\x02Equação Drake\x02Educação em Astronomia\x02Erro Interno do Servidor" +
+	"\x02Página Não Encontrada\x02Início\x02Resultados para Sessão %[1]s\x02P" +
+	"alpites Iniciais\x14\x01\x81\x01\x00=\x01 \x02Seu palpite foi 1 civiliza" +
+	"ção\x00'\x02Seu palpite foram %[1]d civilizações\x02Resultados Finais" +
+	"\x14\x01\x81\x01\x00=\x01\x1e\x02Você estimou 1 civilização\x00#\x02Você" +
+	" estimou %[1]d civilizações\x02Civilizações\x02Participantes\x02Estamos " +
+	"sozinhos no Universo?\x02Estime o número de civilizações alienígenas det" +
+	"ectáveis na Via Láctea usando a Equação de Drake.\x02Objetivos de Aprend" +
+	"izado:\x02pensar sobre o tamanho e composição da galaxia e como afeta a " +
+	"possibilidade de vida inteligente\x02entender e estimar os termos da Equ" +
+	"ação de Drake\x02comparar seu palpite inicial com o valor final\x02Criar" +
+	" Sessão\x02Entra na Sessão\x02Sessões\x02Últimas Sessões\x02Nome\x02Cria" +
+	"do\x02Nenhuma sessão disponível\x02Voltar\x02Sessão %[1]s\x02Compartilhe" +
+	" Endereço:\x02Entre\x02Ver Resultados\x02Equação Drake - %[1]s\x02%[1]d " +
+	"anos\x02%[1]d anos ou mais\x02Próximo\x02Selecione a opção que melhor co" +
+	"ncorde com o que você pensa.\x02Quantas civilizações tecnologicamente av" +
+	"ançadas existem na Via Láctea?\x02Apenas nós, estamos completamente sozi" +
+	"nhos\x02Algumas dezenas\x02Algumas centenas\x02Alguns milhares\x02Alguns" +
+	" milhões\x02Quantas estrelas existem em nossa galáxia?\x02Algumas centen" +
+	"as\x02Algumas centenas de milhares\x02Algumas centenas de milhões\x02Alg" +
+	"umas centenas de bilhões\x02Algumas centenas de trilhões\x02Aproximadame" +
+	"nte qual é a porcentagem de estrelas em nossa galáxia que têm planetas e" +
+	"m órbita?\x02Muito poucas estrelas têm planetas em órbita\x02Na média, q" +
+	"uantos planetas habitáveis (parecidos com a Terra) existem por sistema p" +
+	"lanetário?\x02Muito poucos (menos de um por sistema solar)\x022 ou 3\x02" +
+	"4 ou 5\x02Mais de 5\x02Qual a fração de planetas habitáveis que a vida i" +
+	"rá se desenvolver?\x02Uma pequena porcentagem, a vida é muito rara\x0210" +
+	"0%%, se as condições forem favoráveis, a vida é inevitável\x02Qual a fra" +
+	"ção de planetas com vida na qual vida inteligente irá evoluir?\x02Uma p" +
+	"equena porcentagom\x02Qual a fração de planetas com vida inteligente que" +
+	" irá desenvolver uma civilização tecnologicamente capaz de se comunicar " +
+	"por rádio?\x02Menos de 1%%\x02Em torno de 10%%\x02100%%, uma civilização" +
+	" tecnologicamente capaz sempre se desenvolverá se houver vida\x02Qual é " +
+	"o tempo de vida médio de uma civilização tecnologicamente capaz de comun" +
+	"icação?\x14\x01\x81\x01\x00=\x016\x02Você estimou que há 1 civilização n" +
+	"a Via Láctea.\x00;\x02Você estimou que há %[1]d civilizações na Via Láct" +
+	"ea.\x14\x01\x81\x01\x00=\x01X\x02Existe uma diferença de 1 ordem de magn" +
+	"itude a partir do seu palpite inicial de %[2]d.\x00]\x02Existe uma difer" +
+	"ença de %[1]d ordens de magnitude a partir do seu palpite inicial de %[2" +
+	"]d.\x02Você concoda com essa estimativa mais recente?\x02Sim, eu estou m" +
+	"ais confiante usando o cálculo da Equação de Drake\x02Sim, a Equação de " +
+	"Drake inclui fatores que eu não pensei durante meu palpite inicial\x02Nã" +
+	"o, eu estou mais confiante no meu palpite inicial\x02Não, qualquer palpi" +
+	"te é tão bom quanto o meu"
 
-	// Total table size 6269 bytes (6KiB); checksum: CBC99A8B
+	// Total table size 6262 bytes (6KiB); checksum: D5BC93ED
