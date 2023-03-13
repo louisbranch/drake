@@ -70,6 +70,10 @@ func (s *Survey) Result() {
 }
 
 func (s Survey) Difference() int64 {
+	if s.N == nil || s.PresurveyAssessment == nil {
+		return 0
+	}
+
 	n := math.Log10(*s.N)
 	a := math.Log10(*s.PresurveyAssessment)
 	diff := math.Floor(math.Abs(n - a))

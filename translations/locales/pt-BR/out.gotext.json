@@ -2,21 +2,6 @@
     "language": "pt-BR",
     "messages": [
         {
-            "id": "{Val}",
-            "message": "{Val}",
-            "translation": "",
-            "placeholders": [
-                {
-                    "id": "Val",
-                    "string": "%.[1]f",
-                    "type": "float64",
-                    "underlyingType": "float64",
-                    "argNum": 1,
-                    "expr": "val"
-                }
-            ]
-        },
-        {
             "id": "Drake Equation",
             "message": "Drake Equation",
             "translation": "A Equação Drake"
@@ -70,10 +55,10 @@
                     "arg": "PresurveyAssessment",
                     "cases": {
                         "=1": {
-                            "msg": "Você adivinhou 1 civilização"
+                            "msg": "Seu palpite é 1 civilização"
                         },
                         "other": {
-                            "msg": "Você adivinhou {PresurveyAssessment} civilizações"
+                            "msg": "Seu paplpite são {PresurveyAssessment} civilizações"
                         }
                     }
                 }
@@ -231,6 +216,280 @@
             "id": "See Results",
             "message": "See Results",
             "translation": "Ver Resultados"
+        },
+        {
+            "id": "Drake Equation - {Name}",
+            "message": "Drake Equation - {Name}",
+            "translation": "A Equação Drake - {Name}",
+            "placeholders": [
+                {
+                    "id": "Name",
+                    "string": "%[1]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "name"
+                }
+            ]
+        },
+        {
+            "id": "{N} years",
+            "message": "{N} years",
+            "translation": "{N} anos",
+            "placeholders": [
+                {
+                    "id": "N",
+                    "string": "%[1]d",
+                    "type": "int",
+                    "underlyingType": "int",
+                    "argNum": 1,
+                    "expr": "n"
+                }
+            ]
+        },
+        {
+            "id": "Next",
+            "message": "Next",
+            "translation": "Próximo"
+        },
+        {
+            "id": "Select the choice that best agrees with what you think.",
+            "message": "Select the choice that best agrees with what you think.",
+            "translation": "Selecione a opção que melhor concorde com o que você pensa."
+        },
+        {
+            "id": "How many technological advanced civilizations exist in the Milky Way?",
+            "message": "How many technological advanced civilizations exist in the Milky Way?",
+            "translation": "Quantas civilizações tecnologicamente avançadas existem na Via Láctea?"
+        },
+        {
+            "id": "Only us, we are all alone",
+            "message": "Only us, we are all alone",
+            "translation": "Apenas nós, estamos completamente sozinhos"
+        },
+        {
+            "id": "A few dozens",
+            "message": "A few dozens",
+            "translation": "Algumas dezenas"
+        },
+        {
+            "id": "A few hundreds",
+            "message": "A few hundreds",
+            "translation": "Algumas centenas"
+        },
+        {
+            "id": "A few thousands",
+            "message": "A few thousands",
+            "translation": "Alguns milhares"
+        },
+        {
+            "id": "A few millions",
+            "message": "A few millions",
+            "translation": "Alguns milhões"
+        },
+        {
+            "id": "About how many stars are there in our galaxy?",
+            "message": "About how many stars are there in our galaxy?",
+            "translation": "Quantas estrelas existem em nossa galáxia?"
+        },
+        {
+            "id": "A few hundred",
+            "message": "A few hundred",
+            "translation": "Algumas centenas"
+        },
+        {
+            "id": "A few hundred thousand",
+            "message": "A few hundred thousand",
+            "translation": "Algumas centenas de milhares"
+        },
+        {
+            "id": "A few hundred million",
+            "message": "A few hundred million",
+            "translation": "Algumas centenas de milhões"
+        },
+        {
+            "id": "A few hundred billion",
+            "message": "A few hundred billion",
+            "translation": "Algumas centenas de bilhões"
+        },
+        {
+            "id": "A few hundred trillion",
+            "message": "A few hundred trillion",
+            "translation": "Algumas centenas de trilhões"
+        },
+        {
+            "id": "Approximately what percentage of the stars in our galaxy have planets in orbit?",
+            "message": "Approximately what percentage of the stars in our galaxy have planets in orbit?",
+            "translation": "Aproximadamente qual é a porcentagem de estrelas em nossa galáxia que tem planetas em órbita?"
+        },
+        {
+            "id": "Very few stars have planets in orbit",
+            "message": "Very few stars have planets in orbit",
+            "translation": "Muito poucas estrelas tem planetas em órbita"
+        },
+        {
+            "id": "On average, how many habitable (Earth-like) planets are there per planetary system?",
+            "message": "On average, how many habitable (Earth-like) planets are there per planetary system?",
+            "translation": "Na média, quantos planetas habitáveis (parecidos com a Terra) existem por sistema planetário?"
+        },
+        {
+            "id": "Very few (not even one in every solar system)",
+            "message": "Very few (not even one in every solar system)",
+            "translation": "Muito poucos (menos de um por sistema solar)"
+        },
+        {
+            "id": "2 or 3",
+            "message": "2 or 3",
+            "translation": "2 ou 3"
+        },
+        {
+            "id": "4 or 5",
+            "message": "4 or 5",
+            "translation": "4 ou 5"
+        },
+        {
+            "id": "More than 5",
+            "message": "More than 5",
+            "translation": "Mais de 5"
+        },
+        {
+            "id": "On what fraction of habitable planets will life develop?",
+            "message": "On what fraction of habitable planets will life develop?",
+            "translation": "Qual a fração de planetas habitáveis que a vida irá se desenvolver?"
+        },
+        {
+            "id": "A very small percentage, life is very rare",
+            "message": "A very small percentage, life is very rare",
+            "translation": "Uma pequena porcentagem, a vida é muito rara"
+        },
+        {
+            "id": "100%, if conditions are favorable, life is inevitable",
+            "message": "100%, if conditions are favorable, life is inevitable",
+            "translation": "100%, se as condições forem favoráveis, a vida é inevitável"
+        },
+        {
+            "id": "On what fraction of planets on which life develops will life evolve to intelligence?",
+            "message": "On what fraction of planets on which life develops will life evolve to intelligence?",
+            "translation": "Qual a fração de planetas com vida na qual vida inteligente irá evoluir?"
+        },
+        {
+            "id": "A very small percentage",
+            "message": "A very small percentage",
+            "translation": "Uma pequena porcentagem"
+        },
+        {
+            "id": "What fraction of planets on which life evolves to intelligence will the intelligence develop a technological civilization capable of radio communication?",
+            "message": "What fraction of planets on which life evolves to intelligence will the intelligence develop a technological civilization capable of radio communication?",
+            "translation": "Qual a fração de planetas com vida inteligente que irá desenvolver uma civilização tecnologicamente capaz de se comunicar por rádio?"
+        },
+        {
+            "id": "Less than 1%",
+            "message": "Less than 1%",
+            "translation": "Menos de 1%"
+        },
+        {
+            "id": "About 10%",
+            "message": "About 10%",
+            "translation": "Em torno de 10%"
+        },
+        {
+            "id": "100%, a technological civilization will always eventually develop if life is present",
+            "message": "100%, a technological civilization will always eventually develop if life is present",
+            "translation": "100%, uma civilização tecnologicamente capaz sempre se desenvolve se houver vida"
+        },
+        {
+            "id": "What is the average lifetime of a technological civilization capable of communication?",
+            "message": "What is the average lifetime of a technological civilization capable of communication?",
+            "translation": "Qual é o tempo de vida médio de uma civilização tecnologicamente capaz de comunicação?"
+        },
+        {
+            "id": "You have estimated that there are {N} civilizations in the Milky Way.",
+            "message": "You have estimated that there are {N} civilizations in the Milky Way.",
+            "translation": {
+                "select": {
+                    "feature": "plural",
+                    "arg": "N",
+                    "cases": {
+                        "=1": {
+                            "msg": "Você estimou que há 1 civilização na Via Láctea."
+                        },
+                        "other": {
+                            "msg": "Você estimou que há {N} civilizações na Via Láctea."
+                        }
+                    }
+                }
+            },
+            "placeholders": [
+                {
+                    "id": "N",
+                    "string": "%[1]d",
+                    "type": "int",
+                    "underlyingType": "int",
+                    "argNum": 1,
+                    "expr": "fprtToInt(survey.N)"
+                }
+            ]
+        },
+        {
+            "id": "This is a difference of {Difference} orders of magnitude from your initial prediction of {PresurveyAssessment}.",
+            "message": "This is a difference of {Difference} orders of magnitude from your initial prediction of {PresurveyAssessment}.",
+            "translation": {
+                "select": {
+                    "feature": "plural",
+                    "arg": "Difference",
+                    "cases": {
+                        "=1": {
+                            "msg": "Existe uma diferença de 1 ordem de magnitude a partir do sua estimativa inicial de {PresurveyAssessment}."
+                        },
+                        "other": {
+                            "msg": "Existe uma diferença de {Difference} ordens de magnitude a partir do sua estimativa inicial de {PresurveyAssessment}."
+                        }
+                    }
+                }
+            },
+            "placeholders": [
+                {
+                    "id": "Difference",
+                    "string": "%[1]d",
+                    "type": "int64",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "survey.Difference()"
+                },
+                {
+                    "id": "PresurveyAssessment",
+                    "string": "%[2]d",
+                    "type": "int",
+                    "underlyingType": "int",
+                    "argNum": 2,
+                    "expr": "fprtToInt(survey.PresurveyAssessment)"
+                }
+            ]
+        },
+        {
+            "id": "Do you agree with your most recent estimation?",
+            "message": "Do you agree with your most recent estimation?",
+            "translation": "Você concoda com essa estimativa mais recente?"
+        },
+        {
+            "id": "Yes, I am more confident using the Drake Equation calculation",
+            "message": "Yes, I am more confident using the Drake Equation calculation",
+            "translation": "Sum, eu estou mais confiante usando o cálculo da Equação de Drake"
+        },
+        {
+            "id": "Yes, the Drake Equation includes factors I didn't think during my initial prediction",
+            "message": "Yes, the Drake Equation includes factors I didn't think during my initial prediction",
+            "translation": "Sim, a Equação de Drake inclui fatores que eu não pensei durante minha estimativa inicial"
+        },
+        {
+            "id": "No, I am more confident with my initial prediction",
+            "message": "No, I am more confident with my initial prediction",
+            "translation": "Não, eu estou mais confiante no minha estimativa inicial"
+        },
+        {
+            "id": "No, any guess is good as mine",
+            "message": "No, any guess is good as mine",
+            "translation": "Não, qualquer palpite é tão bom quanto o meu"
         }
     ]
 }
