@@ -16,7 +16,7 @@ func (s *Server) i18n(w http.ResponseWriter, r *http.Request) (*message.Printer,
 
 	query := r.URL.Query().Get("lang")
 	cookie, err := r.Cookie("lang")
-	if err != nil && query != "" {
+	if err != nil || query != "" {
 		http.SetCookie(w, &http.Cookie{
 			Name:   "lang",
 			Value:  query,
