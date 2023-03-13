@@ -11,6 +11,12 @@ header h1 {
     text-align: center;
 }
 
+header h1 a,
+header h1 a:visited {
+    text-decoration: none;
+    color: black;
+}
+
 nav {
     margin-top: 1em;
 }
