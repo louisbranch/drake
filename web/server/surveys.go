@@ -225,7 +225,7 @@ func (srv *Server) surveys(w http.ResponseWriter, r *http.Request, name string) 
 					Value: 0.8,
 				},
 				{
-					Text:  printer.Sprintf("100%%, if conditions are favorable, life is inevitable"),
+					Text:  printer.Sprintf("100%%%%, if conditions are favorable, life is inevitable"),
 					Value: 1,
 				},
 			},
@@ -255,11 +255,11 @@ func (srv *Server) surveys(w http.ResponseWriter, r *http.Request, name string) 
 			Fc: printer.Sprintf("What fraction of planets on which life evolves to intelligence will the intelligence develop a technological civilization capable of radio communication?"),
 			FcValues: []Option{
 				{
-					Text:  printer.Sprintf("Less than 1%%"),
+					Text:  printer.Sprintf("Less than 1%%%%"),
 					Value: 0.001,
 				},
 				{
-					Text:  printer.Sprintf("About 10%%"),
+					Text:  printer.Sprintf("About 10%%%%"),
 					Value: 0.1,
 				},
 				{
@@ -271,7 +271,7 @@ func (srv *Server) surveys(w http.ResponseWriter, r *http.Request, name string) 
 					Value: 0.55,
 				},
 				{
-					Text:  printer.Sprintf("100%%, a technological civilization will always eventually develop if life is present"),
+					Text:  printer.Sprintf("100%%%%, a technological civilization will always eventually develop if life is present"),
 					Value: 1,
 				},
 			},

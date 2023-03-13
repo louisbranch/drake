@@ -378,9 +378,9 @@
             "translation": "Uma pequena porcentagem, a vida é muito rara"
         },
         {
-            "id": "100%, if conditions are favorable, life is inevitable",
-            "message": "100%, if conditions are favorable, life is inevitable",
-            "translation": "100%, se as condições forem favoráveis, a vida é inevitável"
+            "id": "100%%, if conditions are favorable, life is inevitable",
+            "message": "100%%, if conditions are favorable, life is inevitable",
+            "translation": "100%%, se as condições forem favoráveis, a vida é inevitável"
         },
         {
             "id": "On what fraction of planets on which life develops will life evolve to intelligence?",
@@ -398,19 +398,19 @@
             "translation": "Qual a fração de planetas com vida inteligente que irá desenvolver uma civilização tecnologicamente capaz de se comunicar por rádio?"
         },
         {
-            "id": "Less than 1%",
-            "message": "Less than 1%",
-            "translation": "Menos de 1%"
+            "id": "Less than 1%%",
+            "message": "Less than 1%%",
+            "translation": "Menos de 1%%"
         },
         {
-            "id": "About 10%",
-            "message": "About 10%",
-            "translation": "Em torno de 10%"
+            "id": "About 10%%",
+            "message": "About 10%%",
+            "translation": "Em torno de 10%%"
         },
         {
-            "id": "100%, a technological civilization will always eventually develop if life is present",
-            "message": "100%, a technological civilization will always eventually develop if life is present",
-            "translation": "100%, uma civilização tecnologicamente capaz sempre se desenvolve se houver vida"
+            "id": "100%%, a technological civilization will always eventually develop if life is present",
+            "message": "100%%, a technological civilization will always eventually develop if life is present",
+            "translation": "100%%, uma civilização tecnologicamente capaz sempre se desenvolverá se houver vida"
         },
         {
             "id": "What is the average lifetime of a technological civilization capable of communication?",

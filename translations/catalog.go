@@ -41,8 +41,8 @@ func init() {
 var messageKeyToIndex = map[string]int{
 	"%d years":         31,
 	"%d years or more": 32,
-	"100%%, a technological civilization will always eventually develop if life is present": 62,
-	"100%%, if conditions are favorable, life is inevitable":                                56,
+	"100%%%%, a technological civilization will always eventually develop if life is present": 62,
+	"100%%%%, if conditions are favorable, life is inevitable":                                56,
 	"2 or 3":                  51,
 	"4 or 5":                  52,
 	"A few dozens":            37,
@@ -56,7 +56,7 @@ var messageKeyToIndex = map[string]int{
 	"A few thousands":         39,
 	"A very small percentage": 58,
 	"A very small percentage, life is very rare": 55,
-	"About 10%%": 61,
+	"About 10%%%%": 61,
 	"About how many stars are there in our galaxy?":                                   41,
 	"Approximately what percentage of the stars in our galaxy have planets in orbit?": 47,
 	"Are we alone in the Universe?":                                                   12,
@@ -78,7 +78,7 @@ var messageKeyToIndex = map[string]int{
 	"Join Session":          19,
 	"Latest Sessions":       21,
 	"Learning Goals:":       14,
-	"Less than 1%%":         60,
+	"Less than 1%%%%":       60,
 	"More than 5":           53,
 	"Name":                  22,
 	"Next":                  33,
@@ -129,14 +129,14 @@ var enIndex = []uint32{ // 72 elements
 	0x00000482, 0x00000498, 0x000004ae, 0x000004c5,
 	0x00000515, 0x0000053a, 0x0000058e, 0x000005bc,
 	0x000005c3, 0x000005ca, 0x000005d6, 0x0000060f,
-	0x0000063a, 0x00000670, 0x000006c5, 0x000006dd,
-	0x00000777, 0x00000784, 0x0000078e, 0x000007e3,
+	0x0000063a, 0x00000671, 0x000006c6, 0x000006de,
+	0x00000778, 0x00000786, 0x00000791, 0x000007e7,
 	// Entry 40 - 5F
-	0x0000083a, 0x000008cf, 0x00000986, 0x000009b5,
-	0x000009f3, 0x00000a48, 0x00000a7b, 0x00000a99,
+	0x0000083e, 0x000008d3, 0x0000098a, 0x000009b9,
+	0x000009f7, 0x00000a4c, 0x00000a7f, 0x00000a9d,
 } // Size: 312 bytes
 
-const enData string = "" + // Size: 2713 bytes
+const enData string = "" + // Size: 2717 bytes
 	"\x02Drake Equation\x02Astronomy Education\x02Internal Server Error\x02Pa" +
 	"ge Not Found\x02Home\x02Results for Session %[1]s\x02Initial Guesses\x14" +
 	"\x01\x81\x01\x00=\x01\x1b\x02You guessed 1 civilization\x00 \x02You gues" +
@@ -162,24 +162,24 @@ const enData string = "" + // Size: 2713 bytes
 	"arth-like) planets are there per planetary system?\x02Very few (not even" +
 	" one in every solar system)\x022 or 3\x024 or 5\x02More than 5\x02On wha" +
 	"t fraction of habitable planets will life develop?\x02A very small perce" +
-	"ntage, life is very rare\x02100%, if conditions are favorable, life is i" +
-	"nevitable\x02On what fraction of planets on which life develops will lif" +
-	"e evolve to intelligence?\x02A very small percentage\x02What fraction of" +
-	" planets on which life evolves to intelligence will the intelligence dev" +
-	"elop a technological civilization capable of radio communication?\x02Les" +
-	"s than 1%\x02About 10%\x02100%, a technological civilization will always" +
-	" eventually develop if life is present\x02What is the average lifetime o" +
-	"f a technological civilization capable of communication?\x14\x01\x81\x01" +
-	"\x00=\x01C\x02You have estimated that there are 1 civilization in the Mi" +
-	"lky Way.\x00H\x02You have estimated that there are %[1]d civilizations i" +
-	"n the Milky Way.\x14\x01\x81\x01\x00=\x01T\x02This is a difference of 1 " +
-	"order of magnitude from your initial prediction of %[2]d.\x00Y\x02This i" +
-	"s a difference of %[1]d orders of magnitude from your initial prediction" +
-	" of %[2]d.\x02Do you agree with your most recent estimation?\x02Yes, I a" +
-	"m more confident using the Drake Equation calculation\x02Yes, the Drake " +
-	"Equation includes factors I didn't think during my initial prediction" +
-	"\x02No, I am more confident with my initial prediction\x02No, any guess " +
-	"is good as mine"
+	"ntage, life is very rare\x02100%%, if conditions are favorable, life is " +
+	"inevitable\x02On what fraction of planets on which life develops will li" +
+	"fe evolve to intelligence?\x02A very small percentage\x02What fraction o" +
+	"f planets on which life evolves to intelligence will the intelligence de" +
+	"velop a technological civilization capable of radio communication?\x02Le" +
+	"ss than 1%%\x02About 10%%\x02100%%, a technological civilization will al" +
+	"ways eventually develop if life is present\x02What is the average lifeti" +
+	"me of a technological civilization capable of communication?\x14\x01\x81" +
+	"\x01\x00=\x01C\x02You have estimated that there are 1 civilization in th" +
+	"e Milky Way.\x00H\x02You have estimated that there are %[1]d civilizatio" +
+	"ns in the Milky Way.\x14\x01\x81\x01\x00=\x01T\x02This is a difference o" +
+	"f 1 order of magnitude from your initial prediction of %[2]d.\x00Y\x02Th" +
+	"is is a difference of %[1]d orders of magnitude from your initial predic" +
+	"tion of %[2]d.\x02Do you agree with your most recent estimation?\x02Yes," +
+	" I am more confident using the Drake Equation calculation\x02Yes, the Dr" +
+	"ake Equation includes factors I didn't think during my initial predictio" +
+	"n\x02No, I am more confident with my initial prediction\x02No, any guess" +
+	" is good as mine"
 
 var pt_BRIndex = []uint32{ // 72 elements
 	// Entry 0 - 1F
@@ -198,14 +198,14 @@ var pt_BRIndex = []uint32{ // 72 elements
 	0x000004fd, 0x0000051a, 0x00000537, 0x00000555,
 	0x000005b6, 0x000005e4, 0x00000645, 0x00000672,
 	0x00000679, 0x00000680, 0x0000068a, 0x000006d2,
-	0x00000700, 0x00000741, 0x0000078d, 0x000007a5,
-	0x00000830, 0x0000083c, 0x0000084c, 0x0000089f,
+	0x00000700, 0x00000742, 0x0000078e, 0x000007a6,
+	0x00000831, 0x0000083e, 0x0000084f, 0x000008a6,
 	// Entry 40 - 5F
-	0x000008fc, 0x00000977, 0x00000a36, 0x00000a66,
-	0x00000aab, 0x00000b03, 0x00000b38, 0x00000b68,
+	0x00000903, 0x0000097e, 0x00000a3d, 0x00000a6d,
+	0x00000ab2, 0x00000b0a, 0x00000b3f, 0x00000b6f,
 } // Size: 312 bytes
 
-const pt_BRData string = "" + // Size: 2920 bytes
+const pt_BRData string = "" + // Size: 2927 bytes
 	"\x02A Equação de Drake\x02Educação em Astronomia\x02Erro Interno do Serv" +
 	"idor\x02Página Não Encontrada\x02Início\x02Resultados para Sessão %[1]s" +
 	"\x02Palpites Iniciais\x14\x01\x81\x01\x00=\x01 \x02Seu palpite foi 1 civ" +
@@ -233,22 +233,22 @@ const pt_BRData string = "" + // Size: 2920 bytes
 	"istema planetário?\x02Muito poucos (menos de um por sistema solar)\x022 " +
 	"ou 3\x024 ou 5\x02Mais de 5\x02Qual a fração de planetas habitáveis que " +
 	"a vida irá se desenvolver?\x02Uma pequena porcentagem, a vida é muito ra" +
-	"ra\x02100%, se as condições forem favoráveis, a vida é inevitável\x02Qua" +
-	"l a fração de planetas com vida na qual vida inteligente irá evoluir?" +
+	"ra\x02100%%, se as condições forem favoráveis, a vida é inevitável\x02Qu" +
+	"al a fração de planetas com vida na qual vida inteligente irá evoluir?" +
 	"\x02Uma pequena porcentagem\x02Qual a fração de planetas com vida inteli" +
 	"gente que irá desenvolver uma civilização tecnologicamente capaz de se c" +
-	"omunicar por rádio?\x02Menos de 1%\x02Em torno de 10%\x02100%, uma civil" +
-	"ização tecnologicamente capaz sempre se desenvolve se houver vida\x02Qua" +
-	"l é o tempo de vida médio de uma civilização tecnologicamente capaz de c" +
-	"omunicação?\x14\x01\x81\x01\x00=\x016\x02Você estimou que há 1 civilizaç" +
-	"ão na Via Láctea.\x00;\x02Você estimou que há %[1]d civilizações na Via" +
-	" Láctea.\x14\x01\x81\x01\x00=\x01X\x02Existe uma diferença de 1 ordem de" +
-	" magnitude a partir do seu palpite inicial de %[2]d.\x00]\x02Existe uma " +
-	"diferença de %[1]d ordens de magnitude a partir do seu palpite inicial d" +
-	"e %[2]d.\x02Você concoda com essa estimativa mais recente?\x02Sim, eu es" +
-	"tou mais confiante usando o cálculo da Equação de Drake\x02Sim, a Equaçã" +
-	"o de Drake inclui fatores que eu não pensei durante meu palpite inicial" +
-	"\x02Não, eu estou mais confiante no meu palpite inicial\x02Não, qualquer" +
-	" palpite é tão bom quanto o meu"
+	"omunicar por rádio?\x02Menos de 1%%\x02Em torno de 10%%\x02100%%, uma ci" +
+	"vilização tecnologicamente capaz sempre se desenvolverá se houver vida" +
+	"\x02Qual é o tempo de vida médio de uma civilização tecnologicamente cap" +
+	"az de comunicação?\x14\x01\x81\x01\x00=\x016\x02Você estimou que há 1 ci" +
+	"vilização na Via Láctea.\x00;\x02Você estimou que há %[1]d civilizações " +
+	"na Via Láctea.\x14\x01\x81\x01\x00=\x01X\x02Existe uma diferença de 1 or" +
+	"dem de magnitude a partir do seu palpite inicial de %[2]d.\x00]\x02Exist" +
+	"e uma diferença de %[1]d ordens de magnitude a partir do seu palpite ini" +
+	"cial de %[2]d.\x02Você concoda com essa estimativa mais recente?\x02Sim," +
+	" eu estou mais confiante usando o cálculo da Equação de Drake\x02Sim, a " +
+	"Equação de Drake inclui fatores que eu não pensei durante meu palpite in" +
+	"icial\x02Não, eu estou mais confiante no meu palpite inicial\x02Não, qua" +
+	"lquer palpite é tão bom quanto o meu"
 
-	// Total table size 6257 bytes (6KiB); checksum: CD719E63
+	// Total table size 6268 bytes (6KiB); checksum: 9ADA7C3B
