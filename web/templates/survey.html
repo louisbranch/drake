@@ -56,7 +56,7 @@
     <h3>{{ .N }}</h3>
     {{ range $opt := .NValues }}
         <label class="pure-radio">
-            <input type="radio" name="presurvey_assessment" value="{{ printf '%f' $opt.Value }}" /> {{ $opt.Text }}
+            <input type="radio" name="presurvey_assessment" value='{{ printf "%.0f" $opt.Value }}' /> {{ $opt.Text }}
         </label>
     {{ end }}
 
@@ -64,7 +64,7 @@
     <h3>{{ .R }}</h3>
     {{ range $opt := .RValues }}
         <label class="pure-radio">
-            <input type="radio" name="r" value="{{ printf '%f' $opt.Value }}" /> {{ $opt.Text }}
+            <input type="radio" name="r" value='{{ printf "%.0f" $opt.Value }}' /> {{ $opt.Text }}
         </label>
     {{ end }}
 
@@ -72,7 +72,7 @@
     <h3>{{ .Fp }}</h3>
     {{ range $opt := .FpValues }}
         <label class="pure-radio">
-            <input type="radio" name="fp" value="{{ printf '%f' $opt.Value }}" /> {{ $opt.Text }}
+            <input type="radio" name="fp" value='{{ printf "%.3f" $opt.Value }}' /> {{ $opt.Text }}
         </label>
     {{ end }}
 
@@ -80,7 +80,7 @@
     <h3>{{ .Ne }}</h3>
     {{ range $opt := .NeValues }}
         <label class="pure-radio">
-            <input type="radio" name="ne" value="{{ printf '%f' $opt.Value }}" /> {{ $opt.Text }}
+            <input type="radio" name="ne" value='{{ printf "%.3f" $opt.Value }}' /> {{ $opt.Text }}
         </label>
     {{ end }}
 
@@ -88,7 +88,7 @@
     <h3>{{ .Fl }}</h3>
     {{ range $opt := .FlValues }}
         <label class="pure-radio">
-            <input type="radio" name="fl" value="{{ printf '%f' $opt.Value }}" /> {{ $opt.Text }}
+            <input type="radio" name="fl" value='{{ printf "%.3f" $opt.Value }}' /> {{ $opt.Text }}
         </label>
     {{ end }}
 
@@ -96,7 +96,7 @@
     <h3>{{ .Fi }}</h3>
     {{ range $opt := .FiValues }}
         <label class="pure-radio">
-            <input type="radio" name="fi" value="{{ printf '%f' $opt.Value }}" /> {{ $opt.Text }}
+            <input type="radio" name="fi" value='{{ printf "%.3f" $opt.Value }}' /> {{ $opt.Text }}
         </label>
     {{ end }}
 
@@ -104,7 +104,7 @@
     <h3>{{ .Fc }}</h3>
     {{ range $opt := .FcValues }}
         <label class="pure-radio">
-            <input type="radio" name="fc" value="{{ printf '%f' $opt.Value }}" /> {{ $opt.Text }}
+            <input type="radio" name="fc" value='{{ printf "%.3f" $opt.Value }}' /> {{ $opt.Text }}
         </label>
     {{ end }}
 
@@ -112,7 +112,7 @@
     <h3>{{ .L }}</h3>
     {{ range $opt := .LValues }}
         <label class="pure-radio">
-            <input type="radio" name="l" value="{{ printf '%f' $opt.Value }}" /> {{ $opt.Text }}
+            <input type="radio" name="l" value='{{ printf "%.0f" $opt.Value }}' /> {{ $opt.Text }}
         </label>
     {{ end }}
 
@@ -123,7 +123,7 @@
     <h3>{{ .Agreement }}</h3>
     {{ range $opt := .AgreementValues }}
         <label class="pure-radio">
-            <input type="radio" name="learn_gain" value="{{ printf '%f' $opt.Value }}" /> {{ $opt.Text }}
+            <input type="radio" name="learn_gain" value='{{ printf "%.0f" $opt.Value }}' /> {{ $opt.Text }}
         </label>
     {{ end }}
 

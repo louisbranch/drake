@@ -92,10 +92,11 @@ func (r Result) Participants() int {
 }
 
 func (r Result) Buckets() []string {
+	max := 15
 	supers := []rune{'⁰', '¹', '²', '³', '⁴', '⁵', '⁶', '⁷', '⁸', '⁹'}
-	buckets := make([]string, 14)
+	buckets := make([]string, max)
 
-	for i := 0; i < 14; i++ {
+	for i := 0; i < max; i++ {
 		val := "10"
 		if i > 10 {
 			val += string(supers[1]) + string(supers[i%10])
@@ -126,7 +127,8 @@ func (r Result) PresurveyData() []int {
 }
 
 func (r Result) PostsurveyData() []int {
-	data := make([]int, len(r.Buckets()))
+	max := len(r.Buckets())
+	data := make([]int, max)
 
 	for _, s := range r.Surveys {
 		if s.N == nil {
@@ -135,6 +137,8 @@ func (r Result) PostsurveyData() []int {
 		n := int(math.Log10(*s.N))
 		if n < 1 {
 			n = 0
+		} else if n > max-1 {
+			n = max - 1
 		}
 		data[n] += 1
 	}

@@ -4,11 +4,9 @@ import (
 	"database/sql"
 	"errors"
 	"fmt"
-	"math"
 	"net/http"
 	"net/url"
 	"strconv"
-	"strings"
 	"time"
 
 	"github.com/louisbranch/drake"
@@ -311,28 +309,28 @@ func (srv *Server) surveys(w http.ResponseWriter, r *http.Request, name string) 
 
 		form := r.PostForm
 
-		if val := powers(form.Get("presurvey_assessment")); val != nil {
+		if val := ptrFloat(form.Get("presurvey_assessment")); val != nil {
 			survey.PresurveyAssessment = val
 		}
-		if val := powers(form.Get("r")); val != nil {
+		if val := ptrFloat(form.Get("r")); val != nil {
 			survey.R = val
 		}
-		if val := fraction(form.Get("fp")); val != nil {
+		if val := ptrFloat(form.Get("fp")); val != nil {
 			survey.Fp = val
 		}
-		if val := powers(form.Get("ne")); val != nil {
+		if val := ptrFloat(form.Get("ne")); val != nil {
 			survey.Ne = val
 		}
-		if val := fraction(form.Get("fl")); val != nil {
+		if val := ptrFloat(form.Get("fl")); val != nil {
 			survey.Fl = val
 		}
-		if val := fraction(form.Get("fi")); val != nil {
+		if val := ptrFloat(form.Get("fi")); val != nil {
 			survey.Fi = val
 		}
-		if val := fraction(form.Get("fc")); val != nil {
+		if val := ptrFloat(form.Get("fc")); val != nil {
 			survey.Fc = val
 		}
-		if val := powers(form.Get("l")); val != nil {
+		if val := ptrFloat(form.Get("l")); val != nil {
 			survey.L = val
 			survey.Result()
 		}
@@ -356,21 +354,15 @@ func (srv *Server) surveys(w http.ResponseWriter, r *http.Request, name string) 
 	}
 }
 
-func powers(value string) *float64 {
+func ptrFloat(value string) *float64 {
 	if value == "" {
 		return nil
 	}
-	n := strings.Count(value, "0")
-	p := math.Pow(10, float64(n))
-	return &p
-}
-
-func fraction(value string) *float64 {
-	if value == "" {
-		return nil
+	n, err := strconv.ParseFloat(value, 64)
+	if err == nil {
+		return &n
 	}
-	n, _ := strconv.ParseFloat(value, 64)
-	return &n
+	return nil
 }
 
 func prtBool(value string) *bool {
