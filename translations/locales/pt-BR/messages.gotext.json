@@ -58,7 +58,7 @@
                             "msg": "Seu palpite foi 1 civilização"
                         },
                         "other": {
-                            "msg": "Seu paplpite foram {PresurveyAssessment} civilizações"
+                            "msg": "Seu palpite foram {PresurveyAssessment} civilizações"
                         }
                     }
                 }
@@ -335,12 +335,12 @@
         {
             "id": "Approximately what percentage of the stars in our galaxy have planets in orbit?",
             "message": "Approximately what percentage of the stars in our galaxy have planets in orbit?",
-            "translation": "Aproximadamente qual é a porcentagem de estrelas em nossa galáxia que tem planetas em órbita?"
+            "translation": "Aproximadamente qual é a porcentagem de estrelas em nossa galáxia que têm planetas em órbita?"
         },
         {
             "id": "Very few stars have planets in orbit",
             "message": "Very few stars have planets in orbit",
-            "translation": "Muito poucas estrelas tem planetas em órbita"
+            "translation": "Muito poucas estrelas têm planetas em órbita"
         },
         {
             "id": "On average, how many habitable (Earth-like) planets are there per planetary system?",
@@ -390,7 +390,7 @@
         {
             "id": "A very small percentage",
             "message": "A very small percentage",
-            "translation": "Uma pequena porcentagem"
+            "translation": "Uma pequena porcentagom"
         },
         {
             "id": "What fraction of planets on which life evolves to intelligence will the intelligence develop a technological civilization capable of radio communication?",

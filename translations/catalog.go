@@ -185,57 +185,57 @@ var pt_BRIndex = []uint32{ // 72 elements
 	// Entry 0 - 1F
 	0x00000000, 0x00000015, 0x0000002e, 0x00000047,
 	0x0000005f, 0x00000067, 0x00000085, 0x00000097,
-	0x000000e9, 0x000000fb, 0x00000146, 0x00000155,
-	0x00000163, 0x00000181, 0x000001ea, 0x00000204,
-	0x00000266, 0x00000299, 0x000002c8, 0x000002d6,
-	0x000002e7, 0x000002f0, 0x00000302, 0x00000307,
-	0x0000030e, 0x0000032a, 0x00000331, 0x0000033f,
-	0x00000356, 0x0000035c, 0x0000036b, 0x00000385,
+	0x000000e8, 0x000000fa, 0x00000145, 0x00000154,
+	0x00000162, 0x00000180, 0x000001e9, 0x00000203,
+	0x00000265, 0x00000298, 0x000002c7, 0x000002d5,
+	0x000002e6, 0x000002ef, 0x00000301, 0x00000306,
+	0x0000030d, 0x00000329, 0x00000330, 0x0000033e,
+	0x00000355, 0x0000035b, 0x0000036a, 0x00000384,
 	// Entry 20 - 3F
-	0x00000390, 0x000003a3, 0x000003ac, 0x000003eb,
-	0x00000436, 0x00000462, 0x00000472, 0x00000483,
-	0x00000493, 0x000004a3, 0x000004cf, 0x000004e0,
-	0x000004fd, 0x0000051a, 0x00000537, 0x00000555,
-	0x000005b6, 0x000005e4, 0x00000645, 0x00000672,
-	0x00000679, 0x00000680, 0x0000068a, 0x000006d2,
-	0x00000700, 0x00000742, 0x0000078e, 0x000007a6,
-	0x00000831, 0x0000083e, 0x0000084f, 0x000008a6,
+	0x0000038f, 0x000003a2, 0x000003ab, 0x000003ea,
+	0x00000435, 0x00000461, 0x00000471, 0x00000482,
+	0x00000492, 0x000004a2, 0x000004ce, 0x000004df,
+	0x000004fc, 0x00000519, 0x00000536, 0x00000554,
+	0x000005b6, 0x000005e5, 0x00000646, 0x00000673,
+	0x0000067a, 0x00000681, 0x0000068b, 0x000006d3,
+	0x00000701, 0x00000743, 0x0000078f, 0x000007a7,
+	0x00000832, 0x0000083f, 0x00000850, 0x000008a7,
 	// Entry 40 - 5F
-	0x00000903, 0x0000097e, 0x00000a3d, 0x00000a6d,
-	0x00000ab2, 0x00000b0a, 0x00000b3f, 0x00000b6f,
+	0x00000904, 0x0000097f, 0x00000a3e, 0x00000a6e,
+	0x00000ab3, 0x00000b0b, 0x00000b40, 0x00000b70,
 } // Size: 312 bytes
 
-const pt_BRData string = "" + // Size: 2927 bytes
+const pt_BRData string = "" + // Size: 2928 bytes
 	"\x02A Equação de Drake\x02Educação em Astronomia\x02Erro Interno do Serv" +
 	"idor\x02Página Não Encontrada\x02Início\x02Resultados para Sessão %[1]s" +
 	"\x02Palpites Iniciais\x14\x01\x81\x01\x00=\x01 \x02Seu palpite foi 1 civ" +
-	"ilização\x00(\x02Seu paplpite foram %[1]d civilizações\x02Resultados Fin" +
-	"ais\x14\x01\x81\x01\x00=\x01\x1e\x02Você estimou 1 civilização\x00#\x02V" +
-	"ocê estimou %[1]d civilizações\x02Civilizações\x02Participantes\x02Estam" +
-	"os sozinhos no Universo?\x02Estime o número de civilizações alienígenas " +
-	"detectáveis na Via Láctea usando a Equação de Drake.\x02Objetivos de Apr" +
-	"endizado:\x02pensar sobre o tamanho e composição da galaxia e como afeta" +
-	" a possibilidade de vida inteligente\x02entender e estimar os termos da " +
-	"Equação de Drake\x02comparar seu palpite inicial com o valor final\x02Cr" +
-	"iar Sessão\x02Entra na Sessão\x02Sessões\x02Últimas Sessões\x02Nome\x02C" +
-	"riado\x02Nenhuma sessão disponível\x02Voltar\x02Sessão %[1]s\x02Comparti" +
-	"lhe Endereço:\x02Entre\x02Ver Resultados\x02A Equação Drake - %[1]s\x02%" +
-	"[1]d anos\x02%[1]d anos ou mais\x02Próximo\x02Selecione a opção que melh" +
-	"or concorde com o que você pensa.\x02Quantas civilizações tecnologicamen" +
-	"te avançadas existem na Via Láctea?\x02Apenas nós, estamos completamente" +
-	" sozinhos\x02Algumas dezenas\x02Algumas centenas\x02Alguns milhares\x02A" +
-	"lguns milhões\x02Quantas estrelas existem em nossa galáxia?\x02Algumas c" +
-	"entenas\x02Algumas centenas de milhares\x02Algumas centenas de milhões" +
+	"ilização\x00'\x02Seu palpite foram %[1]d civilizações\x02Resultados Fina" +
+	"is\x14\x01\x81\x01\x00=\x01\x1e\x02Você estimou 1 civilização\x00#\x02Vo" +
+	"cê estimou %[1]d civilizações\x02Civilizações\x02Participantes\x02Estamo" +
+	"s sozinhos no Universo?\x02Estime o número de civilizações alienígenas d" +
+	"etectáveis na Via Láctea usando a Equação de Drake.\x02Objetivos de Apre" +
+	"ndizado:\x02pensar sobre o tamanho e composição da galaxia e como afeta " +
+	"a possibilidade de vida inteligente\x02entender e estimar os termos da E" +
+	"quação de Drake\x02comparar seu palpite inicial com o valor final\x02Cri" +
+	"ar Sessão\x02Entra na Sessão\x02Sessões\x02Últimas Sessões\x02Nome\x02Cr" +
+	"iado\x02Nenhuma sessão disponível\x02Voltar\x02Sessão %[1]s\x02Compartil" +
+	"he Endereço:\x02Entre\x02Ver Resultados\x02A Equação Drake - %[1]s\x02%[" +
+	"1]d anos\x02%[1]d anos ou mais\x02Próximo\x02Selecione a opção que melho" +
+	"r concorde com o que você pensa.\x02Quantas civilizações tecnologicament" +
+	"e avançadas existem na Via Láctea?\x02Apenas nós, estamos completamente " +
+	"sozinhos\x02Algumas dezenas\x02Algumas centenas\x02Alguns milhares\x02Al" +
+	"guns milhões\x02Quantas estrelas existem em nossa galáxia?\x02Algumas ce" +
+	"ntenas\x02Algumas centenas de milhares\x02Algumas centenas de milhões" +
 	"\x02Algumas centenas de bilhões\x02Algumas centenas de trilhões\x02Aprox" +
-	"imadamente qual é a porcentagem de estrelas em nossa galáxia que tem pla" +
-	"netas em órbita?\x02Muito poucas estrelas tem planetas em órbita\x02Na m" +
+	"imadamente qual é a porcentagem de estrelas em nossa galáxia que têm pla" +
+	"netas em órbita?\x02Muito poucas estrelas têm planetas em órbita\x02Na m" +
 	"édia, quantos planetas habitáveis (parecidos com a Terra) existem por s" +
 	"istema planetário?\x02Muito poucos (menos de um por sistema solar)\x022 " +
 	"ou 3\x024 ou 5\x02Mais de 5\x02Qual a fração de planetas habitáveis que " +
 	"a vida irá se desenvolver?\x02Uma pequena porcentagem, a vida é muito ra" +
 	"ra\x02100%%, se as condições forem favoráveis, a vida é inevitável\x02Qu" +
 	"al a fração de planetas com vida na qual vida inteligente irá evoluir?" +
-	"\x02Uma pequena porcentagem\x02Qual a fração de planetas com vida inteli" +
+	"\x02Uma pequena porcentagom\x02Qual a fração de planetas com vida inteli" +
 	"gente que irá desenvolver uma civilização tecnologicamente capaz de se c" +
 	"omunicar por rádio?\x02Menos de 1%%\x02Em torno de 10%%\x02100%%, uma ci" +
 	"vilização tecnologicamente capaz sempre se desenvolverá se houver vida" +
@@ -251,4 +251,4 @@ const pt_BRData string = "" + // Size: 2927 bytes
 	"icial\x02Não, eu estou mais confiante no meu palpite inicial\x02Não, qua" +
 	"lquer palpite é tão bom quanto o meu"
 
-	// Total table size 6268 bytes (6KiB); checksum: 9ADA7C3B
+	// Total table size 6269 bytes (6KiB); checksum: CBC99A8B
