@@ -4,7 +4,7 @@
         {
             "id": "Drake Equation",
             "message": "Drake Equation",
-            "translation": "A Equação Drake"
+            "translation": "A Equação de Drake"
         },
         {
             "id": "Astronomy Education",
@@ -55,10 +55,10 @@
                     "arg": "PresurveyAssessment",
                     "cases": {
                         "=1": {
-                            "msg": "Seu palpite é 1 civilização"
+                            "msg": "Seu palpite foi 1 civilização"
                         },
                         "other": {
-                            "msg": "Seu paplpite são {PresurveyAssessment} civilizações"
+                            "msg": "Seu paplpite foram {PresurveyAssessment} civilizações"
                         }
                     }
                 }
@@ -244,6 +244,21 @@
                     "underlyingType": "int",
                     "argNum": 1,
                     "expr": "n"
+                }
+            ]
+        },
+        {
+            "id": "{1000000} years or more",
+            "message": "{1000000} years or more",
+            "translation": "{1000000} anos ou mais",
+            "placeholders": [
+                {
+                    "id": "1000000",
+                    "string": "%[1]d",
+                    "type": "int",
+                    "underlyingType": "int",
+                    "argNum": 1,
+                    "expr": "1000000"
                 }
             ]
         },
@@ -439,10 +454,10 @@
                     "arg": "Difference",
                     "cases": {
                         "=1": {
-                            "msg": "Existe uma diferença de 1 ordem de magnitude a partir do sua estimativa inicial de {PresurveyAssessment}."
+                            "msg": "Existe uma diferença de 1 ordem de magnitude a partir do seu palpite inicial de {PresurveyAssessment}."
                         },
                         "other": {
-                            "msg": "Existe uma diferença de {Difference} ordens de magnitude a partir do sua estimativa inicial de {PresurveyAssessment}."
+                            "msg": "Existe uma diferença de {Difference} ordens de magnitude a partir do seu palpite inicial de {PresurveyAssessment}."
                         }
                     }
                 }
@@ -474,17 +489,17 @@
         {
             "id": "Yes, I am more confident using the Drake Equation calculation",
             "message": "Yes, I am more confident using the Drake Equation calculation",
-            "translation": "Sum, eu estou mais confiante usando o cálculo da Equação de Drake"
+            "translation": "Sim, eu estou mais confiante usando o cálculo da Equação de Drake"
         },
         {
             "id": "Yes, the Drake Equation includes factors I didn't think during my initial prediction",
             "message": "Yes, the Drake Equation includes factors I didn't think during my initial prediction",
-            "translation": "Sim, a Equação de Drake inclui fatores que eu não pensei durante minha estimativa inicial"
+            "translation": "Sim, a Equação de Drake inclui fatores que eu não pensei durante meu palpite inicial"
         },
         {
             "id": "No, I am more confident with my initial prediction",
             "message": "No, I am more confident with my initial prediction",
-            "translation": "Não, eu estou mais confiante no minha estimativa inicial"
+            "translation": "Não, eu estou mais confiante no meu palpite inicial"
         },
         {
             "id": "No, any guess is good as mine",

@@ -501,10 +501,20 @@
             "fuzzy": true
         },
         {
-            "id": "Less than 1%",
-            "message": "Less than 1%",
-            "translation": "Less than 1%",
+            "id": "Less than {1}%",
+            "message": "Less than {1}%",
+            "translation": "Less than {1}%",
             "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "1",
+                    "string": "%[1]d",
+                    "type": "int",
+                    "underlyingType": "int",
+                    "argNum": 1,
+                    "expr": "1"
+                }
+            ],
             "fuzzy": true
         },
         {

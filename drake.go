@@ -75,6 +75,9 @@ func (s Survey) Difference() int64 {
 	}
 
 	n := math.Log10(*s.N)
+	if n < 1 {
+		n = 0
+	}
 	a := math.Log10(*s.PresurveyAssessment)
 	diff := math.Floor(math.Abs(n - a))
 	return int64(diff)

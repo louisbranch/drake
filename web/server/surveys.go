@@ -72,13 +72,17 @@ func (srv *Server) surveys(w http.ResponseWriter, r *http.Request, name string) 
 		}
 
 		lvalues := []Option{}
-		for n := range []int{100, 1000, 10000, 10000, 100000} {
+		for _, n := range []int{100, 1000, 10000, 100000} {
 			lvalues = append(lvalues, Option{
 				Text:  printer.Sprintf("%d years", n),
 				Value: float64(n),
 			})
 
 		}
+		lvalues = append(lvalues, Option{
+			Text:  printer.Sprintf("%d years or more", 1000000),
+			Value: 1000000,
+		})
 
 		page.Content = struct {
 			Session         drake.Session
@@ -163,19 +167,19 @@ func (srv *Server) surveys(w http.ResponseWriter, r *http.Request, name string) 
 					Value: 0.01,
 				},
 				{
-					Text:  printer.Sprintf("20%"),
+					Text:  printer.Sprintf("20%%"),
 					Value: 0.2,
 				},
 				{
-					Text:  printer.Sprintf("40%"),
+					Text:  printer.Sprintf("40%%"),
 					Value: 0.4,
 				},
 				{
-					Text:  printer.Sprintf("60%"),
+					Text:  printer.Sprintf("60%%"),
 					Value: 0.6,
 				},
 				{
-					//Text:  printer.Sprintf("80%-90%"),
+					Text:  printer.Sprintf("80%%-90%%"),
 					Value: 0.85,
 				},
 			},
@@ -209,15 +213,15 @@ func (srv *Server) surveys(w http.ResponseWriter, r *http.Request, name string) 
 					Value: 0.001,
 				},
 				{
-					Text:  printer.Sprintf("20%"),
+					Text:  printer.Sprintf("20%%"),
 					Value: 0.2,
 				},
 				{
-					Text:  printer.Sprintf("50%"),
+					Text:  printer.Sprintf("50%%"),
 					Value: 0.5,
 				},
 				{
-					Text:  printer.Sprintf("80%"),
+					Text:  printer.Sprintf("80%%"),
 					Value: 0.8,
 				},
 				{
@@ -232,19 +236,19 @@ func (srv *Server) surveys(w http.ResponseWriter, r *http.Request, name string) 
 					Value: 0.001,
 				},
 				{
-					Text:  printer.Sprintf("1%-10%"),
+					Text:  printer.Sprintf("1%%-10%%"),
 					Value: 0.05,
 				},
 				{
-					Text:  printer.Sprintf("50%"),
+					Text:  printer.Sprintf("50%%"),
 					Value: 0.5,
 				},
 				{
-					Text:  printer.Sprintf("80%"),
+					Text:  printer.Sprintf("80%%"),
 					Value: 0.8,
 				},
 				{
-					Text:  printer.Sprintf("100%"),
+					Text:  printer.Sprintf("100%%"),
 					Value: 1,
 				},
 			},
@@ -259,11 +263,11 @@ func (srv *Server) surveys(w http.ResponseWriter, r *http.Request, name string) 
 					Value: 0.1,
 				},
 				{
-					Text:  printer.Sprintf("20%-30%"),
+					Text:  printer.Sprintf("20%%-30%%"),
 					Value: 0.25,
 				},
 				{
-					Text:  printer.Sprintf("50%-60%"),
+					Text:  printer.Sprintf("50%%-60%%"),
 					Value: 0.55,
 				},
 				{
@@ -371,10 +375,10 @@ func fraction(value string) *float64 {
 
 func prtBool(value string) *bool {
 	switch value {
-	case "true":
+	case "true", "1":
 		b := true
 		return &b
-	case "false":
+	case "false", "0":
 		b := false
 		return &b
 	default:

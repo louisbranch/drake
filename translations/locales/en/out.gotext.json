@@ -312,6 +312,23 @@
             "fuzzy": true
         },
         {
+            "id": "{1000000} years or more",
+            "message": "{1000000} years or more",
+            "translation": "{1000000} years or more",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "1000000",
+                    "string": "%[1]d",
+                    "type": "int",
+                    "underlyingType": "int",
+                    "argNum": 1,
+                    "expr": "1000000"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
             "id": "Next",
             "message": "Next",
             "translation": "Next",
