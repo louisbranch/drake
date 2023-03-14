@@ -1,6 +1,16 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
 .pure-g.center {
     margin: .5em;
     justify-content: center;
+}
+
+.pure-g.content {
+    flex: 1;
 }
 
 header h1 {
@@ -60,4 +70,16 @@ form.pure-form > input {
 
 .hero p {
     text-align: justify;
+}
+
+footer {
+    border-top: 1px solid #ccc;
+}
+
+footer ul {
+    float: right;
+}
+
+footer .pure-menu.pure-menu-horizontal a.pure-menu-link {
+    display: inline-block;
 }

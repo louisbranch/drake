@@ -37,9 +37,24 @@ func (s *Server) i18n(w http.ResponseWriter, r *http.Request) (*message.Printer,
 
 	printer := message.NewPrinter(lang)
 
+	languages := []web.Language{
+		{Code: "en", Name: "En"},
+		{Code: "pt-BR", Name: "Pt"},
+	}
+	for i, l := range languages {
+		url := r.URL
+		query := url.Query()
+		query.Set("lang", l.Code)
+		url.RawQuery = query.Encode()
+
+		languages[i].URL = url.String()
+	}
+
 	page := web.Page{
-		Header:  printer.Sprintf("Drake Equation"),
-		Website: printer.Sprintf("Astronomy Education"),
+		Header:    printer.Sprintf("Drake Equation"),
+		Website:   printer.Sprintf("Astronomy Education"),
+		Footer:    printer.Sprintf("About"),
+		Languages: languages,
 	}
 
 	return printer, page
