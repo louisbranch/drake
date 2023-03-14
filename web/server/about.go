@@ -16,9 +16,9 @@ func (srv *Server) about(w http.ResponseWriter, r *http.Request) {
 	}{
 		About:         printer.Sprintf("About"),
 		References:    printer.Sprintf("References"),
-		Context:       printer.Sprintf("This project was created as part of the course Principles and Practices in Science Education with the intention of being a free resource for educators to introduce the Drake Equation to a wider audience."),
-		Terms:         printer.Sprintf("The questions on the survey are from LoPresto and Hubble-Zdanowski (2012). The code is open-source using the MIT License."),
-		Contributions: printer.Sprintf("If you would like to contribute to the project, adding more translations, get in touch:"),
+		Context:       printer.Sprintf("This project was created as part of the course Principles and Practices in Science Education at the University of Toronto with the intention of being a free resource for educators to introduce the Drake Equation to a wider audience."),
+		Terms:         printer.Sprintf("The questions for the Drake Equation on the survey are from LoPresto and Hubble-Zdanowski (2012). The code is open-source using the MIT License."),
+		Contributions: printer.Sprintf("If you would like to contribute to the project, for example, adding more translations, get in touch:"),
 		Source:        printer.Sprintf("Source Code"),
 	}
 
