@@ -23,6 +23,7 @@ func (srv *Server) NewServeMux() *http.ServeMux {
 
 	mux.HandleFunc("/sessions/", srv.sessions)
 	mux.HandleFunc("/results/", srv.results)
+	mux.HandleFunc("/about/", srv.about)
 
 	mux.HandleFunc("/", srv.index)
 

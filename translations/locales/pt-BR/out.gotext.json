@@ -52,6 +52,36 @@
             ]
         },
         {
+            "id": "About",
+            "message": "About",
+            "translation": "Sobre"
+        },
+        {
+            "id": "References",
+            "message": "References",
+            "translation": "Referências"
+        },
+        {
+            "id": "This project was created as part of the course Principles and Practices in Science Education with the intention of being a free resource for educators to introduce the Drake Equation to a wider audience.",
+            "message": "This project was created as part of the course Principles and Practices in Science Education with the intention of being a free resource for educators to introduce the Drake Equation to a wider audience.",
+            "translation": ""
+        },
+        {
+            "id": "The questions on the survey are from LoPresto and Hubble-Zdanowski (2012). The code is open-source using the MIT License.",
+            "message": "The questions on the survey are from LoPresto and Hubble-Zdanowski (2012). The code is open-source using the MIT License.",
+            "translation": ""
+        },
+        {
+            "id": "If you would like to contribute to the project, adding more translations, get in touch:",
+            "message": "If you would like to contribute to the project, adding more translations, get in touch:",
+            "translation": ""
+        },
+        {
+            "id": "Source Code",
+            "message": "Source Code",
+            "translation": "Código Fonte"
+        },
+        {
             "id": "Drake Equation",
             "message": "Drake Equation",
             "translation": "Equação Drake"

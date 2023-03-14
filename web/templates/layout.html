@@ -32,7 +32,9 @@
                     <ul class="pure-menu-list">
                         {{ range $lang := .Languages }}
                             <li class="pure-menu-item">
-                                <a href="{{ $lang.URL }}" class="pure-menu-link">{{ $lang.Name }}</a>
+                                <a href="{{ $lang.URL }}" class="pure-menu-link">
+                                    {{ $lang.Name }}
+                                </a>
                             </li>
                         {{ end }}
                     </ul>

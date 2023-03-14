@@ -60,6 +60,48 @@
             "fuzzy": true
         },
         {
+            "id": "About",
+            "message": "About",
+            "translation": "About",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "References",
+            "message": "References",
+            "translation": "References",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "This project was created as part of the course Principles and Practices in Science Education with the intention of being a free resource for educators to introduce the Drake Equation to a wider audience.",
+            "message": "This project was created as part of the course Principles and Practices in Science Education with the intention of being a free resource for educators to introduce the Drake Equation to a wider audience.",
+            "translation": "This project was created as part of the course Principles and Practices in Science Education with the intention of being a free resource for educators to introduce the Drake Equation to a wider audience.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "The questions on the survey are from LoPresto and Hubble-Zdanowski (2012). The code is open-source using the MIT License.",
+            "message": "The questions on the survey are from LoPresto and Hubble-Zdanowski (2012). The code is open-source using the MIT License.",
+            "translation": "The questions on the survey are from LoPresto and Hubble-Zdanowski (2012). The code is open-source using the MIT License.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "If you would like to contribute to the project, adding more translations, get in touch:",
+            "message": "If you would like to contribute to the project, adding more translations, get in touch:",
+            "translation": "If you would like to contribute to the project, adding more translations, get in touch:",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Source Code",
+            "message": "Source Code",
+            "translation": "Source Code",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
             "id": "Drake Equation",
             "message": "Drake Equation",
             "translation": "Drake Equation",
