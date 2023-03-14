@@ -12,11 +12,6 @@ type Session struct {
 	CreatedAt    time.Time
 }
 
-func (s Session) MinutesSince() int64 {
-	mins := time.Since(s.CreatedAt).Minutes()
-	return int64(math.Floor(mins))
-}
-
 type Survey struct {
 	ID          string
 	SessionID   string

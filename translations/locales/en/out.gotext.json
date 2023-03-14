@@ -2,6 +2,64 @@
     "language": "en",
     "messages": [
         {
+            "id": "Less than one min ago",
+            "message": "Less than one min ago",
+            "translation": "Less than one min ago",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "{Min} mins ago",
+            "message": "{Min} mins ago",
+            "translation": "{Min} mins ago",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "Min",
+                    "string": "%[1]d",
+                    "type": "int64",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "min"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "{Hr} hours ago",
+            "message": "{Hr} hours ago",
+            "translation": "{Hr} hours ago",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "Hr",
+                    "string": "%[1]d",
+                    "type": "int64",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "hr"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "{Days} days ago",
+            "message": "{Days} days ago",
+            "translation": "{Days} days ago",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "Days",
+                    "string": "%[1]d",
+                    "type": "int64",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "days"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
             "id": "Drake Equation",
             "message": "Drake Equation",
             "translation": "Drake Equation",

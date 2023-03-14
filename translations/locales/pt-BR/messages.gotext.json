@@ -2,6 +2,56 @@
     "language": "pt-BR",
     "messages": [
         {
+            "id": "Less than one min ago",
+            "message": "Less than one min ago",
+            "translation": "Menos de um min atrás"
+        },
+        {
+            "id": "{Min} mins ago",
+            "message": "{Min} mins ago",
+            "translation": "{Min} mins atrás",
+            "placeholders": [
+                {
+                    "id": "Min",
+                    "string": "%[1]d",
+                    "type": "int64",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "min"
+                }
+            ]
+        },
+        {
+            "id": "{Hr} hours ago",
+            "message": "{Hr} hours ago",
+            "translation": "{Hr} horas atrás",
+            "placeholders": [
+                {
+                    "id": "Hr",
+                    "string": "%[1]d",
+                    "type": "int64",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "hr"
+                }
+            ]
+        },
+        {
+            "id": "{Days} days ago",
+            "message": "{Days} days ago",
+            "translation": "{Days} dias atrás",
+            "placeholders": [
+                {
+                    "id": "Days",
+                    "string": "%[1]d",
+                    "type": "int64",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "days"
+                }
+            ]
+        },
+        {
             "id": "Drake Equation",
             "message": "Drake Equation",
             "translation": "Equação Drake"

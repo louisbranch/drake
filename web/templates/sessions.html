@@ -14,7 +14,7 @@
                 <td>{{ add $i 1 }}</td>
                 <td><a href="/{{ $el.Name }}">{{ $el.Name }}</a></td>
                 <td style="text-align: center;">{{ $el.Participants }}</td>
-                <td>{{.MinutesSince}} mins ago</td>
+                <td>{{.ElapsedTime}}</td>
             </tr>
             {{ end }}
         </tbody>
