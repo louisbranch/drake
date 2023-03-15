@@ -105,9 +105,9 @@ var messageKeyToIndex = map[string]int{
 	"Sessions":    30,
 	"Share Link:": 37,
 	"Source Code": 9,
-	"The questions for the Drake Equation on the survey are from LoPresto and Hubble-Zdanowski (2012). The code is open-source using the MIT License.":                                                                                         7,
-	"This is a difference of %d orders of magnitude from your initial prediction of %d.":                                                                                                                                                       75,
-	"This project was created as part of the course Principles and Practices in Science Education at the University of Toronto with the intention of being a free resource for educators to introduce the Drake Equation to a wider audience.": 6,
+	"The questions for the Drake Equation on the survey are from LoPresto and Hubble-Zdanowski (2012). The code is open-source using the MIT License.":                                                                                           7,
+	"This is a difference of %d orders of magnitude from your initial prediction of %d.":                                                                                                                                                         75,
+	"This project was created as part of the course, Principles and Practices in Science Education, at the University of Toronto with the intention of being a free resource for educators to introduce the Drake Equation to a wider audience.": 6,
 	"Very few (not even one in every solar system)": 60,
 	"Very few stars have planets in orbit":          58,
 	"What fraction of planets on which life evolves to intelligence will the intelligence develop a technological civilization capable of radio communication?": 69,
@@ -125,43 +125,43 @@ var messageKeyToIndex = map[string]int{
 var enIndex = []uint32{ // 82 elements
 	// Entry 0 - 1F
 	0x00000000, 0x00000016, 0x00000025, 0x00000035,
-	0x00000044, 0x0000004a, 0x00000055, 0x0000013e,
-	0x000001cf, 0x00000234, 0x00000240, 0x0000024f,
-	0x00000263, 0x00000279, 0x00000288, 0x0000028d,
-	0x000002a7, 0x000002b7, 0x000002fc, 0x0000030a,
-	0x00000353, 0x00000361, 0x0000036e, 0x0000038c,
-	0x000003ed, 0x000003fd, 0x0000046a, 0x000004a5,
-	0x000004d8, 0x000004e7, 0x000004f4, 0x000004fd,
+	0x00000044, 0x0000004a, 0x00000055, 0x00000140,
+	0x000001d1, 0x00000236, 0x00000242, 0x00000251,
+	0x00000265, 0x0000027b, 0x0000028a, 0x0000028f,
+	0x000002a9, 0x000002b9, 0x000002fe, 0x0000030c,
+	0x00000355, 0x00000363, 0x00000370, 0x0000038e,
+	0x000003ef, 0x000003ff, 0x0000046c, 0x000004a7,
+	0x000004da, 0x000004e9, 0x000004f6, 0x000004ff,
 	// Entry 20 - 3F
-	0x0000050d, 0x00000512, 0x0000051a, 0x00000530,
-	0x00000535, 0x00000543, 0x0000054f, 0x00000554,
-	0x00000560, 0x00000577, 0x00000583, 0x00000597,
-	0x0000059c, 0x000005d4, 0x0000061a, 0x00000634,
-	0x00000641, 0x00000650, 0x00000660, 0x0000066f,
-	0x0000069d, 0x000006ab, 0x000006c2, 0x000006d8,
-	0x000006ee, 0x00000705, 0x00000755, 0x0000077a,
-	0x000007ce, 0x000007fc, 0x00000803, 0x0000080a,
+	0x0000050f, 0x00000514, 0x0000051c, 0x00000532,
+	0x00000537, 0x00000545, 0x00000551, 0x00000556,
+	0x00000562, 0x00000579, 0x00000585, 0x00000599,
+	0x0000059e, 0x000005d6, 0x0000061c, 0x00000636,
+	0x00000643, 0x00000652, 0x00000662, 0x00000671,
+	0x0000069f, 0x000006ad, 0x000006c4, 0x000006da,
+	0x000006f0, 0x00000707, 0x00000757, 0x0000077c,
+	0x000007d0, 0x000007fe, 0x00000805, 0x0000080c,
 	// Entry 40 - 5F
-	0x00000816, 0x0000084f, 0x0000087a, 0x000008b1,
-	0x00000906, 0x0000091e, 0x000009b8, 0x000009c6,
-	0x000009d1, 0x00000a27, 0x00000a7e, 0x00000b13,
-	0x00000bca, 0x00000bf9, 0x00000c37, 0x00000c8c,
-	0x00000cbf, 0x00000cdd,
+	0x00000818, 0x00000851, 0x0000087c, 0x000008b3,
+	0x00000908, 0x00000920, 0x000009ba, 0x000009c8,
+	0x000009d3, 0x00000a29, 0x00000a80, 0x00000b15,
+	0x00000bcc, 0x00000bfb, 0x00000c39, 0x00000c8e,
+	0x00000cc1, 0x00000cdf,
 } // Size: 352 bytes
 
-const enData string = "" + // Size: 3293 bytes
+const enData string = "" + // Size: 3295 bytes
 	"\x02Less than one min ago\x02%[1]d mins ago\x02%[1]d hours ago\x02%[1]d " +
 	"days ago\x02About\x02References\x02This project was created as part of t" +
-	"he course Principles and Practices in Science Education at the Universit" +
-	"y of Toronto with the intention of being a free resource for educators t" +
-	"o introduce the Drake Equation to a wider audience.\x02The questions for" +
-	" the Drake Equation on the survey are from LoPresto and Hubble-Zdanowski" +
-	" (2012). The code is open-source using the MIT License.\x02If you would " +
-	"like to contribute to the project, for example, adding more translations" +
-	", get in touch:\x02Source Code\x02Drake Equation\x02Astronomy Education" +
-	"\x02Internal Server Error\x02Page Not Found\x02Home\x02Results for Sessi" +
-	"on %[1]s\x02Initial Guesses\x14\x01\x81\x01\x00=\x01\x1b\x02You guessed " +
-	"1 civilization\x00 \x02You guessed %[1]d civilizations\x02Final Results" +
+	"he course, Principles and Practices in Science Education, at the Univers" +
+	"ity of Toronto with the intention of being a free resource for educators" +
+	" to introduce the Drake Equation to a wider audience.\x02The questions f" +
+	"or the Drake Equation on the survey are from LoPresto and Hubble-Zdanows" +
+	"ki (2012). The code is open-source using the MIT License.\x02If you woul" +
+	"d like to contribute to the project, for example, adding more translatio" +
+	"ns, get in touch:\x02Source Code\x02Drake Equation\x02Astronomy Educatio" +
+	"n\x02Internal Server Error\x02Page Not Found\x02Home\x02Results for Sess" +
+	"ion %[1]s\x02Initial Guesses\x14\x01\x81\x01\x00=\x01\x1b\x02You guessed" +
+	" 1 civilization\x00 \x02You guessed %[1]d civilizations\x02Final Results" +
 	"\x14\x01\x81\x01\x00=\x01\x1d\x02You estimated 1 civilization\x00\x22" +
 	"\x02You estimated %[1]d civilizations\x02Civilizations\x02Participants" +
 	"\x02Are we alone in the Universe?\x02Estimate the number of detectable a" +
@@ -205,76 +205,82 @@ const enData string = "" + // Size: 3293 bytes
 var pt_BRIndex = []uint32{ // 82 elements
 	// Entry 0 - 1F
 	0x00000000, 0x00000017, 0x00000029, 0x0000003c,
-	0x0000004e, 0x00000054, 0x00000061, 0x00000061,
-	0x00000061, 0x00000061, 0x0000006f, 0x0000007f,
-	0x00000098, 0x000000b1, 0x000000c9, 0x000000d1,
-	0x000000ef, 0x00000101, 0x00000152, 0x00000164,
-	0x000001af, 0x000001be, 0x000001cc, 0x000001ea,
-	0x00000253, 0x0000026d, 0x000002cf, 0x00000302,
-	0x00000331, 0x0000033f, 0x00000350, 0x00000359,
+	0x0000004e, 0x00000054, 0x00000061, 0x00000154,
+	0x000001e0, 0x00000247, 0x00000255, 0x00000265,
+	0x0000027e, 0x00000297, 0x000002af, 0x000002b7,
+	0x000002d5, 0x000002e7, 0x00000338, 0x0000034a,
+	0x00000395, 0x000003a4, 0x000003b2, 0x000003d0,
+	0x00000439, 0x00000453, 0x000004b5, 0x000004e8,
+	0x00000517, 0x00000525, 0x00000536, 0x0000053f,
 	// Entry 20 - 3F
-	0x0000036b, 0x00000370, 0x00000377, 0x00000393,
-	0x0000039a, 0x000003a8, 0x000003bf, 0x000003c5,
-	0x000003d4, 0x000003ec, 0x000003f7, 0x0000040a,
-	0x00000413, 0x00000452, 0x0000049d, 0x000004c9,
-	0x000004d9, 0x000004ea, 0x000004fa, 0x0000050a,
-	0x00000536, 0x00000547, 0x00000564, 0x00000581,
-	0x0000059e, 0x000005bc, 0x0000061e, 0x0000064d,
-	0x000006ae, 0x000006db, 0x000006e2, 0x000006e9,
+	0x00000551, 0x00000556, 0x0000055d, 0x00000579,
+	0x00000580, 0x0000058e, 0x000005a5, 0x000005ab,
+	0x000005ba, 0x000005d2, 0x000005dd, 0x000005f0,
+	0x000005f9, 0x00000638, 0x00000683, 0x000006af,
+	0x000006bf, 0x000006d0, 0x000006e0, 0x000006f0,
+	0x0000071c, 0x0000072d, 0x0000074a, 0x00000767,
+	0x00000784, 0x000007a2, 0x00000804, 0x00000833,
+	0x00000894, 0x000008c1, 0x000008c8, 0x000008cf,
 	// Entry 40 - 5F
-	0x000006f3, 0x0000073b, 0x00000769, 0x000007ab,
-	0x000007f7, 0x0000080f, 0x0000089a, 0x000008a7,
-	0x000008b8, 0x0000090f, 0x0000096c, 0x000009e7,
-	0x00000aa6, 0x00000ad6, 0x00000b1b, 0x00000b73,
-	0x00000ba8, 0x00000bd8,
+	0x000008d9, 0x00000921, 0x0000094f, 0x00000991,
+	0x000009dd, 0x000009f5, 0x00000a80, 0x00000a8d,
+	0x00000a9e, 0x00000af5, 0x00000b52, 0x00000bcd,
+	0x00000c8c, 0x00000cbc, 0x00000d01, 0x00000d59,
+	0x00000d8e, 0x00000dbe,
 } // Size: 352 bytes
 
-const pt_BRData string = "" + // Size: 3032 bytes
+const pt_BRData string = "" + // Size: 3518 bytes
 	"\x02Menos de um min atrás\x02%[1]d mins atrás\x02%[1]d horas atrás\x02%[" +
-	"1]d dias atrás\x02Sobre\x02Referências\x02Código Fonte\x02Equação Drake" +
-	"\x02Educação em Astronomia\x02Erro Interno do Servidor\x02Página Não Enc" +
-	"ontrada\x02Início\x02Resultados para Sessão %[1]s\x02Palpites Iniciais" +
-	"\x14\x01\x81\x01\x00=\x01 \x02Seu palpite foi 1 civilização\x00'\x02Seu " +
-	"palpite foram %[1]d civilizações\x02Resultados Finais\x14\x01\x81\x01" +
-	"\x00=\x01\x1e\x02Você estimou 1 civilização\x00#\x02Você estimou %[1]d c" +
-	"ivilizações\x02Civilizações\x02Participantes\x02Estamos sozinhos no Univ" +
-	"erso?\x02Estime o número de civilizações alienígenas detectáveis na Via " +
-	"Láctea usando a Equação de Drake.\x02Objetivos de Aprendizado:\x02pensar" +
-	" sobre o tamanho e composição da galaxia e como afeta a possibilidade de" +
-	" vida inteligente\x02entender e estimar os termos da Equação de Drake" +
-	"\x02comparar seu palpite inicial com o valor final\x02Criar Sessão\x02En" +
-	"tra na Sessão\x02Sessões\x02Últimas Sessões\x02Nome\x02Criado\x02Nenhuma" +
-	" sessão disponível\x02Voltar\x02Sessão %[1]s\x02Compartilhe Endereço:" +
-	"\x02Entre\x02Ver Resultados\x02Equação Drake - %[1]s\x02%[1]d anos\x02%[" +
-	"1]d anos ou mais\x02Próximo\x02Selecione a opção que melhor concorde com" +
-	" o que você pensa.\x02Quantas civilizações tecnologicamente avançadas ex" +
-	"istem na Via Láctea?\x02Apenas nós, estamos completamente sozinhos\x02Al" +
-	"gumas dezenas\x02Algumas centenas\x02Alguns milhares\x02Alguns milhões" +
-	"\x02Quantas estrelas existem em nossa galáxia?\x02Algumas centenas\x02Al" +
-	"gumas centenas de milhares\x02Algumas centenas de milhões\x02Algumas cen" +
-	"tenas de bilhões\x02Algumas centenas de trilhões\x02Aproximadamente qual" +
-	" é a porcentagem de estrelas em nossa galáxia que têm planetas em órbita" +
-	"?\x02Muito poucas estrelas têm planetas em órbita\x02Na média, quantos p" +
-	"lanetas habitáveis (parecidos com a Terra) existem por sistema planetári" +
-	"o?\x02Muito poucos (menos de um por sistema solar)\x022 ou 3\x024 ou 5" +
-	"\x02Mais de 5\x02Qual a fração de planetas habitáveis que a vida irá se " +
-	"desenvolver?\x02Uma pequena porcentagem, a vida é muito rara\x02100%%, s" +
-	"e as condições forem favoráveis, a vida é inevitável\x02Qual a fração de" +
-	" planetas com vida na qual vida inteligente irá evoluir?\x02Uma pequena " +
-	"porcentagom\x02Qual a fração de planetas com vida inteligente que irá de" +
-	"senvolver uma civilização tecnologicamente capaz de se comunicar por rád" +
-	"io?\x02Menos de 1%%\x02Em torno de 10%%\x02100%%, uma civilização tecnol" +
-	"ogicamente capaz sempre se desenvolverá se houver vida\x02Qual é o tempo" +
-	" de vida médio de uma civilização tecnologicamente capaz de comunicação?" +
-	"\x14\x01\x81\x01\x00=\x016\x02Você estimou que há 1 civilização na Via L" +
-	"áctea.\x00;\x02Você estimou que há %[1]d civilizações na Via Láctea." +
-	"\x14\x01\x81\x01\x00=\x01X\x02Existe uma diferença de 1 ordem de magnitu" +
-	"de a partir do seu palpite inicial de %[2]d.\x00]\x02Existe uma diferenç" +
-	"a de %[1]d ordens de magnitude a partir do seu palpite inicial de %[2]d." +
-	"\x02Você concoda com essa estimativa mais recente?\x02Sim, eu estou mais" +
-	" confiante usando o cálculo da Equação de Drake\x02Sim, a Equação de Dra" +
-	"ke inclui fatores que eu não pensei durante meu palpite inicial\x02Não, " +
-	"eu estou mais confiante no meu palpite inicial\x02Não, qualquer palpite " +
-	"é tão bom quanto o meu"
+	"1]d dias atrás\x02Sobre\x02Referências\x02Esse projeto foi criado como p" +
+	"arte do curso Princípios e Práticas em Ciência da Educação, na Unversida" +
+	"de de Toronto, com a intenção de ser um recurso gratuito a educadores pa" +
+	"ra introduzir a Equação de Drake para uma ampla audiência.\x02As questõe" +
+	"s para a Equação de Drake na pesquisa são de LoPresto and Hubble-Zdanows" +
+	"ki (2012). O código é aberto usando a Licença MIT.\x02Se você quiser con" +
+	"tribuir com o projeto, por exemplo, adicionando mais traduções, entre em" +
+	" contato:\x02Código Fonte\x02Equação Drake\x02Educação em Astronomia\x02" +
+	"Erro Interno do Servidor\x02Página Não Encontrada\x02Início\x02Resultado" +
+	"s para Sessão %[1]s\x02Palpites Iniciais\x14\x01\x81\x01\x00=\x01 \x02Se" +
+	"u palpite foi 1 civilização\x00'\x02Seu palpite foram %[1]d civilizações" +
+	"\x02Resultados Finais\x14\x01\x81\x01\x00=\x01\x1e\x02Você estimou 1 civ" +
+	"ilização\x00#\x02Você estimou %[1]d civilizações\x02Civilizações\x02Part" +
+	"icipantes\x02Estamos sozinhos no Universo?\x02Estime o número de civiliz" +
+	"ações alienígenas detectáveis na Via Láctea usando a Equação de Drake." +
+	"\x02Objetivos de Aprendizado:\x02pensar sobre o tamanho e composição da " +
+	"galaxia e como afeta a possibilidade de vida inteligente\x02entender e e" +
+	"stimar os termos da Equação de Drake\x02comparar seu palpite inicial com" +
+	" o valor final\x02Criar Sessão\x02Entra na Sessão\x02Sessões\x02Últimas " +
+	"Sessões\x02Nome\x02Criado\x02Nenhuma sessão disponível\x02Voltar\x02Sess" +
+	"ão %[1]s\x02Compartilhe Endereço:\x02Entre\x02Ver Resultados\x02Equação" +
+	" Drake - %[1]s\x02%[1]d anos\x02%[1]d anos ou mais\x02Próximo\x02Selecio" +
+	"ne a opção que melhor concorde com o que você pensa.\x02Quantas civiliza" +
+	"ções tecnologicamente avançadas existem na Via Láctea?\x02Apenas nós, e" +
+	"stamos completamente sozinhos\x02Algumas dezenas\x02Algumas centenas\x02" +
+	"Alguns milhares\x02Alguns milhões\x02Quantas estrelas existem em nossa g" +
+	"aláxia?\x02Algumas centenas\x02Algumas centenas de milhares\x02Algumas c" +
+	"entenas de milhões\x02Algumas centenas de bilhões\x02Algumas centenas de" +
+	" trilhões\x02Aproximadamente qual é a porcentagem de estrelas em nossa g" +
+	"aláxia que têm planetas em órbita?\x02Muito poucas estrelas têm planetas" +
+	" em órbita\x02Na média, quantos planetas habitáveis (parecidos com a Ter" +
+	"ra) existem por sistema planetário?\x02Muito poucos (menos de um por sis" +
+	"tema solar)\x022 ou 3\x024 ou 5\x02Mais de 5\x02Qual a fração de planeta" +
+	"s habitáveis que a vida irá se desenvolver?\x02Uma pequena porcentagem, " +
+	"a vida é muito rara\x02100%%, se as condições forem favoráveis, a vida é" +
+	" inevitável\x02Qual a fração de planetas com vida na qual vida inteligen" +
+	"te irá evoluir?\x02Uma pequena porcentagom\x02Qual a fração de planetas " +
+	"com vida inteligente que irá desenvolver uma civilização tecnologicament" +
+	"e capaz de se comunicar por rádio?\x02Menos de 1%%\x02Em torno de 10%%" +
+	"\x02100%%, uma civilização tecnologicamente capaz sempre se desenvolverá" +
+	" se houver vida\x02Qual é o tempo de vida médio de uma civilização tecno" +
+	"logicamente capaz de comunicação?\x14\x01\x81\x01\x00=\x016\x02Você esti" +
+	"mou que há 1 civilização na Via Láctea.\x00;\x02Você estimou que há %[1]" +
+	"d civilizações na Via Láctea.\x14\x01\x81\x01\x00=\x01X\x02Existe uma di" +
+	"ferença de 1 ordem de magnitude a partir do seu palpite inicial de %[2]d" +
+	".\x00]\x02Existe uma diferença de %[1]d ordens de magnitude a partir do " +
+	"seu palpite inicial de %[2]d.\x02Você concoda com essa estimativa mais r" +
+	"ecente?\x02Sim, eu estou mais confiante usando o cálculo da Equação de D" +
+	"rake\x02Sim, a Equação de Drake inclui fatores que eu não pensei durante" +
+	" meu palpite inicial\x02Não, eu estou mais confiante no meu palpite inic" +
+	"ial\x02Não, qualquer palpite é tão bom quanto o meu"
 
-	// Total table size 7029 bytes (6KiB); checksum: E59808A6
+	// Total table size 7517 bytes (7KiB); checksum: 38BEB9BD
