@@ -2,6 +2,12 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    background-color: #131a2e;
+    color: #8ac5d5;
+}
+
+a, a:visited, .pure-menu-link {
+    color: #8ac5d5;
 }
 
 .pure-g.center {
@@ -24,7 +30,7 @@ header h1 {
 header h1 a,
 header h1 a:visited {
     text-decoration: none;
-    color: black;
+    color: #fff;
 }
 
 nav {
@@ -47,11 +53,33 @@ nav ul li button, nav ul li a {
     font-family: 'Fredericka the Great', cursive;
     font-size: 1.5em;
     text-align: center;
+    color: #fff;
 }
 
 table.pure-table {
     margin-bottom: .5em;
     width: 100%;
+    border-color: #d3f6db;
+}
+
+.pure-table-horizontal td, .pure-table-horizontal th {
+    border-color: #d3f6db;
+}
+
+table.pure-table thead {
+    background-color: #d3f6db;
+}
+
+mark {
+    background-color: transparent;
+    color: #d3a634;
+}
+
+a.pure-button,
+.pure-button-primary,
+.pure-menu-link:hover{
+    background-color:  #d3a634;
+    color: #0c142a;
 }
 
 form.pure-form > input {
@@ -73,7 +101,7 @@ form.pure-form > input {
 }
 
 footer {
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #d3f6db;
 }
 
 footer ul {

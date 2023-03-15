@@ -21,6 +21,10 @@
   const predata = {{ .PresurveyData }};
   const postdata = {{ .PostsurveyData }};
 
+  Chart.defaults.backgroundColor = '#e6b12c';
+  Chart.defaults.borderColor = null;
+  Chart.defaults.color = '#fff';
+
   const options = {
       responsive: true,
       maintainAspectRatio: false,
@@ -55,7 +59,8 @@
       labels: buckets,
       datasets: [{
         data: predata,
-        borderWidth: 1
+        borderWidth: 1,
+        backgroundColor: '#e6b12c'
       }]
     },
     options: options
@@ -67,7 +72,8 @@
       labels: buckets,
       datasets: [{
         data: postdata,
-        borderWidth: 1
+        borderWidth: 1,
+        backgroundColor: '#e6b12c'
       }]
     },
     options: options
