@@ -8,6 +8,7 @@ import (
 	"net/http"
 
 	"github.com/louisbranch/drake"
+	"github.com/louisbranch/drake/web/presenter"
 )
 
 func (srv *Server) results(w http.ResponseWriter, r *http.Request) {
@@ -37,7 +38,7 @@ func (srv *Server) results(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	result := drake.Result{
+	result := presenter.Result{
 		Surveys: surveys,
 	}
 
@@ -55,7 +56,7 @@ func (srv *Server) results(w http.ResponseWriter, r *http.Request) {
 	page.Partials = []string{"result"}
 	page.Content = struct {
 		Session        drake.Session
-		Survey         drake.Survey
+		Survey         presenter.Survey
 		Buckets        template.JS
 		PresurveyData  template.JS
 		PostsurveyData template.JS
@@ -67,7 +68,7 @@ func (srv *Server) results(w http.ResponseWriter, r *http.Request) {
 		Participants   string
 	}{
 		Session:        session,
-		Survey:         survey,
+		Survey:         presenter.Survey{Survey: survey},
 		Buckets:        buckets,
 		PresurveyData:  predata,
 		PostsurveyData: postdata,

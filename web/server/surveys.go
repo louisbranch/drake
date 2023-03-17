@@ -10,6 +10,7 @@ import (
 	"time"
 
 	"github.com/louisbranch/drake"
+	"github.com/louisbranch/drake/web/presenter"
 )
 
 func (srv *Server) surveys(w http.ResponseWriter, r *http.Request, name string) {
@@ -82,9 +83,11 @@ func (srv *Server) surveys(w http.ResponseWriter, r *http.Request, name string) 
 			Value: 1000000,
 		})
 
+		survey := presenter.Survey{Survey: survey}
+
 		page.Content = struct {
 			Session         drake.Session
-			Survey          drake.Survey
+			Survey          presenter.Survey
 			Next            string
 			Choice          string
 			N               string

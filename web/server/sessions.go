@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"github.com/louisbranch/drake"
-	"github.com/louisbranch/drake/web/presenters"
+	"github.com/louisbranch/drake/web/presenter"
 )
 
 var alphanum = []rune("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ")
@@ -43,7 +43,7 @@ func (srv *Server) sessions(w http.ResponseWriter, r *http.Request) {
 			page.Title = printer.Sprintf("Sessions")
 			page.Partials = []string{"sessions"}
 			page.Content = struct {
-				Sessions     []presenters.Session
+				Sessions     []presenter.Session
 				Latest       string
 				Name         string
 				Participants string
@@ -51,7 +51,7 @@ func (srv *Server) sessions(w http.ResponseWriter, r *http.Request) {
 				None         string
 				Back         string
 			}{
-				Sessions:     presenters.SessionsList(sessions, printer),
+				Sessions:     presenter.SessionsList(sessions, printer),
 				Latest:       printer.Sprintf("Latest Sessions"),
 				Name:         printer.Sprintf("Name"),
 				Participants: printer.Sprintf("Participants"),
