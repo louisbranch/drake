@@ -109,6 +109,360 @@
             "fuzzy": true
         },
         {
+            "id": "You have estimated that there are {Estimation} civilizations in the Milky Way.",
+            "message": "You have estimated that there are {Estimation} civilizations in the Milky Way.",
+            "translation": {
+                "select": {
+                    "feature": "plural",
+                    "arg": "Estimation",
+                    "cases": {
+                        "=1": {
+                            "msg": "You have estimated that there are 1 civilization in the Milky Way."
+                        },
+                        "other": {
+                            "msg": "You have estimated that there are {Estimation} civilizations in the Milky Way."
+                        }
+                    }
+                }
+            },
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "Estimation",
+                    "string": "%[1]d",
+                    "type": "int",
+                    "underlyingType": "int",
+                    "argNum": 1,
+                    "expr": "estimation"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "This is a difference of {Difference} orders of magnitude from your initial prediction of {Prediction}.",
+            "message": "This is a difference of {Difference} orders of magnitude from your initial prediction of {Prediction}.",
+            "translation": {
+                "select": {
+                    "feature": "plural",
+                    "arg": "Difference",
+                    "cases": {
+                        "=1": {
+                            "msg": "This is a difference of 1 order of magnitude from your initial prediction of {Prediction}."
+                        },
+                        "other": {
+                            "msg": "This is a difference of {Difference} orders of magnitude from your initial prediction of {Prediction}."
+                        }
+                    }
+                }
+            },
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "Difference",
+                    "string": "%[1]d",
+                    "type": "int64",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "s.difference()"
+                },
+                {
+                    "id": "Prediction",
+                    "string": "%[2]d",
+                    "type": "int",
+                    "underlyingType": "int",
+                    "argNum": 2,
+                    "expr": "prediction"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "How many technological advanced civilizations exist in the Milky Way?",
+            "message": "How many technological advanced civilizations exist in the Milky Way?",
+            "translation": "How many technological advanced civilizations exist in the Milky Way?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Only us, we are all alone",
+            "message": "Only us, we are all alone",
+            "translation": "Only us, we are all alone",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "A few dozens",
+            "message": "A few dozens",
+            "translation": "A few dozens",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "A few hundreds",
+            "message": "A few hundreds",
+            "translation": "A few hundreds",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "A few thousands",
+            "message": "A few thousands",
+            "translation": "A few thousands",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "A few millions",
+            "message": "A few millions",
+            "translation": "A few millions",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "A few billions",
+            "message": "A few billions",
+            "translation": "A few billions",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "A few trillions",
+            "message": "A few trillions",
+            "translation": "A few trillions",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "About how many stars are there in our galaxy?",
+            "message": "About how many stars are there in our galaxy?",
+            "translation": "About how many stars are there in our galaxy?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "A few hundred",
+            "message": "A few hundred",
+            "translation": "A few hundred",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "A few hundred thousand",
+            "message": "A few hundred thousand",
+            "translation": "A few hundred thousand",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "A few hundred million",
+            "message": "A few hundred million",
+            "translation": "A few hundred million",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "A few hundred billion",
+            "message": "A few hundred billion",
+            "translation": "A few hundred billion",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "A few hundred trillion",
+            "message": "A few hundred trillion",
+            "translation": "A few hundred trillion",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Approximately what percentage of the stars in our galaxy have planets in orbit?",
+            "message": "Approximately what percentage of the stars in our galaxy have planets in orbit?",
+            "translation": "Approximately what percentage of the stars in our galaxy have planets in orbit?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Very few stars have planets in orbit",
+            "message": "Very few stars have planets in orbit",
+            "translation": "Very few stars have planets in orbit",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "On average, how many habitable (Earth-like) planets are there per planetary system?",
+            "message": "On average, how many habitable (Earth-like) planets are there per planetary system?",
+            "translation": "On average, how many habitable (Earth-like) planets are there per planetary system?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Very few (not even one in every solar system)",
+            "message": "Very few (not even one in every solar system)",
+            "translation": "Very few (not even one in every solar system)",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "2 or 3",
+            "message": "2 or 3",
+            "translation": "2 or 3",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "4 or 5",
+            "message": "4 or 5",
+            "translation": "4 or 5",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "More than 5",
+            "message": "More than 5",
+            "translation": "More than 5",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "On what fraction of habitable planets will life develop?",
+            "message": "On what fraction of habitable planets will life develop?",
+            "translation": "On what fraction of habitable planets will life develop?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "A very small percentage, life is very rare",
+            "message": "A very small percentage, life is very rare",
+            "translation": "A very small percentage, life is very rare",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "100%%, if conditions are favorable, life is inevitable",
+            "message": "100%%, if conditions are favorable, life is inevitable",
+            "translation": "100%%, if conditions are favorable, life is inevitable",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "On what fraction of planets on which life develops will life evolve to intelligence?",
+            "message": "On what fraction of planets on which life develops will life evolve to intelligence?",
+            "translation": "On what fraction of planets on which life develops will life evolve to intelligence?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "A very small percentage",
+            "message": "A very small percentage",
+            "translation": "A very small percentage",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "What fraction of planets on which life evolves to intelligence will the intelligence develop a technological civilization capable of radio communication?",
+            "message": "What fraction of planets on which life evolves to intelligence will the intelligence develop a technological civilization capable of radio communication?",
+            "translation": "What fraction of planets on which life evolves to intelligence will the intelligence develop a technological civilization capable of radio communication?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Less than 1%%",
+            "message": "Less than 1%%",
+            "translation": "Less than 1%%",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "About 10%%",
+            "message": "About 10%%",
+            "translation": "About 10%%",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "100%%, a technological civilization will always eventually develop if life is present",
+            "message": "100%%, a technological civilization will always eventually develop if life is present",
+            "translation": "100%%, a technological civilization will always eventually develop if life is present",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "What is the average lifetime of a technological civilization capable of communication?",
+            "message": "What is the average lifetime of a technological civilization capable of communication?",
+            "translation": "What is the average lifetime of a technological civilization capable of communication?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "{N} years",
+            "message": "{N} years",
+            "translation": "{N} years",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "N",
+                    "string": "%[1]d",
+                    "type": "int",
+                    "underlyingType": "int",
+                    "argNum": 1,
+                    "expr": "n"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "{1000000} years or more",
+            "message": "{1000000} years or more",
+            "translation": "{1000000} years or more",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "1000000",
+                    "string": "%[1]d",
+                    "type": "int",
+                    "underlyingType": "int",
+                    "argNum": 1,
+                    "expr": "1000000"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "Do you agree with your most recent estimation?",
+            "message": "Do you agree with your most recent estimation?",
+            "translation": "Do you agree with your most recent estimation?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Yes, I am more confident using the Drake Equation calculation",
+            "message": "Yes, I am more confident using the Drake Equation calculation",
+            "translation": "Yes, I am more confident using the Drake Equation calculation",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Yes, the Drake Equation includes factors I didn't think during my initial prediction",
+            "message": "Yes, the Drake Equation includes factors I didn't think during my initial prediction",
+            "translation": "Yes, the Drake Equation includes factors I didn't think during my initial prediction",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "No, I am more confident with my initial prediction",
+            "message": "No, I am more confident with my initial prediction",
+            "translation": "No, I am more confident with my initial prediction",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "No, any guess is good as mine",
+            "message": "No, any guess is good as mine",
+            "translation": "No, any guess is good as mine",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
             "id": "About",
             "message": "About",
             "translation": "About",
@@ -444,40 +798,6 @@
             "fuzzy": true
         },
         {
-            "id": "{N} years",
-            "message": "{N} years",
-            "translation": "{N} years",
-            "translatorComment": "Copied from source.",
-            "placeholders": [
-                {
-                    "id": "N",
-                    "string": "%[1]d",
-                    "type": "int",
-                    "underlyingType": "int",
-                    "argNum": 1,
-                    "expr": "n"
-                }
-            ],
-            "fuzzy": true
-        },
-        {
-            "id": "{1000000} years or more",
-            "message": "{1000000} years or more",
-            "translation": "{1000000} years or more",
-            "translatorComment": "Copied from source.",
-            "placeholders": [
-                {
-                    "id": "1000000",
-                    "string": "%[1]d",
-                    "type": "int",
-                    "underlyingType": "int",
-                    "argNum": 1,
-                    "expr": "1000000"
-                }
-            ],
-            "fuzzy": true
-        },
-        {
             "id": "Next",
             "message": "Next",
             "translation": "Next",
@@ -488,312 +808,6 @@
             "id": "Select the choice that best agrees with what you think.",
             "message": "Select the choice that best agrees with what you think.",
             "translation": "Select the choice that best agrees with what you think.",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "How many technological advanced civilizations exist in the Milky Way?",
-            "message": "How many technological advanced civilizations exist in the Milky Way?",
-            "translation": "How many technological advanced civilizations exist in the Milky Way?",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Only us, we are all alone",
-            "message": "Only us, we are all alone",
-            "translation": "Only us, we are all alone",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "A few dozens",
-            "message": "A few dozens",
-            "translation": "A few dozens",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "A few hundreds",
-            "message": "A few hundreds",
-            "translation": "A few hundreds",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "A few thousands",
-            "message": "A few thousands",
-            "translation": "A few thousands",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "A few millions",
-            "message": "A few millions",
-            "translation": "A few millions",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "About how many stars are there in our galaxy?",
-            "message": "About how many stars are there in our galaxy?",
-            "translation": "About how many stars are there in our galaxy?",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "A few hundred",
-            "message": "A few hundred",
-            "translation": "A few hundred",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "A few hundred thousand",
-            "message": "A few hundred thousand",
-            "translation": "A few hundred thousand",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "A few hundred million",
-            "message": "A few hundred million",
-            "translation": "A few hundred million",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "A few hundred billion",
-            "message": "A few hundred billion",
-            "translation": "A few hundred billion",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "A few hundred trillion",
-            "message": "A few hundred trillion",
-            "translation": "A few hundred trillion",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Approximately what percentage of the stars in our galaxy have planets in orbit?",
-            "message": "Approximately what percentage of the stars in our galaxy have planets in orbit?",
-            "translation": "Approximately what percentage of the stars in our galaxy have planets in orbit?",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Very few stars have planets in orbit",
-            "message": "Very few stars have planets in orbit",
-            "translation": "Very few stars have planets in orbit",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "On average, how many habitable (Earth-like) planets are there per planetary system?",
-            "message": "On average, how many habitable (Earth-like) planets are there per planetary system?",
-            "translation": "On average, how many habitable (Earth-like) planets are there per planetary system?",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Very few (not even one in every solar system)",
-            "message": "Very few (not even one in every solar system)",
-            "translation": "Very few (not even one in every solar system)",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "2 or 3",
-            "message": "2 or 3",
-            "translation": "2 or 3",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "4 or 5",
-            "message": "4 or 5",
-            "translation": "4 or 5",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "More than 5",
-            "message": "More than 5",
-            "translation": "More than 5",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "On what fraction of habitable planets will life develop?",
-            "message": "On what fraction of habitable planets will life develop?",
-            "translation": "On what fraction of habitable planets will life develop?",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "A very small percentage, life is very rare",
-            "message": "A very small percentage, life is very rare",
-            "translation": "A very small percentage, life is very rare",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "100%%, if conditions are favorable, life is inevitable",
-            "message": "100%%, if conditions are favorable, life is inevitable",
-            "translation": "100%%, if conditions are favorable, life is inevitable",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "On what fraction of planets on which life develops will life evolve to intelligence?",
-            "message": "On what fraction of planets on which life develops will life evolve to intelligence?",
-            "translation": "On what fraction of planets on which life develops will life evolve to intelligence?",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "A very small percentage",
-            "message": "A very small percentage",
-            "translation": "A very small percentage",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "What fraction of planets on which life evolves to intelligence will the intelligence develop a technological civilization capable of radio communication?",
-            "message": "What fraction of planets on which life evolves to intelligence will the intelligence develop a technological civilization capable of radio communication?",
-            "translation": "What fraction of planets on which life evolves to intelligence will the intelligence develop a technological civilization capable of radio communication?",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Less than 1%%",
-            "message": "Less than 1%%",
-            "translation": "Less than 1%%",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "About 10%%",
-            "message": "About 10%%",
-            "translation": "About 10%%",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "100%%, a technological civilization will always eventually develop if life is present",
-            "message": "100%%, a technological civilization will always eventually develop if life is present",
-            "translation": "100%%, a technological civilization will always eventually develop if life is present",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "What is the average lifetime of a technological civilization capable of communication?",
-            "message": "What is the average lifetime of a technological civilization capable of communication?",
-            "translation": "What is the average lifetime of a technological civilization capable of communication?",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "You have estimated that there are {N} civilizations in the Milky Way.",
-            "message": "You have estimated that there are {N} civilizations in the Milky Way.",
-            "translation": {
-                "select": {
-                    "feature": "plural",
-                    "arg": "N",
-                    "cases": {
-                        "=1": {
-                            "msg": "You have estimated that there are 1 civilization in the Milky Way."
-                        },
-                        "other": {
-                            "msg": "You have estimated that there are {N} civilizations in the Milky Way."
-                        }
-                    }
-                }
-            },
-            "translatorComment": "Copied from source.",
-            "placeholders": [
-                {
-                    "id": "N",
-                    "string": "%[1]d",
-                    "type": "int",
-                    "underlyingType": "int",
-                    "argNum": 1,
-                    "expr": "fprtToInt(survey.N)"
-                }
-            ],
-            "fuzzy": true
-        },
-        {
-            "id": "This is a difference of {Difference} orders of magnitude from your initial prediction of {PresurveyAssessment}.",
-            "message": "This is a difference of {Difference} orders of magnitude from your initial prediction of {PresurveyAssessment}.",
-            "translation": {
-                "select": {
-                    "feature": "plural",
-                    "arg": "Difference",
-                    "cases": {
-                        "=1": {
-                            "msg": "This is a difference of 1 order of magnitude from your initial prediction of {PresurveyAssessment}."
-                        },
-                        "other": {
-                            "msg": "This is a difference of {Difference} orders of magnitude from your initial prediction of {PresurveyAssessment}."
-                        }
-                    }
-                }
-            },
-            "translatorComment": "Copied from source.",
-            "placeholders": [
-                {
-                    "id": "Difference",
-                    "string": "%[1]d",
-                    "type": "int64",
-                    "underlyingType": "int64",
-                    "argNum": 1,
-                    "expr": "survey.Difference()"
-                },
-                {
-                    "id": "PresurveyAssessment",
-                    "string": "%[2]d",
-                    "type": "int",
-                    "underlyingType": "int",
-                    "argNum": 2,
-                    "expr": "fprtToInt(survey.PresurveyAssessment)"
-                }
-            ],
-            "fuzzy": true
-        },
-        {
-            "id": "Do you agree with your most recent estimation?",
-            "message": "Do you agree with your most recent estimation?",
-            "translation": "Do you agree with your most recent estimation?",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Yes, I am more confident using the Drake Equation calculation",
-            "message": "Yes, I am more confident using the Drake Equation calculation",
-            "translation": "Yes, I am more confident using the Drake Equation calculation",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Yes, the Drake Equation includes factors I didn't think during my initial prediction",
-            "message": "Yes, the Drake Equation includes factors I didn't think during my initial prediction",
-            "translation": "Yes, the Drake Equation includes factors I didn't think during my initial prediction",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "No, I am more confident with my initial prediction",
-            "message": "No, I am more confident with my initial prediction",
-            "translation": "No, I am more confident with my initial prediction",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "No, any guess is good as mine",
-            "message": "No, any guess is good as mine",
-            "translation": "No, any guess is good as mine",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         }

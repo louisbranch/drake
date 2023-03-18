@@ -73,6 +73,14 @@ func (s Survey) NValues() []SurveyOption {
 			Text:  s.Printer.Sprintf("A few millions"),
 			Value: 1000000,
 		},
+		{
+			Text:  s.Printer.Sprintf("A few billions"),
+			Value: 1000000000,
+		},
+		{
+			Text:  s.Printer.Sprintf("A few trillions"),
+			Value: 1000000000000,
+		},
 	}
 }
 
