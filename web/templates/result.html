@@ -13,10 +13,18 @@
     <canvas id="post-survey"></canvas>
 </div>
 {{ if ne .Survey.N nil }}
-<h3>{{ .Estimation }}</h3>
+<h3>{{ .Survey.Estimation }}</h3>
+<h3>{{ .Survey.MeanEstimationDistance }}</h3>
 {{ end }}
 
 <script>
+  // Wrap numbers in span.number tags
+  document.querySelectorAll('h3').forEach(function(el){
+    const tag = '<span class="number">$1</span>'
+    return el.innerHTML = el.innerHTML.replace(/((\d(,|\.)?)+)/g, tag);
+  });
+
+  // Initialize ChartJS settings
   const labels = {{ .DataLabels }};
   const predata = {{ .PresurveyData }};
   const postdata = {{ .PostsurveyData }};
@@ -26,6 +34,7 @@
   Chart.defaults.borderColor = null;
   Chart.defaults.color = '#fff';
 
+  // Shared options between charts
   const options = {
       responsive: true,
       indexAxis: 'y',
@@ -64,6 +73,7 @@
       }
     };
 
+  // Pre-Survey Chart
   new Chart(document.getElementById('pre-survey'), {
     type: 'bar',
     data: {
@@ -77,6 +87,7 @@
     options: options
   });
 
+  // Post-Survey Chart
   new Chart(document.getElementById('post-survey'), {
     type: 'bar',
     data: {
