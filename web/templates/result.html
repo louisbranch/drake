@@ -17,7 +17,7 @@
 {{ end }}
 
 <script>
-  const buckets = {{ .Buckets }};
+  const labels = {{ .DataLabels }};
   const predata = {{ .PresurveyData }};
   const postdata = {{ .PostsurveyData }};
 
@@ -27,6 +27,7 @@
 
   const options = {
       responsive: true,
+      indexAxis: 'y',
       maintainAspectRatio: false,
       plugins: {
         legend: {
@@ -34,13 +35,13 @@
         }
       },
       scales: {
-        x: {
+        y: {
           title: {
             display: true,
             text: {{ .Civilizations }}
           }
         },
-        y: {
+        x: {
           beginAtZero: true,
           title: {
             display: true,
@@ -56,7 +57,7 @@
   new Chart(document.getElementById('pre-survey'), {
     type: 'bar',
     data: {
-      labels: buckets,
+      labels: labels,
       datasets: [{
         data: predata,
         borderWidth: 1,
@@ -69,7 +70,7 @@
   new Chart(document.getElementById('post-survey'), {
     type: 'bar',
     data: {
-      labels: buckets,
+      labels: labels,
       datasets: [{
         data: postdata,
         borderWidth: 1,

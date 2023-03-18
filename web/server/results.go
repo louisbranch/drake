@@ -38,12 +38,15 @@ func (srv *Server) results(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	printer, page := srv.i18n(w, r)
+
 	result := presenter.Result{
 		Surveys: surveys,
+		Printer: printer,
 	}
 
-	s, _ := json.Marshal(result.Buckets())
-	buckets := template.JS(string(s))
+	s, _ := json.Marshal(result.DataLabels())
+	labels := template.JS(string(s))
 
 	s, _ = json.Marshal(result.PresurveyData())
 	predata := template.JS(string(s))
@@ -51,13 +54,12 @@ func (srv *Server) results(w http.ResponseWriter, r *http.Request) {
 	s, _ = json.Marshal(result.PostsurveyData())
 	postdata := template.JS(string(s))
 
-	printer, page := srv.i18n(w, r)
 	page.Title = printer.Sprintf("Results for Session %s", name)
 	page.Partials = []string{"result"}
 	page.Content = struct {
 		Session        drake.Session
 		Survey         presenter.Survey
-		Buckets        template.JS
+		DataLabels     template.JS
 		PresurveyData  template.JS
 		PostsurveyData template.JS
 		Guesses        string
@@ -69,7 +71,7 @@ func (srv *Server) results(w http.ResponseWriter, r *http.Request) {
 	}{
 		Session:        session,
 		Survey:         presenter.Survey{Survey: survey},
-		Buckets:        buckets,
+		DataLabels:     labels,
 		PresurveyData:  predata,
 		PostsurveyData: postdata,
 		Guesses:        printer.Sprintf("Initial Guesses"),

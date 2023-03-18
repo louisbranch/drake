@@ -4,66 +4,75 @@ import (
 	"math"
 
 	"github.com/louisbranch/drake"
+	"golang.org/x/text/message"
 )
 
 type Result struct {
 	Surveys []drake.Survey
+	*message.Printer
 }
 
 func (r Result) Participants() int {
 	return len(r.Surveys)
 }
 
-func (r Result) Buckets() []string {
-	max := 15
-	supers := []rune{'⁰', '¹', '²', '³', '⁴', '⁵', '⁶', '⁷', '⁸', '⁹'}
-	buckets := make([]string, max)
-
-	for i := 0; i < max; i++ {
-		val := "10"
-		if i > 10 {
-			val += string(supers[1]) + string(supers[i%10])
-		} else {
-			val += string(supers[i%10])
-		}
-		buckets[i] = val
+func (r Result) DataLabels() []string {
+	return []string{
+		r.Printer.Sprintf("Only us"),
+		r.Printer.Sprintf("Dozens"),
+		r.Printer.Sprintf("Hundreds"),
+		r.Printer.Sprintf("Thousands"),
+		r.Printer.Sprintf("Millions"),
+		r.Printer.Sprintf("Billions"),
+		r.Printer.Sprintf("Trillions"),
 	}
-
-	return buckets
 }
 
 func (r Result) PresurveyData() []int {
-	data := make([]int, len(r.Buckets()))
+	data := make([]int, 7)
 
 	for _, s := range r.Surveys {
 		if s.PresurveyAssessment == nil {
 			continue
 		}
 		n := int(math.Log10(*s.PresurveyAssessment))
-		if n < 1 {
-			n = 0
+		switch {
+		case n < 1:
+			data[0] += 1 // 0
+		case n < 3:
+			data[n] += 1 // 1 - 999
+		case n < 6:
+			data[3] += 1 // 1,000 - 999,999
+		default:
+			data[4] += 1 // 1,000,000+
 		}
-		data[n] += 1
 	}
 
 	return data
 }
 
 func (r Result) PostsurveyData() []int {
-	max := len(r.Buckets())
-	data := make([]int, max)
+	data := make([]int, 7)
 
 	for _, s := range r.Surveys {
 		if s.N == nil {
 			continue
 		}
 		n := int(math.Log10(*s.N))
-		if n < 1 {
-			n = 0
-		} else if n > max-1 {
-			n = max - 1
+		switch {
+		case n < 1:
+			data[0] += 1 // 0
+		case n < 3:
+			data[n] += 1 // 1 - 999
+		case n < 6:
+			data[3] += 1 // 1,000 - 999,999
+		case n < 9:
+			data[4] += 1 // 1,000,000 - 999,999,999
+		case n < 12:
+			data[5] += 1 // 1,000,000,000 - 999,999,999,999
+		default:
+			data[6] += 1 // 1,000,000,000,000+
 		}
-		data[n] += 1
 	}
 
 	return data
