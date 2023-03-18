@@ -340,7 +340,7 @@ func (s Survey) avgDistance(val *float64) (int, bool) {
 
 	n := *val
 
-	if n == 0 {
+	if n < 1 {
 		return 0, false
 	}
 
