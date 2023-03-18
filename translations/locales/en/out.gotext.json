@@ -557,25 +557,25 @@
             "fuzzy": true
         },
         {
-            "id": "Initial Guesses",
-            "message": "Initial Guesses",
-            "translation": "Initial Guesses",
+            "id": "Initial Predictions",
+            "message": "Initial Predictions",
+            "translation": "Initial Predictions",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
         {
-            "id": "You guessed {PresurveyAssessment} civilizations",
-            "message": "You guessed {PresurveyAssessment} civilizations",
+            "id": "You predicted {PresurveyAssessment} civilizations.",
+            "message": "You predicted {PresurveyAssessment} civilizations.",
             "translation": {
                 "select": {
                     "feature": "plural",
                     "arg": "PresurveyAssessment",
                     "cases": {
                         "=1": {
-                            "msg": "You guessed 1 civilization"
+                            "msg": "You predicted 1 civilization."
                         },
                         "other": {
-                            "msg": "You guessed {PresurveyAssessment} civilizations"
+                            "msg": "You predicted {PresurveyAssessment} civilizations."
                         }
                     }
                 }
@@ -594,25 +594,25 @@
             "fuzzy": true
         },
         {
-            "id": "Final Results",
-            "message": "Final Results",
-            "translation": "Final Results",
+            "id": "Final Estimations",
+            "message": "Final Estimations",
+            "translation": "Final Estimations",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
         {
-            "id": "You estimated {N} civilizations",
-            "message": "You estimated {N} civilizations",
+            "id": "You estimated {N} civilizations.",
+            "message": "You estimated {N} civilizations.",
             "translation": {
                 "select": {
                     "feature": "plural",
                     "arg": "N",
                     "cases": {
                         "=1": {
-                            "msg": "You estimated 1 civilization"
+                            "msg": "You estimated 1 civilization."
                         },
                         "other": {
-                            "msg": "You estimated {N} civilizations"
+                            "msg": "You estimated {N} civilizations."
                         }
                     }
                 }

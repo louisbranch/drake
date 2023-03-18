@@ -1,11 +1,11 @@
 {{ define "content" }}
 
-<h2>{{ .Guesses }}</h2>
+<h2>{{ .Predictions }}</h2>
 <div style="position: relative; height: 50vh;">
     <canvas id="pre-survey"></canvas>
 </div>
 {{ if ne .Survey.PresurveyAssessment nil }}
-<h3>{{ .Guess }}</h3>
+<h3>{{ .Prediction }}</h3>
 {{ end }}
 <hr>
 <h2>{{ .Results }}</h2>

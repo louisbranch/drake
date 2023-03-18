@@ -77,12 +77,12 @@ var messageKeyToIndex = map[string]int{
 	"Drake Equation":      57,
 	"Drake Equation - %s": 87,
 	"Estimate the number of detectable alien civilizations in the Milky Way using the Drake Equation.": 70,
-	"Final Results": 65,
-	"Home":          61,
+	"Final Estimations": 65,
+	"Home":              61,
 	"How many technological advanced civilizations exist in the Milky Way?": 13,
 	"Hundreds": 2,
 	"If you would like to contribute to the project, for example, adding more translations, get in touch:": 55,
-	"Initial Guesses":       63,
+	"Initial Predictions":   63,
 	"Internal Server Error": 59,
 	"Join":                  85,
 	"Join Session":          76,
@@ -123,10 +123,10 @@ var messageKeyToIndex = map[string]int{
 	"What is the average lifetime of a technological civilization capable of communication?":                                                                    43,
 	"Yes, I am more confident using the Drake Equation calculation":                                                                                             47,
 	"Yes, the Drake Equation includes factors I didn't think during my initial prediction":                                                                      48,
-	"You estimated %d civilizations":                                       66,
-	"You guessed %d civilizations":                                         64,
-	"You have estimated that there are %d civilizations in the Milky Way.": 11,
-	"to compare your initial guess with the final value":                   74,
+	"You estimated %d civilizations.":                                                                              66,
+	"You have estimated that there are %d civilizations in the Milky Way.":                                         11,
+	"You predicted %d civilizations.":                                                                              64,
+	"to compare your initial guess with the final value":                                                           74,
 	"to think about the size and composition of the galaxy and how it affects the possibility of intelligent life": 72,
 	"to understand and estimate the terms of the Drake Equation":                                                   73,
 }
@@ -151,16 +151,16 @@ var enIndex = []uint32{ // 91 elements
 	0x000009bc, 0x000009c8, 0x000009d7, 0x000009eb,
 	0x00000a01, 0x00000a10, 0x00000a15, 0x00000a2f,
 	// Entry 40 - 5F
-	0x00000a3f, 0x00000a84, 0x00000a92, 0x00000adb,
-	0x00000ae9, 0x00000af6, 0x00000b14, 0x00000b75,
-	0x00000b85, 0x00000bf2, 0x00000c2d, 0x00000c60,
-	0x00000c6f, 0x00000c7c, 0x00000c85, 0x00000c95,
-	0x00000c9a, 0x00000ca2, 0x00000cb8, 0x00000cbd,
-	0x00000ccb, 0x00000cd7, 0x00000cdc, 0x00000ce8,
-	0x00000cff, 0x00000d04, 0x00000d3c,
+	0x00000a43, 0x00000a8e, 0x00000aa0, 0x00000aeb,
+	0x00000af9, 0x00000b06, 0x00000b24, 0x00000b85,
+	0x00000b95, 0x00000c02, 0x00000c3d, 0x00000c70,
+	0x00000c7f, 0x00000c8c, 0x00000c95, 0x00000ca5,
+	0x00000caa, 0x00000cb2, 0x00000cc8, 0x00000ccd,
+	0x00000cdb, 0x00000ce7, 0x00000cec, 0x00000cf8,
+	0x00000d0f, 0x00000d14, 0x00000d4c,
 } // Size: 388 bytes
 
-const enData string = "" + // Size: 3388 bytes
+const enData string = "" + // Size: 3404 bytes
 	"\x02Only us\x02Dozens\x02Hundreds\x02Thousands\x02Millions\x02Billions" +
 	"\x02Trillions\x02Less than one min ago\x02%[1]d mins ago\x02%[1]d hours " +
 	"ago\x02%[1]d days ago\x14\x01\x81\x01\x00=\x01C\x02You have estimated th" +
@@ -200,20 +200,20 @@ const enData string = "" + // Size: 3388 bytes
 	" the MIT License.\x02If you would like to contribute to the project, for" +
 	" example, adding more translations, get in touch:\x02Source Code\x02Drak" +
 	"e Equation\x02Astronomy Education\x02Internal Server Error\x02Page Not F" +
-	"ound\x02Home\x02Results for Session %[1]s\x02Initial Guesses\x14\x01\x81" +
-	"\x01\x00=\x01\x1b\x02You guessed 1 civilization\x00 \x02You guessed %[1]" +
-	"d civilizations\x02Final Results\x14\x01\x81\x01\x00=\x01\x1d\x02You est" +
-	"imated 1 civilization\x00\x22\x02You estimated %[1]d civilizations\x02Ci" +
-	"vilizations\x02Participants\x02Are we alone in the Universe?\x02Estimate" +
-	" the number of detectable alien civilizations in the Milky Way using the" +
-	" Drake Equation.\x02Learning Goals:\x02to think about the size and compo" +
-	"sition of the galaxy and how it affects the possibility of intelligent l" +
-	"ife\x02to understand and estimate the terms of the Drake Equation\x02to " +
-	"compare your initial guess with the final value\x02Create Session\x02Joi" +
-	"n Session\x02Sessions\x02Latest Sessions\x02Name\x02Created\x02No availa" +
-	"ble sessions\x02Back\x02Session %[1]s\x02Share Link:\x02Join\x02See Resu" +
-	"lts\x02Drake Equation - %[1]s\x02Next\x02Select the choice that best agr" +
-	"ees with what you think."
+	"ound\x02Home\x02Results for Session %[1]s\x02Initial Predictions\x14\x01" +
+	"\x81\x01\x00=\x01\x1e\x02You predicted 1 civilization.\x00#\x02You predi" +
+	"cted %[1]d civilizations.\x02Final Estimations\x14\x01\x81\x01\x00=\x01" +
+	"\x1e\x02You estimated 1 civilization.\x00#\x02You estimated %[1]d civili" +
+	"zations.\x02Civilizations\x02Participants\x02Are we alone in the Univers" +
+	"e?\x02Estimate the number of detectable alien civilizations in the Milky" +
+	" Way using the Drake Equation.\x02Learning Goals:\x02to think about the " +
+	"size and composition of the galaxy and how it affects the possibility of" +
+	" intelligent life\x02to understand and estimate the terms of the Drake E" +
+	"quation\x02to compare your initial guess with the final value\x02Create " +
+	"Session\x02Join Session\x02Sessions\x02Latest Sessions\x02Name\x02Create" +
+	"d\x02No available sessions\x02Back\x02Session %[1]s\x02Share Link:\x02Jo" +
+	"in\x02See Results\x02Drake Equation - %[1]s\x02Next\x02Select the choice" +
+	" that best agrees with what you think."
 
 var pt_BRIndex = []uint32{ // 91 elements
 	// Entry 0 - 1F
@@ -230,21 +230,21 @@ var pt_BRIndex = []uint32{ // 91 elements
 	0x00000504, 0x00000546, 0x00000592, 0x000005aa,
 	0x00000635, 0x00000642, 0x00000653, 0x000006aa,
 	0x00000707, 0x00000712, 0x00000725, 0x00000755,
-	0x0000079a, 0x000007f2, 0x00000827, 0x00000857,
-	0x0000085d, 0x0000086a, 0x0000095d, 0x000009e9,
-	0x00000a50, 0x00000a5e, 0x00000a6e, 0x00000a87,
-	0x00000aa0, 0x00000ab8, 0x00000ac0, 0x00000ade,
+	0x0000079a, 0x000007f7, 0x00000831, 0x00000866,
+	0x0000086c, 0x00000879, 0x0000096c, 0x000009f8,
+	0x00000a5f, 0x00000a6d, 0x00000a7d, 0x00000a96,
+	0x00000aaf, 0x00000ac7, 0x00000acf, 0x00000aed,
 	// Entry 40 - 5F
-	0x00000af0, 0x00000b41, 0x00000b53, 0x00000b9e,
-	0x00000bad, 0x00000bbb, 0x00000bd9, 0x00000c42,
-	0x00000c5c, 0x00000cbe, 0x00000cf1, 0x00000d20,
-	0x00000d2e, 0x00000d3f, 0x00000d48, 0x00000d5a,
-	0x00000d5f, 0x00000d66, 0x00000d82, 0x00000d89,
-	0x00000d97, 0x00000dae, 0x00000db4, 0x00000dc3,
-	0x00000ddb, 0x00000de4, 0x00000e23,
+	0x00000b01, 0x00000b4f, 0x00000b62, 0x00000baf,
+	0x00000bbe, 0x00000bcc, 0x00000bea, 0x00000c53,
+	0x00000c6d, 0x00000ccf, 0x00000d02, 0x00000d34,
+	0x00000d42, 0x00000d53, 0x00000d5c, 0x00000d6e,
+	0x00000d73, 0x00000d7a, 0x00000d96, 0x00000d9d,
+	0x00000dab, 0x00000dc2, 0x00000dc8, 0x00000dd7,
+	0x00000def, 0x00000df8, 0x00000e37,
 } // Size: 388 bytes
 
-const pt_BRData string = "" + // Size: 3619 bytes
+const pt_BRData string = "" + // Size: 3639 bytes
 	"\x02Apenas nós\x02Dezenas\x02Centenas\x02Milhares\x02Milhões\x02Bilhões" +
 	"\x02Trilhões\x02Menos de um min atrás\x02%[1]d mins atrás\x02%[1]d horas" +
 	" atrás\x02%[1]d dias atrás\x14\x01\x81\x01\x00=\x016\x02Você estimou que" +
@@ -274,30 +274,30 @@ const pt_BRData string = "" + // Size: 3619 bytes
 	" tecnologicamente capaz de comunicação?\x02%[1]d anos\x02%[1]d anos ou m" +
 	"ais\x02Você concoda com essa estimativa mais recente?\x02Sim, eu estou m" +
 	"ais confiante usando o cálculo da Equação de Drake\x02Sim, a Equação de " +
-	"Drake inclui fatores que eu não pensei durante meu palpite inicial\x02Nã" +
-	"o, eu estou mais confiante no meu palpite inicial\x02Não, qualquer palpi" +
-	"te é tão bom quanto o meu\x02Sobre\x02Referências\x02Esse projeto foi cr" +
-	"iado como parte do curso Princípios e Práticas em Ciência da Educação, n" +
-	"a Unversidade de Toronto, com a intenção de ser um recurso gratuito a ed" +
-	"ucadores para introduzir a Equação de Drake para uma ampla audiência." +
-	"\x02As questões para a Equação de Drake na pesquisa são de LoPresto and " +
-	"Hubble-Zdanowski (2012). O código é aberto usando a Licença MIT.\x02Se v" +
-	"ocê quiser contribuir com o projeto, por exemplo, adicionando mais tradu" +
-	"ções, entre em contato:\x02Código Fonte\x02Equação Drake\x02Educação em" +
-	" Astronomia\x02Erro Interno do Servidor\x02Página Não Encontrada\x02Iníc" +
-	"io\x02Resultados para Sessão %[1]s\x02Palpites Iniciais\x14\x01\x81\x01" +
-	"\x00=\x01 \x02Seu palpite foi 1 civilização\x00'\x02Seu palpite foram %[" +
-	"1]d civilizações\x02Resultados Finais\x14\x01\x81\x01\x00=\x01\x1e\x02Vo" +
-	"cê estimou 1 civilização\x00#\x02Você estimou %[1]d civilizações\x02Civi" +
-	"lizações\x02Participantes\x02Estamos sozinhos no Universo?\x02Estime o n" +
-	"úmero de civilizações alienígenas detectáveis na Via Láctea usando a Eq" +
-	"uação de Drake.\x02Objetivos de Aprendizado:\x02pensar sobre o tamanho e" +
-	" composição da galaxia e como afeta a possibilidade de vida inteligente" +
-	"\x02entender e estimar os termos da Equação de Drake\x02comparar seu pal" +
-	"pite inicial com o valor final\x02Criar Sessão\x02Entra na Sessão\x02Ses" +
-	"sões\x02Últimas Sessões\x02Nome\x02Criado\x02Nenhuma sessão disponível" +
-	"\x02Voltar\x02Sessão %[1]s\x02Compartilhe Endereço:\x02Entre\x02Ver Resu" +
-	"ltados\x02Equação Drake - %[1]s\x02Próximo\x02Selecione a opção que melh" +
-	"or concorde com o que você pensa."
+	"Drake inclui fatores que eu não pensei durante minha predição inicial" +
+	"\x02Não, eu estou mais confiante no minha predição inicial\x02Não, qualq" +
+	"uer predição é tão boa quanto a minha\x02Sobre\x02Referências\x02Esse pr" +
+	"ojeto foi criado como parte do curso Princípios e Práticas em Ciência da" +
+	" Educação, na Unversidade de Toronto, com a intenção de ser um recurso g" +
+	"ratuito a educadores para introduzir a Equação de Drake para uma ampla a" +
+	"udiência.\x02As questões para a Equação de Drake na pesquisa são de LoPr" +
+	"esto and Hubble-Zdanowski (2012). O código é aberto usando a Licença MIT" +
+	".\x02Se você quiser contribuir com o projeto, por exemplo, adicionando m" +
+	"ais traduções, entre em contato:\x02Código Fonte\x02Equação Drake\x02Edu" +
+	"cação em Astronomia\x02Erro Interno do Servidor\x02Página Não Encontrada" +
+	"\x02Início\x02Resultados para Sessão %[1]s\x02Previsões Iniciais\x14\x01" +
+	"\x81\x01\x00=\x01 \x02Você predisse 1 civilização.\x00$\x02Você predisse" +
+	" %[1]d civilizations.\x02Estimativas Finais\x14\x01\x81\x01\x00=\x01\x1f" +
+	"\x02Você estimou 1 civilização.\x00$\x02Você estimou %[1]d civilizações." +
+	"\x02Civilizações\x02Participantes\x02Estamos sozinhos no Universo?\x02Es" +
+	"time o número de civilizações alienígenas detectáveis na Via Láctea usan" +
+	"do a Equação de Drake.\x02Objetivos de Aprendizado:\x02pensar sobre o ta" +
+	"manho e composição da galaxia e como afeta a possibilidade de vida intel" +
+	"igente\x02entender e estimar os termos da Equação de Drake\x02comparar s" +
+	"ua predição inicial com o valor final\x02Criar Sessão\x02Entra na Sessão" +
+	"\x02Sessões\x02Últimas Sessões\x02Nome\x02Criado\x02Nenhuma sessão dispo" +
+	"nível\x02Voltar\x02Sessão %[1]s\x02Compartilhe Endereço:\x02Entre\x02Ver" +
+	" Resultados\x02Equação Drake - %[1]s\x02Próximo\x02Selecione a opção que" +
+	" melhor concorde com o que você pensa."
 
-	// Total table size 7783 bytes (7KiB); checksum: 6091112B
+	// Total table size 7819 bytes (7KiB); checksum: 60CBC9CD

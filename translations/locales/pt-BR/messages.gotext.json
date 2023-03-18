@@ -348,17 +348,17 @@
         {
             "id": "Yes, the Drake Equation includes factors I didn't think during my initial prediction",
             "message": "Yes, the Drake Equation includes factors I didn't think during my initial prediction",
-            "translation": "Sim, a Equação de Drake inclui fatores que eu não pensei durante meu palpite inicial"
+            "translation": "Sim, a Equação de Drake inclui fatores que eu não pensei durante minha predição inicial"
         },
         {
             "id": "No, I am more confident with my initial prediction",
             "message": "No, I am more confident with my initial prediction",
-            "translation": "Não, eu estou mais confiante no meu palpite inicial"
+            "translation": "Não, eu estou mais confiante no minha predição inicial"
         },
         {
             "id": "No, any guess is good as mine",
             "message": "No, any guess is good as mine",
-            "translation": "Não, qualquer palpite é tão bom quanto o meu"
+            "translation": "Não, qualquer predição é tão boa quanto a minha"
         },
         {
             "id": "About",
@@ -431,23 +431,23 @@
             ]
         },
         {
-            "id": "Initial Guesses",
-            "message": "Initial Guesses",
-            "translation": "Palpites Iniciais"
+            "id": "Initial Predictions",
+            "message": "Initial Predictions",
+            "translation": "Previsões Iniciais"
         },
         {
-            "id": "You guessed {PresurveyAssessment} civilizations",
-            "message": "You guessed {PresurveyAssessment} civilizations",
+            "id": "You predicted {PresurveyAssessment} civilizations.",
+            "message": "You predicted {PresurveyAssessment} civilizations.",
             "translation": {
                 "select": {
                     "feature": "plural",
                     "arg": "PresurveyAssessment",
                     "cases": {
                         "=1": {
-                            "msg": "Seu palpite foi 1 civilização"
+                            "msg": "Você predisse 1 civilização."
                         },
                         "other": {
-                            "msg": "Seu palpite foram {PresurveyAssessment} civilizações"
+                            "msg": "Você predisse {PresurveyAssessment} civilizations."
                         }
                     }
                 }
@@ -464,23 +464,23 @@
             ]
         },
         {
-            "id": "Final Results",
-            "message": "Final Results",
-            "translation": "Resultados Finais"
+            "id": "Final Estimations",
+            "message": "Final Estimations",
+            "translation": "Estimativas Finais"
         },
         {
-            "id": "You estimated {N} civilizations",
-            "message": "You estimated {N} civilizations",
+            "id": "You estimated {N} civilizations.",
+            "message": "You estimated {N} civilizations.",
             "translation": {
                 "select": {
                     "feature": "plural",
                     "arg": "N",
                     "cases": {
                         "=1": {
-                            "msg": "Você estimou 1 civilização"
+                            "msg": "Você estimou 1 civilização."
                         },
                         "other": {
-                            "msg": "Você estimou {N} civilizações"
+                            "msg": "Você estimou {N} civilizações."
                         }
                     }
                 }
@@ -534,7 +534,7 @@
         {
             "id": "to compare your initial guess with the final value",
             "message": "to compare your initial guess with the final value",
-            "translation": "comparar seu palpite inicial com o valor final"
+            "translation": "comparar sua predição inicial com o valor final"
         },
         {
             "id": "Create Session",

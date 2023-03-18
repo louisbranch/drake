@@ -62,8 +62,8 @@ func (srv *Server) results(w http.ResponseWriter, r *http.Request) {
 		DataLabels     template.JS
 		PresurveyData  template.JS
 		PostsurveyData template.JS
-		Guesses        string
-		Guess          string
+		Predictions    string
+		Prediction     string
 		Results        string
 		Estimation     string
 		Civilizations  string
@@ -74,11 +74,11 @@ func (srv *Server) results(w http.ResponseWriter, r *http.Request) {
 		DataLabels:     labels,
 		PresurveyData:  predata,
 		PostsurveyData: postdata,
-		Guesses:        printer.Sprintf("Initial Guesses"),
-		Guess: printer.Sprintf("You guessed %d civilizations",
+		Predictions:    printer.Sprintf("Initial Predictions"),
+		Prediction: printer.Sprintf("You predicted %d civilizations.",
 			fprtToInt(survey.PresurveyAssessment)),
-		Results: printer.Sprintf("Final Results"),
-		Estimation: printer.Sprintf("You estimated %d civilizations",
+		Results: printer.Sprintf("Final Estimations"),
+		Estimation: printer.Sprintf("You estimated %d civilizations.",
 			fprtToInt(survey.N)),
 		Civilizations: printer.Sprintf("Civilizations"),
 		Participants:  printer.Sprintf("Participants"),
