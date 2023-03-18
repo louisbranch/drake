@@ -242,37 +242,37 @@
             "fuzzy": true
         },
         {
-            "id": "A few hundred",
-            "message": "A few hundred",
-            "translation": "A few hundred",
+            "id": "Around 100 million",
+            "message": "Around 100 million",
+            "translation": "Around 100 million",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
         {
-            "id": "A few hundred thousand",
-            "message": "A few hundred thousand",
-            "translation": "A few hundred thousand",
+            "id": "Around 500 million",
+            "message": "Around 500 million",
+            "translation": "Around 500 million",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
         {
-            "id": "A few hundred million",
-            "message": "A few hundred million",
-            "translation": "A few hundred million",
+            "id": "Around 100 billion",
+            "message": "Around 100 billion",
+            "translation": "Around 100 billion",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
         {
-            "id": "A few hundred billion",
-            "message": "A few hundred billion",
-            "translation": "A few hundred billion",
+            "id": "Around 500 billion",
+            "message": "Around 500 billion",
+            "translation": "Around 500 billion",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
         {
-            "id": "A few hundred trillion",
-            "message": "A few hundred trillion",
-            "translation": "A few hundred trillion",
+            "id": "More than 1 trillion",
+            "message": "More than 1 trillion",
+            "translation": "More than 1 trillion",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },

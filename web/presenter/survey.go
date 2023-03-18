@@ -107,24 +107,24 @@ func (s Survey) RQuestion() string {
 func (s Survey) RValues() []SurveyOption {
 	return []SurveyOption{
 		{
-			Text:  s.Printer.Sprintf("A few hundred"),
-			Value: 1e3 / MILKY_WAY_AGE,
-		},
-		{
-			Text:  s.Printer.Sprintf("A few hundred thousand"),
-			Value: 1e5 / MILKY_WAY_AGE,
-		},
-		{
-			Text:  s.Printer.Sprintf("A few hundred million"),
+			Text:  s.Printer.Sprintf("Around 100 million"),
 			Value: 1e8 / MILKY_WAY_AGE,
 		},
 		{
-			Text:  s.Printer.Sprintf("A few hundred billion"),
+			Text:  s.Printer.Sprintf("Around 500 million"),
+			Value: 5e8 / MILKY_WAY_AGE,
+		},
+		{
+			Text:  s.Printer.Sprintf("Around 100 billion"),
 			Value: 1e11 / MILKY_WAY_AGE,
 		},
 		{
-			Text:  s.Printer.Sprintf("A few hundred trillion"),
-			Value: 1e14 / MILKY_WAY_AGE,
+			Text:  s.Printer.Sprintf("Around 500 billion"),
+			Value: 5e11 / MILKY_WAY_AGE,
+		},
+		{
+			Text:  s.Printer.Sprintf("More than 1 trillion"),
+			Value: 1e12 / MILKY_WAY_AGE,
 		},
 	}
 }

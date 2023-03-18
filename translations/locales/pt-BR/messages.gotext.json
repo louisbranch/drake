@@ -204,29 +204,29 @@
             "translation": "Quantas estrelas existem em nossa galáxia?"
         },
         {
-            "id": "A few hundred",
-            "message": "A few hundred",
-            "translation": "Algumas centenas"
+            "id": "Around 100 million",
+            "message": "Around 100 million",
+            "translation": "Em torno de 100 milhões"
         },
         {
-            "id": "A few hundred thousand",
-            "message": "A few hundred thousand",
-            "translation": "Algumas centenas de milhares"
+            "id": "Around 500 million",
+            "message": "Around 500 million",
+            "translation": "Em torno de 500 milhões"
         },
         {
-            "id": "A few hundred million",
-            "message": "A few hundred million",
-            "translation": "Algumas centenas de milhões"
+            "id": "Around 100 billion",
+            "message": "Around 100 billion",
+            "translation": "Em torno de 100 bilhões"
         },
         {
-            "id": "A few hundred billion",
-            "message": "A few hundred billion",
-            "translation": "Algumas centenas de bilhões"
+            "id": "Around 500 billion",
+            "message": "Around 500 billion",
+            "translation": "Em torno de 500 bilhões"
         },
         {
-            "id": "A few hundred trillion",
-            "message": "A few hundred trillion",
-            "translation": "Algumas centenas de trilhões"
+            "id": "More than 1 trillion",
+            "message": "More than 1 trillion",
+            "translation": "Mais de 1 trilhão"
         },
         {
             "id": "Approximately what percentage of the stars in our galaxy have planets in orbit?",
