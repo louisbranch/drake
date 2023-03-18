@@ -53,64 +53,64 @@
     <h4>{{ .Choice }}</h4>
     {{ end }}
     {{ if eq .Survey.PresurveyAssessment nil }}
-    <h3>{{ .N }}</h3>
-    {{ range $opt := .NValues }}
+    <h3>{{ .Survey.NQuestion }}</h3>
+    {{ range $opt := .Survey.NValues }}
         <label class="pure-radio">
             <input type="radio" name="presurvey_assessment" value='{{ printf "%.0f" $opt.Value }}' /> {{ $opt.Text }}
         </label>
     {{ end }}
 
     {{ else if eq .Survey.R nil }}
-    <h3>{{ .R }}</h3>
-    {{ range $opt := .RValues }}
+    <h3>{{ .Survey.RQuestion }}</h3>
+    {{ range $opt := .Survey.RValues }}
         <label class="pure-radio">
             <input type="radio" name="r" value='{{ printf "%.0f" $opt.Value }}' /> {{ $opt.Text }}
         </label>
     {{ end }}
 
     {{ else if eq .Survey.Fp nil }}
-    <h3>{{ .Fp }}</h3>
-    {{ range $opt := .FpValues }}
+    <h3>{{ .Survey.FpQuestion }}</h3>
+    {{ range $opt := .Survey.FpValues }}
         <label class="pure-radio">
             <input type="radio" name="fp" value='{{ printf "%.3f" $opt.Value }}' /> {{ $opt.Text }}
         </label>
     {{ end }}
 
     {{ else if eq .Survey.Ne nil }}
-    <h3>{{ .Ne }}</h3>
-    {{ range $opt := .NeValues }}
+    <h3>{{ .Survey.NeQuestion }}</h3>
+    {{ range $opt := .Survey.NeValues }}
         <label class="pure-radio">
             <input type="radio" name="ne" value='{{ printf "%.3f" $opt.Value }}' /> {{ $opt.Text }}
         </label>
     {{ end }}
 
     {{ else if eq .Survey.Fl nil }}
-    <h3>{{ .Fl }}</h3>
-    {{ range $opt := .FlValues }}
+    <h3>{{ .Survey.FlQuestion }}</h3>
+    {{ range $opt := .Survey.FlValues }}
         <label class="pure-radio">
             <input type="radio" name="fl" value='{{ printf "%.3f" $opt.Value }}' /> {{ $opt.Text }}
         </label>
     {{ end }}
 
     {{ else if eq .Survey.Fi nil }}
-    <h3>{{ .Fi }}</h3>
-    {{ range $opt := .FiValues }}
+    <h3>{{ .Survey.FiQuestion }}</h3>
+    {{ range $opt := .Survey.FiValues }}
         <label class="pure-radio">
             <input type="radio" name="fi" value='{{ printf "%.3f" $opt.Value }}' /> {{ $opt.Text }}
         </label>
     {{ end }}
 
     {{ else if eq .Survey.Fc nil }}
-    <h3>{{ .Fc }}</h3>
-    {{ range $opt := .FcValues }}
+    <h3>{{ .Survey.FcQuestion }}</h3>
+    {{ range $opt := .Survey.FcValues }}
         <label class="pure-radio">
             <input type="radio" name="fc" value='{{ printf "%.3f" $opt.Value }}' /> {{ $opt.Text }}
         </label>
     {{ end }}
 
     {{ else if eq .Survey.L nil }}
-    <h3>{{ .L }}</h3>
-    {{ range $opt := .LValues }}
+    <h3>{{ .Survey.LQuestion }}</h3>
+    {{ range $opt := .Survey.LValues }}
         <label class="pure-radio">
             <input type="radio" name="l" value='{{ printf "%.0f" $opt.Value }}' /> {{ $opt.Text }}
         </label>
@@ -118,10 +118,10 @@
 
     {{ else if eq .Survey.PostsurveyLearnGain nil }}
 
-    <h3>{{ .Estimation }}</h3>
-    <h4>{{ .Difference }}</h4>
-    <h3>{{ .Agreement }}</h3>
-    {{ range $opt := .AgreementValues }}
+    <h3>{{ .Survey.Estimation }}</h3>
+    <h4>{{ .Survey.Difference }}</h4>
+    <h3>{{ .Survey.AgreementQuestion }}</h3>
+    {{ range $opt := .Survey.AgreementValues }}
         <label class="pure-radio">
             <input type="radio" name="learn_gain" value='{{ printf "%.0f" $opt.Value }}' /> {{ $opt.Text }}
         </label>
