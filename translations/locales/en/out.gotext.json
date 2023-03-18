@@ -37,20 +37,6 @@
             "fuzzy": true
         },
         {
-            "id": "Billions",
-            "message": "Billions",
-            "translation": "Billions",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "Trillions",
-            "message": "Trillions",
-            "translation": "Trillions",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
             "id": "Less than one min ago",
             "message": "Less than one min ago",
             "translation": "Less than one min ago",

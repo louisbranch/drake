@@ -23,8 +23,6 @@ func (r Result) DataLabels() []string {
 		r.Printer.Sprintf("Hundreds"),
 		r.Printer.Sprintf("Thousands"),
 		r.Printer.Sprintf("Millions"),
-		r.Printer.Sprintf("Billions"),
-		r.Printer.Sprintf("Trillions"),
 	}
 }
 
@@ -66,12 +64,8 @@ func (r Result) PostsurveyData() []int {
 			data[n] += 1 // 1 - 999
 		case n < 6:
 			data[3] += 1 // 1,000 - 999,999
-		case n < 9:
-			data[4] += 1 // 1,000,000 - 999,999,999
-		case n < 12:
-			data[5] += 1 // 1,000,000,000 - 999,999,999,999
 		default:
-			data[6] += 1 // 1,000,000,000,000+
+			data[4] += 1 // 1,000,000+
 		}
 	}
 
