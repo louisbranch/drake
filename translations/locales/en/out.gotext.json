@@ -2,6 +2,55 @@
     "language": "en",
     "messages": [
         {
+            "id": "Only us",
+            "message": "Only us",
+            "translation": "Only us",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Dozens",
+            "message": "Dozens",
+            "translation": "Dozens",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Hundreds",
+            "message": "Hundreds",
+            "translation": "Hundreds",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Thousands",
+            "message": "Thousands",
+            "translation": "Thousands",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Millions",
+            "message": "Millions",
+            "translation": "Millions",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Billions",
+            "message": "Billions",
+            "translation": "Billions",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Trillions",
+            "message": "Trillions",
+            "translation": "Trillions",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
             "id": "Less than one min ago",
             "message": "Less than one min ago",
             "translation": "Less than one min ago",

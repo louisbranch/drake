@@ -2,6 +2,41 @@
     "language": "pt-BR",
     "messages": [
         {
+            "id": "Only us",
+            "message": "Only us",
+            "translation": "Apenas nós"
+        },
+        {
+            "id": "Dozens",
+            "message": "Dozens",
+            "translation": "Dezenas"
+        },
+        {
+            "id": "Hundreds",
+            "message": "Hundreds",
+            "translation": "Centenas"
+        },
+        {
+            "id": "Thousands",
+            "message": "Thousands",
+            "translation": "Milhares"
+        },
+        {
+            "id": "Millions",
+            "message": "Millions",
+            "translation": "Milhões"
+        },
+        {
+            "id": "Billions",
+            "message": "Billions",
+            "translation": "Bilhões"
+        },
+        {
+            "id": "Trillions",
+            "message": "Trillions",
+            "translation": "Trilhões"
+        },
+        {
             "id": "Less than one min ago",
             "message": "Less than one min ago",
             "translation": "Menos de um min atrás"
