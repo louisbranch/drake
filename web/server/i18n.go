@@ -20,6 +20,7 @@ func (s *Server) i18n(w http.ResponseWriter, r *http.Request) (*message.Printer,
 		http.SetCookie(w, &http.Cookie{
 			Name:   "lang",
 			Value:  query,
+			Path:   "/",
 			MaxAge: 24 * 60 * 60 * 365, // 1 year
 		})
 	}
