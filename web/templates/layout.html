@@ -46,5 +46,13 @@
             </div>
         </div>
     </footer>
+    <script>
+        // Wrap numbers in span.number tags
+        document.querySelectorAll('h3,h4').forEach(function(el){
+            const tag = '<span class="number">$1</span>'
+            return el.innerHTML = el.innerHTML.replace(/((\d(,|\.)?)+)/g, tag);
+        });
+    </script>
+
   </body>
 </html>

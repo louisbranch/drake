@@ -19,12 +19,6 @@
 {{ end }}
 
 <script>
-  // Wrap numbers in span.number tags
-  document.querySelectorAll('h3').forEach(function(el){
-    const tag = '<span class="number">$1</span>'
-    return el.innerHTML = el.innerHTML.replace(/((\d(,|\.)?)+)/g, tag);
-  });
-
   // Initialize ChartJS settings
   const labels = {{ .DataLabels }};
   const predata = {{ .PresurveyData }};

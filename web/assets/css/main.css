@@ -56,7 +56,8 @@ nav ul li button, nav ul li a {
     color: #fff;
 }
 
-h3 .number {
+h3 .number,
+h4 .number {
     font-size: 1.2em;
     font-weight: bold;
     color: #d3a634;
