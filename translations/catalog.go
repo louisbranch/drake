@@ -266,7 +266,7 @@ const pt_BRData string = "" + // Size: 3848 bytes
 	"desenvolver?\x02Uma pequena porcentagem, a vida é muito rara\x02100%%, s" +
 	"e as condições forem favoráveis, a vida é inevitável\x02Qual a fração de" +
 	" planetas com vida na qual vida inteligente irá evoluir?\x02Uma pequena " +
-	"porcentagom\x02Qual a fração de planetas com vida inteligente que irá de" +
+	"porcentagem\x02Qual a fração de planetas com vida inteligente que irá de" +
 	"senvolver uma civilização tecnologicamente capaz de se comunicar por rád" +
 	"io?\x02Menos de 1%%\x02Em torno de 10%%\x02100%%, uma civilização tecnol" +
 	"ogicamente capaz sempre se desenvolverá se houver vida\x02Qual é o tempo" +
@@ -301,4 +301,4 @@ const pt_BRData string = "" + // Size: 3848 bytes
 	" Drake - %[1]s\x02Próximo\x02Selecione a opção que melhor concorde com o" +
 	" que você pensa."
 
-	// Total table size 8245 bytes (8KiB); checksum: 7B4EE578
+	// Total table size 8245 bytes (8KiB); checksum: 889DC49E
