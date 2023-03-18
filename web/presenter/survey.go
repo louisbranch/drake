@@ -34,6 +34,14 @@ func (s Survey) Estimation() string {
 	return s.Printer.Sprintf("You have estimated that there are %d civilizations in the Milky Way.", estimation)
 }
 
+func (s Survey) Prediction() string {
+	prediction := 0
+	if s.PresurveyAssessment != nil {
+		prediction = int(*s.PresurveyAssessment)
+	}
+	return s.Printer.Sprintf("You have predicted that there are %d civilizations in the Milky Way.", prediction)
+}
+
 func (s Survey) Difference() string {
 	prediction := 0
 	if s.PresurveyAssessment != nil {
@@ -303,4 +311,37 @@ func (s Survey) AgreementValues() []SurveyOption {
 			Value: 0,
 		},
 	}
+}
+
+func (s Survey) MeanPredictionDistance() string {
+	u, d := s.meanDistance(s.PresurveyAssessment)
+	if u == "ly" {
+		return s.Printer.Sprintf("The mean distance to another civilization would be %d light-years.", d)
+	}
+	return s.Printer.Sprintf("The mean distance to another civilization would be %d kms.", d)
+}
+
+func (s Survey) MeanEstimationDistance() string {
+	u, d := s.meanDistance(s.N)
+	if u == "ly" {
+		return s.Printer.Sprintf("The mean distance to another civilization would be %d light-years.", d)
+	}
+	return s.Printer.Sprintf("The mean distance to another civilization would be %d kms.", d)
+}
+
+func (s Survey) meanDistance(val *float64) (string, int) {
+	if val == nil {
+		return "", 0
+	}
+
+	n := *val
+	if n == 0 {
+		return "", 0
+	}
+
+	if n < 1e4 {
+		return "ly", int(2 * MILKY_WAY_R_LY / n)
+	}
+
+	return "km", int(2 * MILKY_WAY_R_LY * 9.461 * math.Pow(10, 15) / n)
 }

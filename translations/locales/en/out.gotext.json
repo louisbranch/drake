@@ -117,7 +117,7 @@
                     "arg": "Estimation",
                     "cases": {
                         "=1": {
-                            "msg": "You have estimated that there are 1 civilization in the Milky Way."
+                            "msg": "You have estimated that there is only 1 civilization in the Milky Way."
                         },
                         "other": {
                             "msg": "You have estimated that there are {Estimation} civilizations in the Milky Way."
@@ -134,6 +134,36 @@
                     "underlyingType": "int",
                     "argNum": 1,
                     "expr": "estimation"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "You have predicted that there are {Prediction} civilizations in the Milky Way.",
+            "message": "You have predicted that there are {Prediction} civilizations in the Milky Way.",
+            "translation": {
+                "select": {
+                    "feature": "plural",
+                    "arg": "Prediction",
+                    "cases": {
+                        "=1": {
+                            "msg": "You have predicted that there is only 1 civilization in the Milky Way."
+                        },
+                        "other": {
+                            "msg": "You have predicted that there are {Prediction} civilizations in the Milky Way."
+                        }
+                    }
+                }
+            },
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "Prediction",
+                    "string": "%[1]d",
+                    "type": "int",
+                    "underlyingType": "int",
+                    "argNum": 1,
+                    "expr": "prediction"
                 }
             ],
             "fuzzy": true
@@ -215,20 +245,6 @@
             "id": "A few millions",
             "message": "A few millions",
             "translation": "A few millions",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "A few billions",
-            "message": "A few billions",
-            "translation": "A few billions",
-            "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "A few trillions",
-            "message": "A few trillions",
-            "translation": "A few trillions",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },
@@ -463,6 +479,56 @@
             "fuzzy": true
         },
         {
+            "id": "The mean distance to another civilization would be {D} light-years.",
+            "message": "The mean distance to another civilization would be {D} light-years.",
+            "translation": {
+                "select": {
+                    "feature": "plural",
+                    "arg": "D",
+                    "cases": {
+                        "=0": {
+                            "msg": "There would be no other civilization in the galaxy."
+                        },
+                        "=1": {
+                            "msg": "The mean distance to another civilization would be 1 light-year."
+                        },
+                        "other": {
+                            "msg": "The mean distance to another civilization would be {D} light-years."
+                        }
+                    }
+                }
+            },
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "D",
+                    "string": "%[1]d",
+                    "type": "int",
+                    "underlyingType": "int",
+                    "argNum": 1,
+                    "expr": "d"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "The mean distance to another civilization would be {D} kms.",
+            "message": "The mean distance to another civilization would be {D} kms.",
+            "translation": "The mean distance to another civilization would be {D} kms.",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "D",
+                    "string": "%[1]d",
+                    "type": "int",
+                    "underlyingType": "int",
+                    "argNum": 1,
+                    "expr": "d"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
             "id": "About",
             "message": "About",
             "translation": "About",
@@ -564,70 +630,10 @@
             "fuzzy": true
         },
         {
-            "id": "You predicted {PresurveyAssessment} civilizations.",
-            "message": "You predicted {PresurveyAssessment} civilizations.",
-            "translation": {
-                "select": {
-                    "feature": "plural",
-                    "arg": "PresurveyAssessment",
-                    "cases": {
-                        "=1": {
-                            "msg": "You predicted 1 civilization."
-                        },
-                        "other": {
-                            "msg": "You predicted {PresurveyAssessment} civilizations."
-                        }
-                    }
-                }
-            },
-            "translatorComment": "Copied from source.",
-            "placeholders": [
-                {
-                    "id": "PresurveyAssessment",
-                    "string": "%[1]d",
-                    "type": "int",
-                    "underlyingType": "int",
-                    "argNum": 1,
-                    "expr": "fprtToInt(survey.PresurveyAssessment)"
-                }
-            ],
-            "fuzzy": true
-        },
-        {
             "id": "Final Estimations",
             "message": "Final Estimations",
             "translation": "Final Estimations",
             "translatorComment": "Copied from source.",
-            "fuzzy": true
-        },
-        {
-            "id": "You estimated {N} civilizations.",
-            "message": "You estimated {N} civilizations.",
-            "translation": {
-                "select": {
-                    "feature": "plural",
-                    "arg": "N",
-                    "cases": {
-                        "=1": {
-                            "msg": "You estimated 1 civilization."
-                        },
-                        "other": {
-                            "msg": "You estimated {N} civilizations."
-                        }
-                    }
-                }
-            },
-            "translatorComment": "Copied from source.",
-            "placeholders": [
-                {
-                    "id": "N",
-                    "string": "%[1]d",
-                    "type": "int",
-                    "underlyingType": "int",
-                    "argNum": 1,
-                    "expr": "fprtToInt(survey.N)"
-                }
-            ],
             "fuzzy": true
         },
         {

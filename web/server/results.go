@@ -7,7 +7,6 @@ import (
 	"html/template"
 	"net/http"
 
-	"github.com/louisbranch/drake"
 	"github.com/louisbranch/drake/web/presenter"
 )
 
@@ -57,40 +56,24 @@ func (srv *Server) results(w http.ResponseWriter, r *http.Request) {
 	page.Title = printer.Sprintf("Results for Session %s", name)
 	page.Partials = []string{"result"}
 	page.Content = struct {
-		Session        drake.Session
 		Survey         presenter.Survey
 		DataLabels     template.JS
 		PresurveyData  template.JS
 		PostsurveyData template.JS
 		Predictions    string
-		Prediction     string
 		Results        string
-		Estimation     string
 		Civilizations  string
 		Participants   string
 	}{
-		Session:        session,
-		Survey:         presenter.Survey{Survey: survey},
+		Survey:         presenter.Survey{Survey: survey, Printer: printer},
 		DataLabels:     labels,
 		PresurveyData:  predata,
 		PostsurveyData: postdata,
 		Predictions:    printer.Sprintf("Initial Predictions"),
-		Prediction: printer.Sprintf("You predicted %d civilizations.",
-			fprtToInt(survey.PresurveyAssessment)),
-		Results: printer.Sprintf("Final Estimations"),
-		Estimation: printer.Sprintf("You estimated %d civilizations.",
-			fprtToInt(survey.N)),
-		Civilizations: printer.Sprintf("Civilizations"),
-		Participants:  printer.Sprintf("Participants"),
+		Results:        printer.Sprintf("Final Estimations"),
+		Civilizations:  printer.Sprintf("Civilizations"),
+		Participants:   printer.Sprintf("Participants"),
 	}
 
 	srv.render(w, page)
-}
-
-func fprtToInt(n *float64) int {
-	if n == nil {
-		return 0
-	}
-
-	return int(*n)
 }

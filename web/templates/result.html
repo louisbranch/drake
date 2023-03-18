@@ -5,7 +5,8 @@
     <canvas id="pre-survey"></canvas>
 </div>
 {{ if ne .Survey.PresurveyAssessment nil }}
-<h3>{{ .Prediction }}</h3>
+<h3>{{ .Survey.Prediction }}</h3>
+<h3>{{ .Survey.MeanPredictionDistance }}</h3>
 {{ end }}
 <hr>
 <h2>{{ .Results }}</h2>

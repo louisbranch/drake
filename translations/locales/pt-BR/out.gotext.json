@@ -95,7 +95,7 @@
                     "arg": "Estimation",
                     "cases": {
                         "=1": {
-                            "msg": "Você estimou que há 1 civilização na Via Láctea."
+                            "msg": "Você estimou que há apenas 1 civilização na Via Láctea."
                         },
                         "other": {
                             "msg": "Você estimou que há {Estimation} civilizações na Via Láctea."
@@ -111,6 +111,34 @@
                     "underlyingType": "int",
                     "argNum": 1,
                     "expr": "estimation"
+                }
+            ]
+        },
+        {
+            "id": "You have predicted that there are {Prediction} civilizations in the Milky Way.",
+            "message": "You have predicted that there are {Prediction} civilizations in the Milky Way.",
+            "translation": {
+                "select": {
+                    "feature": "plural",
+                    "arg": "Prediction",
+                    "cases": {
+                        "=1": {
+                            "msg": "Sua predição é de que há apenas 1 civilização na Via Láctea."
+                        },
+                        "other": {
+                            "msg": "Sua predição é de que há {Prediction} civilizações na Via Láctea."
+                        }
+                    }
+                }
+            },
+            "placeholders": [
+                {
+                    "id": "Prediction",
+                    "string": "%[1]d",
+                    "type": "int",
+                    "underlyingType": "int",
+                    "argNum": 1,
+                    "expr": "prediction"
                 }
             ]
         },
@@ -179,16 +207,6 @@
             "id": "A few millions",
             "message": "A few millions",
             "translation": "Alguns milhões"
-        },
-        {
-            "id": "A few billions",
-            "message": "A few billions",
-            "translation": "Alguns bilhões"
-        },
-        {
-            "id": "A few trillions",
-            "message": "A few trillions",
-            "translation": "Alguns trilhões"
         },
         {
             "id": "About how many stars are there in our galaxy?",
@@ -361,6 +379,52 @@
             "translation": "Não, qualquer predição é tão boa quanto a minha"
         },
         {
+            "id": "The mean distance to another civilization would be {D} light-years.",
+            "message": "The mean distance to another civilization would be {D} light-years.",
+            "translation": {
+                "select": {
+                    "feature": "plural",
+                    "arg": "D",
+                    "cases": {
+                        "=0": {
+                            "msg": "Não haveria uma outra civilização na galáxia."
+                        },
+                        "=1": {
+                            "msg": "A distância média até uma outra civilição seria de 1 ano-luz."
+                        },
+                        "other": {
+                            "msg": "A distância média até uma outra civilição seria de {D} anos-luz."
+                        }
+                    }
+                }
+            },
+            "placeholders": [
+                {
+                    "id": "D",
+                    "string": "%[1]d",
+                    "type": "int",
+                    "underlyingType": "int",
+                    "argNum": 1,
+                    "expr": "d"
+                }
+            ]
+        },
+        {
+            "id": "The mean distance to another civilization would be {D} kms.",
+            "message": "The mean distance to another civilization would be {D} kms.",
+            "translation": "",
+            "placeholders": [
+                {
+                    "id": "D",
+                    "string": "%[1]d",
+                    "type": "int",
+                    "underlyingType": "int",
+                    "argNum": 1,
+                    "expr": "d"
+                }
+            ]
+        },
+        {
             "id": "About",
             "message": "About",
             "translation": "Sobre"
@@ -436,65 +500,9 @@
             "translation": "Previsões Iniciais"
         },
         {
-            "id": "You predicted {PresurveyAssessment} civilizations.",
-            "message": "You predicted {PresurveyAssessment} civilizations.",
-            "translation": {
-                "select": {
-                    "feature": "plural",
-                    "arg": "PresurveyAssessment",
-                    "cases": {
-                        "=1": {
-                            "msg": "Você predisse 1 civilização."
-                        },
-                        "other": {
-                            "msg": "Você predisse {PresurveyAssessment} civilizations."
-                        }
-                    }
-                }
-            },
-            "placeholders": [
-                {
-                    "id": "PresurveyAssessment",
-                    "string": "%[1]d",
-                    "type": "int",
-                    "underlyingType": "int",
-                    "argNum": 1,
-                    "expr": "fprtToInt(survey.PresurveyAssessment)"
-                }
-            ]
-        },
-        {
             "id": "Final Estimations",
             "message": "Final Estimations",
             "translation": "Estimativas Finais"
-        },
-        {
-            "id": "You estimated {N} civilizations.",
-            "message": "You estimated {N} civilizations.",
-            "translation": {
-                "select": {
-                    "feature": "plural",
-                    "arg": "N",
-                    "cases": {
-                        "=1": {
-                            "msg": "Você estimou 1 civilização."
-                        },
-                        "other": {
-                            "msg": "Você estimou {N} civilizações."
-                        }
-                    }
-                }
-            },
-            "placeholders": [
-                {
-                    "id": "N",
-                    "string": "%[1]d",
-                    "type": "int",
-                    "underlyingType": "int",
-                    "argNum": 1,
-                    "expr": "fprtToInt(survey.N)"
-                }
-            ]
         },
         {
             "id": "Civilizations",
