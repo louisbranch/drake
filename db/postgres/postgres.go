@@ -34,7 +34,7 @@ func New(connection string) (*DB, error) {
             session_id SERIAL NOT NULL,
             access_token TEXT NOT NULL,
 
-            presurvey_assessment REAL CHECK(presurvey_assessment > 0),
+            presurvey_assessment REAL CHECK(presurvey_assessment >= 0),
             r_star_formation REAL CHECK(r_star_formation > 0),
             fp_planetary_systems REAL CHECK(fp_planetary_systems > 0),
             ne_habitable_planets REAL CHECK(ne_habitable_planets > 0),
@@ -42,7 +42,7 @@ func New(connection string) (*DB, error) {
             fi_intelligence_emergence REAL CHECK(fi_intelligence_emergence > 0),
             fc_technology_emergence REAL CHECK(fc_technology_emergence > 0),
             l_lifespan REAL CHECK(l_lifespan > 0),
-            n_civilizations REAL CHECK(n_civilizations > 0),
+            n_civilizations REAL CHECK(n_civilizations >= 0),
             postsurvey_learn_gain BOOL,
             postsurvey_reason TEXT,
 

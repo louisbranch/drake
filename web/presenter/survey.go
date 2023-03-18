@@ -64,6 +64,9 @@ func (s Survey) difference() int64 {
 		n = 0
 	}
 	a := math.Log10(*s.PresurveyAssessment)
+	if a < 1 {
+		a = 0
+	}
 	diff := math.Floor(math.Abs(n - a))
 	return int64(diff)
 }
@@ -76,7 +79,7 @@ func (s Survey) NValues() []SurveyOption {
 	return []SurveyOption{
 		{
 			Text:  s.Printer.Sprintf("Only us, we are all alone"),
-			Value: 1,
+			Value: 0,
 		},
 		{
 			Text:  s.Printer.Sprintf("A few dozens"),
@@ -88,11 +91,11 @@ func (s Survey) NValues() []SurveyOption {
 		},
 		{
 			Text:  s.Printer.Sprintf("A few thousands"),
-			Value: 1000,
+			Value: 1e3,
 		},
 		{
 			Text:  s.Printer.Sprintf("A few millions"),
-			Value: 1000000,
+			Value: 1e6,
 		},
 	}
 }
