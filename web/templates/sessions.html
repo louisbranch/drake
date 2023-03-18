@@ -12,7 +12,7 @@
             {{ range $i, $el := .Sessions }}
             <tr>
                 <td>{{ add $i 1 }}</td>
-                <td><a href="/{{ $el.Name }}">{{ $el.Name }}</a></td>
+                <td><a href="/drake/{{ $el.Name }}">{{ $el.Name }}</a></td>
                 <td style="text-align: center;">{{ $el.Participants }}</td>
                 <td>{{.ElapsedTime}}</td>
             </tr>
@@ -23,5 +23,5 @@
     {{ .None }}
 {{ end }}
 
-<a href="/" class="pure-button">{{ .Back }}</a>
+<a href="/drake/" class="pure-button">{{ .Back }}</a>
 {{ end }}

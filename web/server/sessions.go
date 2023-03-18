@@ -32,7 +32,7 @@ func (srv *Server) sessions(w http.ResponseWriter, r *http.Request) {
 	switch r.Method {
 	case "GET":
 
-		name := r.URL.Path[len("/sessions/"):]
+		name := r.URL.Path[len("/drake/sessions/"):]
 		if name == "" {
 			sessions, err := srv.DB.FindSessions()
 			if err != nil {
@@ -95,7 +95,7 @@ func (srv *Server) sessions(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 
-		uri := fmt.Sprintf("/sessions/%s", session.Name)
+		uri := fmt.Sprintf("/drake/sessions/%s", session.Name)
 
 		http.Redirect(w, r, uri, http.StatusFound)
 	default:

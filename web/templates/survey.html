@@ -48,7 +48,7 @@
         L
     {{ end }}
 </div>
-<form action="/{{ .Session.Name }}" method="post" class="pure-form">
+<form action="/drake/{{ .Session.Name }}" method="post" class="pure-form">
     {{ if eq .Survey.N nil }}
     <h4>{{ .Choice }}</h4>
     {{ end }}

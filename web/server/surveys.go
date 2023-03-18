@@ -54,7 +54,7 @@ func (srv *Server) surveys(w http.ResponseWriter, r *http.Request, name string) 
 	}
 
 	if survey.NextQuestion() == "" {
-		uri, _ := url.JoinPath("", "results", name)
+		uri, _ := url.JoinPath("results", name)
 		http.Redirect(w, r, uri, http.StatusFound)
 		return
 	}

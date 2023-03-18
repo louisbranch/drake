@@ -19,13 +19,13 @@ type Server struct {
 func (srv *Server) NewServeMux() *http.ServeMux {
 	mux := http.NewServeMux()
 
-	mux.Handle("/assets/", http.StripPrefix("/assets/", srv.Assets))
+	mux.Handle("/drake/assets/", http.StripPrefix("/drake/assets/", srv.Assets))
 
-	mux.HandleFunc("/sessions/", srv.sessions)
-	mux.HandleFunc("/results/", srv.results)
-	mux.HandleFunc("/about/", srv.about)
+	mux.HandleFunc("/drake/sessions/", srv.sessions)
+	mux.HandleFunc("/drake/results/", srv.results)
+	mux.HandleFunc("/drake/about/", srv.about)
 
-	mux.HandleFunc("/", srv.index)
+	mux.HandleFunc("/drake/", srv.index)
 
 	return mux
 }
@@ -43,7 +43,7 @@ func (srv *Server) render(w http.ResponseWriter, page web.Page) {
 }
 
 func (srv *Server) index(w http.ResponseWriter, r *http.Request) {
-	name := r.URL.Path[len("/"):]
+	name := r.URL.Path[len("/drake/"):]
 
 	if name != "" {
 		srv.surveys(w, r, name)

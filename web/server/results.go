@@ -12,7 +12,7 @@ import (
 )
 
 func (srv *Server) results(w http.ResponseWriter, r *http.Request) {
-	name := r.URL.Path[len("/results/"):]
+	name := r.URL.Path[len("/drake/results/"):]
 
 	session, err := srv.DB.FindSession(name)
 	if err != nil {
