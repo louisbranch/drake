@@ -7,6 +7,15 @@ import (
 	"golang.org/x/text/message"
 )
 
+// Milky Way radius is light-years
+const MILKY_WAY_R_LY = 5e4
+
+// Number of stars in the Milky Way: 100 billion
+const MILKY_WAY_STARS = 1e11
+
+// Age of the Milky Way: 13.61 billion years
+const MILKY_WAY_AGE = 13.61e9
+
 type Survey struct {
 	drake.Survey
 	*message.Printer
@@ -73,14 +82,6 @@ func (s Survey) NValues() []SurveyOption {
 			Text:  s.Printer.Sprintf("A few millions"),
 			Value: 1000000,
 		},
-		{
-			Text:  s.Printer.Sprintf("A few billions"),
-			Value: 1000000000,
-		},
-		{
-			Text:  s.Printer.Sprintf("A few trillions"),
-			Value: 1000000000000,
-		},
 	}
 }
 
@@ -92,23 +93,23 @@ func (s Survey) RValues() []SurveyOption {
 	return []SurveyOption{
 		{
 			Text:  s.Printer.Sprintf("A few hundred"),
-			Value: 100,
+			Value: 1e3 / MILKY_WAY_AGE,
 		},
 		{
 			Text:  s.Printer.Sprintf("A few hundred thousand"),
-			Value: 100000,
+			Value: 1e5 / MILKY_WAY_AGE,
 		},
 		{
 			Text:  s.Printer.Sprintf("A few hundred million"),
-			Value: 100000000,
+			Value: 1e8 / MILKY_WAY_AGE,
 		},
 		{
 			Text:  s.Printer.Sprintf("A few hundred billion"),
-			Value: 100000000000,
+			Value: 1e11 / MILKY_WAY_AGE,
 		},
 		{
 			Text:  s.Printer.Sprintf("A few hundred trillion"),
-			Value: 100000000000000,
+			Value: 1e14 / MILKY_WAY_AGE,
 		},
 	}
 }

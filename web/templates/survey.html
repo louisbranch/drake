@@ -64,7 +64,7 @@
     <h3>{{ .Survey.RQuestion }}</h3>
     {{ range $opt := .Survey.RValues }}
         <label class="pure-radio">
-            <input type="radio" name="r" value='{{ printf "%.0f" $opt.Value }}' /> {{ $opt.Text }}
+            <input type="radio" name="r" value='{{ printf "%.7f" $opt.Value }}' /> {{ $opt.Text }}
         </label>
     {{ end }}
 
