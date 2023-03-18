@@ -34,7 +34,7 @@ type Survey struct {
 }
 
 func (s *Survey) Result() {
-	n := *s.R * *s.Fp * *s.Ne * *s.Fl * *s.Fi * *s.Fc * *s.Fc
+	n := *s.R * *s.Fp * *s.Ne * *s.Fl * *s.Fi * *s.Fc * *s.L
 	s.N = &n
 }
 
