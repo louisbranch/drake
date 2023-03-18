@@ -209,16 +209,6 @@
             "translation": "Alguns milhões"
         },
         {
-            "id": "A few billions",
-            "message": "A few billions",
-            "translation": "Alguns bilhões"
-        },
-        {
-            "id": "A few trillions",
-            "message": "A few trillions",
-            "translation": "Alguns trilhões"
-        },
-        {
             "id": "About how many stars are there in our galaxy?",
             "message": "About how many stars are there in our galaxy?",
             "translation": "Quantas estrelas existem em nossa galáxia?"
@@ -389,21 +379,26 @@
             "translation": "Não, qualquer predição é tão boa quanto a minha"
         },
         {
-            "id": "The mean distance to another civilization would be {D} light-years.",
-            "message": "The mean distance to another civilization would be {D} light-years.",
+            "id": "There would be no other civilization in the galaxy.",
+            "message": "There would be no other civilization in the galaxy.",
+            "translation": "Não haveria outra civilização na galáxia."
+        },
+        {
+            "id": "The average distance to another civilization would be {D} light-years.",
+            "message": "The average distance to another civilization would be {D} light-years.",
             "translation": {
                 "select": {
                     "feature": "plural",
                     "arg": "D",
                     "cases": {
                         "=0": {
-                            "msg": "A distância média até uma outra civilição seria menos de 1 ano-luz."
+                            "msg": "A distância média para outra civilização seria menos de 1 ano-luz."
                         },
                         "=1": {
-                            "msg": "A distância média até uma outra civilição seria de 1 ano-luz."
+                            "msg": "A distância média para outra civilização seria de 1 ano-luz."
                         },
                         "other": {
-                            "msg": "A distância média até uma outra civilição seria de {D} anos-luz."
+                            "msg": "A distância média para outra civilização seria de {D} anos-luz."
                         }
                     }
                 }
@@ -412,8 +407,8 @@
                 {
                     "id": "D",
                     "string": "%[1]d",
-                    "type": "float64",
-                    "underlyingType": "float64",
+                    "type": "int",
+                    "underlyingType": "int",
                     "argNum": 1,
                     "expr": "d"
                 }

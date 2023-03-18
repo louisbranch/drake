@@ -7,8 +7,12 @@ import (
 	"golang.org/x/text/message"
 )
 
-// Milky Way radius is light-years
-const MILKY_WAY_R_LY = 5e4
+// Source: https://doi.org/10.48550/arXiv.1301.6411
+// Milky Way galactic disk cylinder in kpc
+const MILKY_WAY_R_KPC = 12
+const MILKY_WAY_H_KPC = 1
+
+const KPC_TO_LY = 3262
 
 // Number of stars in the Milky Way: 100 billion
 const MILKY_WAY_STARS = 1e11
@@ -313,22 +317,39 @@ func (s Survey) AgreementValues() []SurveyOption {
 	}
 }
 
-func (s Survey) MeanPredictionDistance() string {
-	d := s.meanDistance(s.PresurveyAssessment)
-	return s.Printer.Sprintf("The mean distance to another civilization would be %d light-years.", d)
+func (s Survey) AvgPredictionDistance() string {
+	d, ok := s.avgDistance(s.PresurveyAssessment)
+	if !ok {
+		return s.Printer.Sprintf("There would be no other civilization in the galaxy.")
+	}
+	return s.Printer.Sprintf("The average distance to another civilization would be %d light-years.", d)
 }
 
-func (s Survey) MeanEstimationDistance() string {
-	d := s.meanDistance(s.N)
-	return s.Printer.Sprintf("The mean distance to another civilization would be %d light-years.", d)
+func (s Survey) AvgEstimationDistance() string {
+	d, ok := s.avgDistance(s.N)
+	if !ok {
+		return s.Printer.Sprintf("There would be no other civilization in the galaxy.")
+	}
+	return s.Printer.Sprintf("The average distance to another civilization would be %d light-years.", d)
 }
 
-func (s Survey) meanDistance(val *float64) int {
+func (s Survey) avgDistance(val *float64) (int, bool) {
 	if val == nil {
-		return 0
+		return 0, false
 	}
 
 	n := *val
 
-	return int(128 * MILKY_WAY_R_LY / (45 * math.Pi) / n)
+	if n == 0 {
+		return 0, false
+	}
+
+	// Source: https://doi.org/10.48550/arXiv.1301.6411
+	if n < 1000 {
+		return int(2 * MILKY_WAY_R_KPC / math.Sqrt(n) * KPC_TO_LY), true
+	}
+
+	v := math.Pow(MILKY_WAY_R_KPC, 2) * MILKY_WAY_H_KPC * math.Pi
+
+	return int(2 * math.Pow(3*v/(4*math.Pi*n), 1.0/3) * KPC_TO_LY), true
 }

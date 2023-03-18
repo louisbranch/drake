@@ -6,7 +6,7 @@
 </div>
 {{ if ne .Survey.PresurveyAssessment nil }}
 <h3>{{ .Survey.Prediction }}</h3>
-<h3>{{ .Survey.MeanPredictionDistance }}</h3>
+<h3>{{ .Survey.AvgPredictionDistance }}</h3>
 {{ end }}
 <hr>
 <h2>{{ .Results }}</h2>
@@ -15,7 +15,7 @@
 </div>
 {{ if ne .Survey.N nil }}
 <h3>{{ .Survey.Estimation }}</h3>
-<h3>{{ .Survey.MeanEstimationDistance }}</h3>
+<h3>{{ .Survey.AvgEstimationDistance }}</h3>
 {{ end }}
 
 <script>
