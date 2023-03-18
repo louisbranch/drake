@@ -487,7 +487,7 @@
                     "arg": "D",
                     "cases": {
                         "=0": {
-                            "msg": "There would be no other civilization in the galaxy."
+                            "msg": "The mean distance to another civilization would be less than 1 light-year."
                         },
                         "=1": {
                             "msg": "The mean distance to another civilization would be 1 light-year."
@@ -498,23 +498,6 @@
                     }
                 }
             },
-            "translatorComment": "Copied from source.",
-            "placeholders": [
-                {
-                    "id": "D",
-                    "string": "%[1]d",
-                    "type": "int",
-                    "underlyingType": "int",
-                    "argNum": 1,
-                    "expr": "d"
-                }
-            ],
-            "fuzzy": true
-        },
-        {
-            "id": "The mean distance to another civilization would be {D} kms.",
-            "message": "The mean distance to another civilization would be {D} kms.",
-            "translation": "The mean distance to another civilization would be {D} kms.",
             "translatorComment": "Copied from source.",
             "placeholders": [
                 {

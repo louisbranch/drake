@@ -501,7 +501,7 @@
                     "arg": "D",
                     "cases": {
                         "=0": {
-                            "msg": "There would be no other civilization in the galaxy."
+                            "msg": "The mean distance to another civilization would be less than 1 light-year."
                         },
                         "=1": {
                             "msg": "The mean distance to another civilization would be 1 light-year."

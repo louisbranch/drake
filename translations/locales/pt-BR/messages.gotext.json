@@ -397,7 +397,7 @@
                     "arg": "D",
                     "cases": {
                         "=0": {
-                            "msg": "Não haveria uma outra civilização na galáxia."
+                            "msg": "A distância média até uma outra civilição seria menos de 1 ano-luz."
                         },
                         "=1": {
                             "msg": "A distância média até uma outra civilição seria de 1 ano-luz."

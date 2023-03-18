@@ -314,34 +314,21 @@ func (s Survey) AgreementValues() []SurveyOption {
 }
 
 func (s Survey) MeanPredictionDistance() string {
-	u, d := s.meanDistance(s.PresurveyAssessment)
-	if u == "ly" {
-		return s.Printer.Sprintf("The mean distance to another civilization would be %d light-years.", d)
-	}
-	return s.Printer.Sprintf("The mean distance to another civilization would be %d kms.", d)
+	d := s.meanDistance(s.PresurveyAssessment)
+	return s.Printer.Sprintf("The mean distance to another civilization would be %d light-years.", d)
 }
 
 func (s Survey) MeanEstimationDistance() string {
-	u, d := s.meanDistance(s.N)
-	if u == "ly" {
-		return s.Printer.Sprintf("The mean distance to another civilization would be %d light-years.", d)
-	}
-	return s.Printer.Sprintf("The mean distance to another civilization would be %d kms.", d)
+	d := s.meanDistance(s.N)
+	return s.Printer.Sprintf("The mean distance to another civilization would be %d light-years.", d)
 }
 
-func (s Survey) meanDistance(val *float64) (string, int) {
+func (s Survey) meanDistance(val *float64) int {
 	if val == nil {
-		return "", 0
+		return 0
 	}
 
 	n := *val
-	if n == 0 {
-		return "", 0
-	}
 
-	if n < 1e4 {
-		return "ly", int(2 * MILKY_WAY_R_LY / n)
-	}
-
-	return "km", int(2 * MILKY_WAY_R_LY * 9.461 * math.Pow(10, 15) / n)
+	return int(128 * MILKY_WAY_R_LY / (45 * math.Pi) / n)
 }
