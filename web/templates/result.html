@@ -19,82 +19,100 @@
 {{ end }}
 
 <script>
-  // Initialize ChartJS settings
-  const labels = {{ .DataLabels }};
-  const predata = {{ .PresurveyData }};
-  const postdata = {{ .PostsurveyData }};
+  (function(window){
 
-  Chart.register(ChartDataLabels);
-  Chart.defaults.backgroundColor = '#e6b12c';
-  Chart.defaults.borderColor = null;
-  Chart.defaults.color = '#fff';
+    // Initialize ChartJS settings
+    const labels = {{ .DataLabels }};
 
-  // Shared options between charts
-  const options = {
-      responsive: true,
-      indexAxis: 'y',
-      maintainAspectRatio: false,
-      plugins: {
-        legend: {
-          display: false
+    Chart.register(ChartDataLabels);
+    Chart.defaults.backgroundColor = '#e6b12c';
+    Chart.defaults.borderColor = null;
+    Chart.defaults.color = '#fff';
+    Chart.defaults.datasets.borderWidth = 1;
+    Chart.defaults.datasets.backgroundColor = '#e6b12c';
+
+    // Shared options between charts
+    const options = {
+        responsive: true,
+        indexAxis: 'y',
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                display: false
+            },
+            datalabels: {
+                color: '#131a2e',
+                formatter: function(value, context) {
+                    const data = context.dataset.data;
+                    const sum = data.reduce((partialSum, a) => partialSum + a, 0);
+                    const perc = data[context.dataIndex] / sum;
+                    return "" + Math.round(perc*100) + "%";
+                }
+            }
         },
-        datalabels: {
-            color: '#131a2e',
-            formatter: function(value, context) {
-                const data = context.dataset.data;
-                const sum = data.reduce((partialSum, a) => partialSum + a, 0);
-                const perc = data[context.dataIndex] / sum;
-                return "" + Math.round(perc*100) + "%";
+        scales: {
+            y: {
+            title: {
+                display: true,
+                text: {{ .Civilizations }}
+            }
+            },
+            x: {
+            beginAtZero: true,
+            title: {
+                display: true,
+                text: {{ .Participants }}
+            },
+            ticks: {
+                stepSize: 1
+            }
             }
         }
-      },
-      scales: {
-        y: {
-          title: {
-            display: true,
-            text: {{ .Civilizations }}
-          }
+        };
+
+    // Pre-Survey Chart
+    var prechart = new Chart(document.getElementById('pre-survey'), {
+        type: 'bar',
+        data: {
+            labels: labels,
+            datasets: [{}]
         },
-        x: {
-          beginAtZero: true,
-          title: {
-            display: true,
-            text: {{ .Participants }}
-          },
-          ticks: {
-            stepSize: 1
-          }
-        }
-      }
-    };
+        options: options
+    });
 
-  // Pre-Survey Chart
-  new Chart(document.getElementById('pre-survey'), {
-    type: 'bar',
-    data: {
-      labels: labels,
-      datasets: [{
-        data: predata,
-        borderWidth: 1,
-        backgroundColor: '#e6b12c'
-      }]
-    },
-    options: options
-  });
+    // Post-Survey Chart
+    var postchart = new Chart(document.getElementById('post-survey'), {
+        type: 'bar',
+        data: {
+            labels: labels,
+            datasets: [{}]
+        },
+        options: options
+    });
 
-  // Post-Survey Chart
-  new Chart(document.getElementById('post-survey'), {
-    type: 'bar',
-    data: {
-      labels: labels,
-      datasets: [{
-        data: postdata,
-        borderWidth: 1,
-        backgroundColor: '#e6b12c'
-      }]
-    },
-    options: options
-  });
+    function fetchData(){
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    var data = JSON.parse(xhr.responseText)
+                    prechart.config.data.datasets[0].data = data.predata;
+                    postchart.config.data.datasets[0].data = data.postdata;
+
+                    prechart.update();
+                    postchart.update();
+                }
+            }
+        };
+        xhr.open("GET", window.location.pathname, true);
+        xhr.setRequestHeader("Content-type", "application/json");
+        xhr.send();
+    }
+
+    fetchData();
+    window.setInterval(fetchData, 5*1000); // Fetch every 5s;
+
+    })(window);
 
 </script>
 {{ end }}

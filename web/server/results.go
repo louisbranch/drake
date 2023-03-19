@@ -44,35 +44,46 @@ func (srv *Server) results(w http.ResponseWriter, r *http.Request) {
 		Printer: printer,
 	}
 
+	if r.Header.Get("Content-type") == "application/json" {
+
+		data := struct {
+			PreSurveyData  []int `json:"predata"`
+			PostSurveyData []int `json:"postdata"`
+		}{
+			PreSurveyData:  result.PresurveyData(),
+			PostSurveyData: result.PostsurveyData(),
+		}
+
+		w.Header().Set("Content-Type", "application/json")
+		w.WriteHeader(http.StatusOK)
+		err = json.NewEncoder(w).Encode(data)
+		if err != nil {
+			srv.renderError(w, r, err)
+			return
+		}
+
+		return
+	}
+
 	s, _ := json.Marshal(result.DataLabels())
 	labels := template.JS(string(s))
-
-	s, _ = json.Marshal(result.PresurveyData())
-	predata := template.JS(string(s))
-
-	s, _ = json.Marshal(result.PostsurveyData())
-	postdata := template.JS(string(s))
 
 	page.Title = printer.Sprintf("Results for Session %s", name)
 	page.Partials = []string{"result"}
 	page.Content = struct {
-		Survey         presenter.Survey
-		DataLabels     template.JS
-		PresurveyData  template.JS
-		PostsurveyData template.JS
-		Predictions    string
-		Results        string
-		Civilizations  string
-		Participants   string
+		Survey        presenter.Survey
+		DataLabels    template.JS
+		Predictions   string
+		Results       string
+		Civilizations string
+		Participants  string
 	}{
-		Survey:         presenter.Survey{Survey: survey, Printer: printer},
-		DataLabels:     labels,
-		PresurveyData:  predata,
-		PostsurveyData: postdata,
-		Predictions:    printer.Sprintf("Initial Predictions"),
-		Results:        printer.Sprintf("Final Estimations"),
-		Civilizations:  printer.Sprintf("Civilizations"),
-		Participants:   printer.Sprintf("Participants"),
+		Survey:        presenter.Survey{Survey: survey, Printer: printer},
+		DataLabels:    labels,
+		Predictions:   printer.Sprintf("Initial Predictions"),
+		Results:       printer.Sprintf("Final Estimations"),
+		Civilizations: printer.Sprintf("Civilizations"),
+		Participants:  printer.Sprintf("Participants"),
 	}
 
 	srv.render(w, page)
