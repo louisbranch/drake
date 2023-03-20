@@ -8,6 +8,31 @@ This project was created as part of the course, Principles and Practices in Scie
 
 The questions for the Drake Equation on the survey are from [LoPresto and Hubble-Zdanowski (2012)](https://doi.org/10.3847/aer2012020).
 
+## Running locally
+
+By default, the project runs on port `8080`: [http://localhost:8080/drake/](http://localhost:8080/drake/).
+
+### With Docker Compose
+```
+docker compose -f server-compose.yaml up -d --build server
+```
+
+### With Go
+
+```
+go mod tidy
+go run cmd/server/main.go
+```
+
+Two databases are supported [SQLite](https://github.com/mattn/go-sqlite3) (default) and PostgreSQL.
+For PostgreSQL, you have to set the following environmental variables:
+```
+POSTGRES_USER=%your db user%
+POSTGRES_PASSWORD=%your db password%
+POSTGRES_HOSTNAME=%your db hostname%
+POSTGRES_DB=%your db name%
+```
+
 ## Adding a new language
 
 Add the language go to [translations.go](translations/translations.go)
