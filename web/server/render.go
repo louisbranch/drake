@@ -1,8 +1,23 @@
 package server
 
 import (
+	"fmt"
 	"net/http"
+
+	"github.com/louisbranch/drake/web"
 )
+
+func (srv *Server) render(w http.ResponseWriter, page web.Page) {
+	if page.Layout == "" {
+		page.Layout = "layout"
+	}
+
+	err := srv.Template.Render(w, page)
+	if err != nil {
+		w.WriteHeader(http.StatusInternalServerError)
+		fmt.Fprintln(w, err)
+	}
+}
 
 func (srv *Server) renderError(w http.ResponseWriter, r *http.Request, err error) {
 	printer, page := srv.i18n(w, r)

@@ -1,7 +1,6 @@
 package server
 
 import (
-	"fmt"
 	"math/rand"
 	"net/http"
 
@@ -27,20 +26,16 @@ func (srv *Server) NewServeMux() *http.ServeMux {
 	mux.HandleFunc("/drake/about/", srv.about)
 
 	mux.HandleFunc("/drake/", srv.index)
+	mux.HandleFunc("/", srv.astro)
 
 	return mux
 }
 
-func (srv *Server) render(w http.ResponseWriter, page web.Page) {
-	if page.Layout == "" {
-		page.Layout = "layout"
-	}
+func (srv *Server) astro(w http.ResponseWriter, r *http.Request) {
+	_, page := srv.i18n(w, r)
+	page.Layout = "astro"
 
-	err := srv.Template.Render(w, page)
-	if err != nil {
-		w.WriteHeader(http.StatusInternalServerError)
-		fmt.Fprintln(w, err)
-	}
+	srv.render(w, page)
 }
 
 func (srv *Server) index(w http.ResponseWriter, r *http.Request) {
