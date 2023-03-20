@@ -73,15 +73,17 @@ func (srv *Server) sessions(w http.ResponseWriter, r *http.Request) {
 		page.Title = printer.Sprintf("Session %s", name)
 		page.Partials = []string{"session"}
 		page.Content = struct {
-			Session drake.Session
-			Share   string
-			Join    string
-			Results string
+			Session    drake.Session
+			Share      string
+			Join       string
+			Results    string
+			Statistics string
 		}{
-			Session: session,
-			Share:   printer.Sprintf("Share Link:"),
-			Join:    printer.Sprintf("Join"),
-			Results: printer.Sprintf("See Results"),
+			Session:    session,
+			Share:      printer.Sprintf("Share Link:"),
+			Join:       printer.Sprintf("Join"),
+			Results:    printer.Sprintf("Results"),
+			Statistics: printer.Sprintf("Statistics"),
 		}
 
 		srv.render(w, page)

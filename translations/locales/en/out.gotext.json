@@ -95,6 +95,20 @@
             "fuzzy": true
         },
         {
+            "id": "Yes",
+            "message": "Yes",
+            "translation": "Yes",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "No",
+            "message": "No",
+            "translation": "No",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
             "id": "You have estimated that there are {Estimation} civilizations in the Milky Way.",
             "message": "You have estimated that there are {Estimation} civilizations in the Milky Way.",
             "translation": {
@@ -756,9 +770,40 @@
             "fuzzy": true
         },
         {
-            "id": "See Results",
-            "message": "See Results",
-            "translation": "See Results",
+            "id": "Results",
+            "message": "Results",
+            "translation": "Results",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Statistics",
+            "message": "Statistics",
+            "translation": "Statistics",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Stastics for Session {Name}",
+            "message": "Stastics for Session {Name}",
+            "translation": "Stastics for Session {Name}",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "Name",
+                    "string": "%[1]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "name"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "Options",
+            "message": "Options",
+            "translation": "Options",
             "translatorComment": "Copied from source.",
             "fuzzy": true
         },

@@ -77,6 +77,16 @@
             ]
         },
         {
+            "id": "Yes",
+            "message": "Yes",
+            "translation": "Sim"
+        },
+        {
+            "id": "No",
+            "message": "No",
+            "translation": "Não"
+        },
+        {
             "id": "You have estimated that there are {Estimation} civilizations in the Milky Way.",
             "message": "You have estimated that there are {Estimation} civilizations in the Milky Way.",
             "translation": {
@@ -590,9 +600,34 @@
             "translation": "Entre"
         },
         {
-            "id": "See Results",
-            "message": "See Results",
-            "translation": "Ver Resultados"
+            "id": "Results",
+            "message": "Results",
+            "translation": "Resultados"
+        },
+        {
+            "id": "Statistics",
+            "message": "Statistics",
+            "translation": "Estatísticas"
+        },
+        {
+            "id": "Stastics for Session {Name}",
+            "message": "Stastics for Session {Name}",
+            "translation": "Estatísticas para Sessão {Name}",
+            "placeholders": [
+                {
+                    "id": "Name",
+                    "string": "%[1]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "name"
+                }
+            ]
+        },
+        {
+            "id": "Options",
+            "message": "Options",
+            "translation": "Opções"
         },
         {
             "id": "Drake Equation - {Name}",

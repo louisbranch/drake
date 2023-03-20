@@ -67,9 +67,9 @@ func (s Statistics) Data() [][]int {
 
 		if survey.PostsurveyLearnGain != nil {
 			if *survey.PostsurveyLearnGain {
-				data[8][1] += 1
-			} else {
 				data[8][0] += 1
+			} else {
+				data[8][1] += 1
 			}
 		}
 
@@ -133,7 +133,7 @@ func (s Statistics) extract() ([][]string, [][]float64) {
 		s.Printer.Sprintf("No"),
 	})
 
-	values = append(values, []float64{0, 1})
+	values = append(values, []float64{1, 0})
 
 	return labels, values
 }

@@ -42,262 +42,273 @@ var messageKeyToIndex = map[string]int{
 	"%d days ago":      8,
 	"%d hours ago":     7,
 	"%d mins ago":      6,
-	"%d years":         41,
-	"%d years or more": 42,
-	"100%%%%, a technological civilization will always eventually develop if life is present": 39,
-	"100%%%%, if conditions are favorable, life is inevitable":                                33,
-	"2 or 3":                  28,
-	"4 or 5":                  29,
-	"A few dozens":            14,
-	"A few hundreds":          15,
-	"A few millions":          17,
-	"A few thousands":         16,
-	"A very small percentage": 35,
-	"A very small percentage, life is very rare": 32,
-	"About":        50,
-	"About 10%%%%": 38,
-	"About how many stars are there in our galaxy?":                                   18,
-	"Approximately what percentage of the stars in our galaxy have planets in orbit?": 24,
-	"Are we alone in the Universe?":                                                   66,
-	"Around 100 billion":                                                              21,
-	"Around 100 million":                                                              19,
-	"Around 500 billion":                                                              22,
-	"Around 500 million":                                                              20,
-	"Astronomy Education":                                                             57,
-	"Back":                                                                            79,
-	"Civilizations":                                                                   64,
-	"Create Session":                                                                  72,
-	"Created":                                                                         77,
-	"Do you agree with your most recent estimation?":                                  43,
+	"%d years":         43,
+	"%d years or more": 44,
+	"100%%%%, a technological civilization will always eventually develop if life is present": 41,
+	"100%%%%, if conditions are favorable, life is inevitable":                                35,
+	"2 or 3":                  30,
+	"4 or 5":                  31,
+	"A few dozens":            16,
+	"A few hundreds":          17,
+	"A few millions":          19,
+	"A few thousands":         18,
+	"A very small percentage": 37,
+	"A very small percentage, life is very rare": 34,
+	"About":        52,
+	"About 10%%%%": 40,
+	"About how many stars are there in our galaxy?":                                   20,
+	"Approximately what percentage of the stars in our galaxy have planets in orbit?": 26,
+	"Are we alone in the Universe?":                                                   68,
+	"Around 100 billion":                                                              23,
+	"Around 100 million":                                                              21,
+	"Around 500 billion":                                                              24,
+	"Around 500 million":                                                              22,
+	"Astronomy Education":                                                             59,
+	"Back":                                                                            81,
+	"Civilizations":                                                                   66,
+	"Create Session":                                                                  74,
+	"Created":                                                                         79,
+	"Do you agree with your most recent estimation?":                                  45,
 	"Dozens":              1,
-	"Drake Equation":      56,
-	"Drake Equation - %s": 84,
-	"Estimate the number of detectable alien civilizations in the Milky Way using the Drake Equation.": 67,
-	"Final Estimations": 63,
-	"Home":              60,
-	"How many technological advanced civilizations exist in the Milky Way?": 12,
+	"Drake Equation":      58,
+	"Drake Equation - %s": 89,
+	"Estimate the number of detectable alien civilizations in the Milky Way using the Drake Equation.": 69,
+	"Final Estimations": 65,
+	"Home":              62,
+	"How many technological advanced civilizations exist in the Milky Way?": 14,
 	"Hundreds": 2,
-	"If you would like to contribute to the project, for example, adding more translations, get in touch:": 54,
-	"Initial Predictions":   62,
-	"Internal Server Error": 58,
-	"Join":                  82,
-	"Join Session":          73,
-	"Latest Sessions":       75,
-	"Learning Goals:":       68,
-	"Less than 1%%%%":       37,
+	"If you would like to contribute to the project, for example, adding more translations, get in touch:": 56,
+	"Initial Predictions":   64,
+	"Internal Server Error": 60,
+	"Join":                  84,
+	"Join Session":          75,
+	"Latest Sessions":       77,
+	"Learning Goals:":       70,
+	"Less than 1%%%%":       39,
 	"Less than one min ago": 5,
 	"Millions":              4,
-	"More than 1 trillion":  23,
-	"More than 5":           30,
-	"Name":                  76,
-	"Next":                  85,
-	"No available sessions": 78,
-	"No, I am more confident with my initial prediction":                                   46,
-	"No, any guess is good as mine":                                                        47,
-	"On average, how many habitable (Earth-like) planets are there per planetary system?":  26,
-	"On what fraction of habitable planets will life develop?":                             31,
-	"On what fraction of planets on which life develops will life evolve to intelligence?": 34,
+	"More than 1 trillion":  25,
+	"More than 5":           32,
+	"Name":                  78,
+	"Next":                  90,
+	"No":                    10,
+	"No available sessions": 80,
+	"No, I am more confident with my initial prediction":                                   48,
+	"No, any guess is good as mine":                                                        49,
+	"On average, how many habitable (Earth-like) planets are there per planetary system?":  28,
+	"On what fraction of habitable planets will life develop?":                             33,
+	"On what fraction of planets on which life develops will life evolve to intelligence?": 36,
 	"Only us":                   0,
-	"Only us, we are all alone": 13,
-	"Page Not Found":            59,
-	"Participants":              65,
-	"References":                51,
-	"Results for Session %s":    61,
-	"See Results":               83,
-	"Select the choice that best agrees with what you think.": 86,
-	"Session %s":  80,
-	"Sessions":    74,
-	"Share Link:": 81,
-	"Source Code": 55,
-	"The average distance to another civilization would be %d light-years.":                                                                            49,
-	"The questions for the Drake Equation on the survey are from LoPresto and Hubble-Zdanowski (2012). The code is open-source using the MIT License.": 53,
-	"There would be no other civilization in the galaxy.":                                                                                              48,
-	"This is a difference of %d orders of magnitude from your initial prediction of %d.":                                                               11,
-	"This project was created as part of the course, Principles and Practices in Science Education, at the University of Toronto with the intention of being a free resource for educators to introduce the Drake Equation to a wider audience.": 52,
+	"Only us, we are all alone": 15,
+	"Options":                   88,
+	"Page Not Found":            61,
+	"Participants":              67,
+	"References":                53,
+	"Results":                   85,
+	"Results for Session %s":    63,
+	"Select the choice that best agrees with what you think.": 91,
+	"Session %s":              82,
+	"Sessions":                76,
+	"Share Link:":             83,
+	"Source Code":             57,
+	"Stastics for Session %s": 87,
+	"Statistics":              86,
+	"The average distance to another civilization would be %d light-years.":                                                                            51,
+	"The questions for the Drake Equation on the survey are from LoPresto and Hubble-Zdanowski (2012). The code is open-source using the MIT License.": 55,
+	"There would be no other civilization in the galaxy.":                                                                                              50,
+	"This is a difference of %d orders of magnitude from your initial prediction of %d.":                                                               13,
+	"This project was created as part of the course, Principles and Practices in Science Education, at the University of Toronto with the intention of being a free resource for educators to introduce the Drake Equation to a wider audience.": 54,
 	"Thousands": 3,
-	"Very few (not even one in every solar system)": 27,
-	"Very few stars have planets in orbit":          25,
-	"What fraction of planets on which life evolves to intelligence will the intelligence develop a technological civilization capable of radio communication?": 36,
-	"What is the average lifetime of a technological civilization capable of communication?":                                                                    40,
-	"Yes, I am more confident using the Drake Equation calculation":                                                                                             44,
-	"Yes, the Drake Equation includes factors I didn't think during my initial prediction":                                                                      45,
-	"You have estimated that there are %d civilizations in the Milky Way.":                                                                                      9,
-	"You have predicted that there are %d civilizations in the Milky Way.":                                                                                      10,
-	"to compare your initial guess with the final value":                                                                                                        71,
-	"to think about the size and composition of the galaxy and how it affects the possibility of intelligent life":                                              69,
-	"to understand and estimate the terms of the Drake Equation":                                                                                                70,
+	"Very few (not even one in every solar system)": 29,
+	"Very few stars have planets in orbit":          27,
+	"What fraction of planets on which life evolves to intelligence will the intelligence develop a technological civilization capable of radio communication?": 38,
+	"What is the average lifetime of a technological civilization capable of communication?":                                                                    42,
+	"Yes": 9,
+	"Yes, I am more confident using the Drake Equation calculation":                                                46,
+	"Yes, the Drake Equation includes factors I didn't think during my initial prediction":                         47,
+	"You have estimated that there are %d civilizations in the Milky Way.":                                         11,
+	"You have predicted that there are %d civilizations in the Milky Way.":                                         12,
+	"to compare your initial guess with the final value":                                                           73,
+	"to think about the size and composition of the galaxy and how it affects the possibility of intelligent life": 71,
+	"to understand and estimate the terms of the Drake Equation":                                                   72,
 }
 
-var enIndex = []uint32{ // 88 elements
+var enIndex = []uint32{ // 93 elements
 	// Entry 0 - 1F
 	0x00000000, 0x00000008, 0x0000000f, 0x00000018,
 	0x00000022, 0x0000002b, 0x00000041, 0x00000050,
-	0x00000060, 0x0000006f, 0x00000108, 0x000001a1,
-	0x00000258, 0x0000029e, 0x000002b8, 0x000002c5,
-	0x000002d4, 0x000002e4, 0x000002f3, 0x00000321,
-	0x00000334, 0x00000347, 0x0000035a, 0x0000036d,
-	0x00000382, 0x000003d2, 0x000003f7, 0x0000044b,
-	0x00000479, 0x00000480, 0x00000487, 0x00000493,
+	0x00000060, 0x0000006f, 0x00000073, 0x00000076,
+	0x0000010f, 0x000001a8, 0x0000025f, 0x000002a5,
+	0x000002bf, 0x000002cc, 0x000002db, 0x000002eb,
+	0x000002fa, 0x00000328, 0x0000033b, 0x0000034e,
+	0x00000361, 0x00000374, 0x00000389, 0x000003d9,
+	0x000003fe, 0x00000452, 0x00000480, 0x00000487,
 	// Entry 20 - 3F
-	0x000004cc, 0x000004f7, 0x0000052e, 0x00000583,
-	0x0000059b, 0x00000635, 0x00000643, 0x0000064e,
-	0x000006a4, 0x000006fb, 0x00000707, 0x0000071b,
-	0x0000074a, 0x00000788, 0x000007dd, 0x00000810,
-	0x0000082e, 0x00000862, 0x0000094a, 0x00000950,
-	0x0000095b, 0x00000a46, 0x00000ad7, 0x00000b3c,
-	0x00000b48, 0x00000b57, 0x00000b6b, 0x00000b81,
-	0x00000b90, 0x00000b95, 0x00000baf, 0x00000bc3,
+	0x0000048e, 0x0000049a, 0x000004d3, 0x000004fe,
+	0x00000535, 0x0000058a, 0x000005a2, 0x0000063c,
+	0x0000064a, 0x00000655, 0x000006ab, 0x00000702,
+	0x0000070e, 0x00000722, 0x00000751, 0x0000078f,
+	0x000007e4, 0x00000817, 0x00000835, 0x00000869,
+	0x00000951, 0x00000957, 0x00000962, 0x00000a4d,
+	0x00000ade, 0x00000b43, 0x00000b4f, 0x00000b5e,
+	0x00000b72, 0x00000b88, 0x00000b97, 0x00000b9c,
 	// Entry 40 - 5F
-	0x00000bd5, 0x00000be3, 0x00000bf0, 0x00000c0e,
-	0x00000c6f, 0x00000c7f, 0x00000cec, 0x00000d27,
-	0x00000d5a, 0x00000d69, 0x00000d76, 0x00000d7f,
-	0x00000d8f, 0x00000d94, 0x00000d9c, 0x00000db2,
-	0x00000db7, 0x00000dc5, 0x00000dd1, 0x00000dd6,
-	0x00000de2, 0x00000df9, 0x00000dfe, 0x00000e36,
-} // Size: 376 bytes
+	0x00000bb6, 0x00000bca, 0x00000bdc, 0x00000bea,
+	0x00000bf7, 0x00000c15, 0x00000c76, 0x00000c86,
+	0x00000cf3, 0x00000d2e, 0x00000d61, 0x00000d70,
+	0x00000d7d, 0x00000d86, 0x00000d96, 0x00000d9b,
+	0x00000da3, 0x00000db9, 0x00000dbe, 0x00000dcc,
+	0x00000dd8, 0x00000ddd, 0x00000de5, 0x00000df0,
+	0x00000e0b, 0x00000e13, 0x00000e2a, 0x00000e2f,
+	0x00000e67,
+} // Size: 396 bytes
 
-const enData string = "" + // Size: 3638 bytes
+const enData string = "" + // Size: 3687 bytes
 	"\x02Only us\x02Dozens\x02Hundreds\x02Thousands\x02Millions\x02Less than " +
-	"one min ago\x02%[1]d mins ago\x02%[1]d hours ago\x02%[1]d days ago\x14" +
-	"\x01\x81\x01\x00=\x01G\x02You have estimated that there is only 1 civili" +
-	"zation in the Milky Way.\x00H\x02You have estimated that there are %[1]d" +
-	" civilizations in the Milky Way.\x14\x01\x81\x01\x00=\x01G\x02You have p" +
-	"redicted that there is only 1 civilization in the Milky Way.\x00H\x02You" +
-	" have predicted that there are %[1]d civilizations in the Milky Way.\x14" +
-	"\x01\x81\x01\x00=\x01T\x02This is a difference of 1 order of magnitude f" +
-	"rom your initial prediction of %[2]d.\x00Y\x02This is a difference of %[" +
-	"1]d orders of magnitude from your initial prediction of %[2]d.\x02How ma" +
-	"ny technological advanced civilizations exist in the Milky Way?\x02Only " +
-	"us, we are all alone\x02A few dozens\x02A few hundreds\x02A few thousand" +
-	"s\x02A few millions\x02About how many stars are there in our galaxy?\x02" +
-	"Around 100 million\x02Around 500 million\x02Around 100 billion\x02Around" +
-	" 500 billion\x02More than 1 trillion\x02Approximately what percentage of" +
-	" the stars in our galaxy have planets in orbit?\x02Very few stars have p" +
-	"lanets in orbit\x02On average, how many habitable (Earth-like) planets a" +
-	"re there per planetary system?\x02Very few (not even one in every solar " +
-	"system)\x022 or 3\x024 or 5\x02More than 5\x02On what fraction of habita" +
-	"ble planets will life develop?\x02A very small percentage, life is very " +
-	"rare\x02100%%, if conditions are favorable, life is inevitable\x02On wha" +
-	"t fraction of planets on which life develops will life evolve to intelli" +
-	"gence?\x02A very small percentage\x02What fraction of planets on which l" +
-	"ife evolves to intelligence will the intelligence develop a technologica" +
-	"l civilization capable of radio communication?\x02Less than 1%%\x02About" +
-	" 10%%\x02100%%, a technological civilization will always eventually deve" +
-	"lop if life is present\x02What is the average lifetime of a technologica" +
-	"l civilization capable of communication?\x02%[1]d years\x02%[1]d years o" +
-	"r more\x02Do you agree with your most recent estimation?\x02Yes, I am mo" +
-	"re confident using the Drake Equation calculation\x02Yes, the Drake Equa" +
-	"tion includes factors I didn't think during my initial prediction\x02No," +
-	" I am more confident with my initial prediction\x02No, any guess is good" +
-	" as mine\x02There would be no other civilization in the galaxy.\x14\x01" +
-	"\x81\x01\x00=\x00N\x02The average distance to another civilization would" +
-	" be less than 1 light-year.=\x01D\x02The average distance to another civ" +
-	"ilization would be 1 light-year.\x00I\x02The average distance to another" +
-	" civilization would be %[1]d light-years.\x02About\x02References\x02This" +
-	" project was created as part of the course, Principles and Practices in " +
-	"Science Education, at the University of Toronto with the intention of be" +
-	"ing a free resource for educators to introduce the Drake Equation to a w" +
-	"ider audience.\x02The questions for the Drake Equation on the survey are" +
-	" from LoPresto and Hubble-Zdanowski (2012). The code is open-source usin" +
-	"g the MIT License.\x02If you would like to contribute to the project, fo" +
-	"r example, adding more translations, get in touch:\x02Source Code\x02Dra" +
-	"ke Equation\x02Astronomy Education\x02Internal Server Error\x02Page Not " +
-	"Found\x02Home\x02Results for Session %[1]s\x02Initial Predictions\x02Fin" +
-	"al Estimations\x02Civilizations\x02Participants\x02Are we alone in the U" +
-	"niverse?\x02Estimate the number of detectable alien civilizations in the" +
-	" Milky Way using the Drake Equation.\x02Learning Goals:\x02to think abou" +
-	"t the size and composition of the galaxy and how it affects the possibil" +
-	"ity of intelligent life\x02to understand and estimate the terms of the D" +
-	"rake Equation\x02to compare your initial guess with the final value\x02C" +
-	"reate Session\x02Join Session\x02Sessions\x02Latest Sessions\x02Name\x02" +
-	"Created\x02No available sessions\x02Back\x02Session %[1]s\x02Share Link:" +
-	"\x02Join\x02See Results\x02Drake Equation - %[1]s\x02Next\x02Select the " +
-	"choice that best agrees with what you think."
+	"one min ago\x02%[1]d mins ago\x02%[1]d hours ago\x02%[1]d days ago\x02Ye" +
+	"s\x02No\x14\x01\x81\x01\x00=\x01G\x02You have estimated that there is on" +
+	"ly 1 civilization in the Milky Way.\x00H\x02You have estimated that ther" +
+	"e are %[1]d civilizations in the Milky Way.\x14\x01\x81\x01\x00=\x01G" +
+	"\x02You have predicted that there is only 1 civilization in the Milky Wa" +
+	"y.\x00H\x02You have predicted that there are %[1]d civilizations in the " +
+	"Milky Way.\x14\x01\x81\x01\x00=\x01T\x02This is a difference of 1 order " +
+	"of magnitude from your initial prediction of %[2]d.\x00Y\x02This is a di" +
+	"fference of %[1]d orders of magnitude from your initial prediction of %[" +
+	"2]d.\x02How many technological advanced civilizations exist in the Milky" +
+	" Way?\x02Only us, we are all alone\x02A few dozens\x02A few hundreds\x02" +
+	"A few thousands\x02A few millions\x02About how many stars are there in o" +
+	"ur galaxy?\x02Around 100 million\x02Around 500 million\x02Around 100 bil" +
+	"lion\x02Around 500 billion\x02More than 1 trillion\x02Approximately what" +
+	" percentage of the stars in our galaxy have planets in orbit?\x02Very fe" +
+	"w stars have planets in orbit\x02On average, how many habitable (Earth-l" +
+	"ike) planets are there per planetary system?\x02Very few (not even one i" +
+	"n every solar system)\x022 or 3\x024 or 5\x02More than 5\x02On what frac" +
+	"tion of habitable planets will life develop?\x02A very small percentage," +
+	" life is very rare\x02100%%, if conditions are favorable, life is inevit" +
+	"able\x02On what fraction of planets on which life develops will life evo" +
+	"lve to intelligence?\x02A very small percentage\x02What fraction of plan" +
+	"ets on which life evolves to intelligence will the intelligence develop " +
+	"a technological civilization capable of radio communication?\x02Less tha" +
+	"n 1%%\x02About 10%%\x02100%%, a technological civilization will always e" +
+	"ventually develop if life is present\x02What is the average lifetime of " +
+	"a technological civilization capable of communication?\x02%[1]d years" +
+	"\x02%[1]d years or more\x02Do you agree with your most recent estimation" +
+	"?\x02Yes, I am more confident using the Drake Equation calculation\x02Ye" +
+	"s, the Drake Equation includes factors I didn't think during my initial " +
+	"prediction\x02No, I am more confident with my initial prediction\x02No, " +
+	"any guess is good as mine\x02There would be no other civilization in the" +
+	" galaxy.\x14\x01\x81\x01\x00=\x00N\x02The average distance to another ci" +
+	"vilization would be less than 1 light-year.=\x01D\x02The average distanc" +
+	"e to another civilization would be 1 light-year.\x00I\x02The average dis" +
+	"tance to another civilization would be %[1]d light-years.\x02About\x02Re" +
+	"ferences\x02This project was created as part of the course, Principles a" +
+	"nd Practices in Science Education, at the University of Toronto with the" +
+	" intention of being a free resource for educators to introduce the Drake" +
+	" Equation to a wider audience.\x02The questions for the Drake Equation o" +
+	"n the survey are from LoPresto and Hubble-Zdanowski (2012). The code is " +
+	"open-source using the MIT License.\x02If you would like to contribute to" +
+	" the project, for example, adding more translations, get in touch:\x02So" +
+	"urce Code\x02Drake Equation\x02Astronomy Education\x02Internal Server Er" +
+	"ror\x02Page Not Found\x02Home\x02Results for Session %[1]s\x02Initial Pr" +
+	"edictions\x02Final Estimations\x02Civilizations\x02Participants\x02Are w" +
+	"e alone in the Universe?\x02Estimate the number of detectable alien civi" +
+	"lizations in the Milky Way using the Drake Equation.\x02Learning Goals:" +
+	"\x02to think about the size and composition of the galaxy and how it aff" +
+	"ects the possibility of intelligent life\x02to understand and estimate t" +
+	"he terms of the Drake Equation\x02to compare your initial guess with the" +
+	" final value\x02Create Session\x02Join Session\x02Sessions\x02Latest Ses" +
+	"sions\x02Name\x02Created\x02No available sessions\x02Back\x02Session %[1" +
+	"]s\x02Share Link:\x02Join\x02Results\x02Statistics\x02Stastics for Sessi" +
+	"on %[1]s\x02Options\x02Drake Equation - %[1]s\x02Next\x02Select the choi" +
+	"ce that best agrees with what you think."
 
-var pt_BRIndex = []uint32{ // 88 elements
+var pt_BRIndex = []uint32{ // 93 elements
 	// Entry 0 - 1F
 	0x00000000, 0x0000000c, 0x00000014, 0x0000001d,
 	0x00000026, 0x0000002f, 0x00000046, 0x00000058,
-	0x0000006b, 0x0000007d, 0x000000ff, 0x0000018f,
-	0x00000250, 0x0000029b, 0x000002c7, 0x000002d7,
-	0x000002e8, 0x000002f8, 0x00000308, 0x00000334,
-	0x0000034d, 0x00000366, 0x0000037f, 0x00000398,
-	0x000003ab, 0x0000040d, 0x0000043c, 0x0000049d,
-	0x000004ca, 0x000004d1, 0x000004d8, 0x000004e2,
+	0x0000006b, 0x0000007d, 0x00000081, 0x00000086,
+	0x00000108, 0x00000198, 0x00000259, 0x000002a4,
+	0x000002d0, 0x000002e0, 0x000002f1, 0x00000301,
+	0x00000311, 0x0000033d, 0x00000356, 0x0000036f,
+	0x00000388, 0x000003a1, 0x000003b4, 0x00000416,
+	0x00000445, 0x000004a6, 0x000004d3, 0x000004da,
 	// Entry 20 - 3F
-	0x0000052a, 0x00000558, 0x0000059a, 0x000005e6,
-	0x000005fe, 0x00000689, 0x00000696, 0x000006a7,
-	0x000006fe, 0x0000075b, 0x00000766, 0x00000779,
-	0x000007a9, 0x000007ee, 0x0000084b, 0x00000885,
-	0x000008ba, 0x000008e8, 0x000009c3, 0x000009c9,
-	0x000009d6, 0x00000ac9, 0x00000b55, 0x00000bbc,
-	0x00000bca, 0x00000bda, 0x00000bf3, 0x00000c0c,
-	0x00000c24, 0x00000c2c, 0x00000c4a, 0x00000c5e,
+	0x000004e1, 0x000004eb, 0x00000533, 0x00000561,
+	0x000005a3, 0x000005ef, 0x00000607, 0x00000692,
+	0x0000069f, 0x000006b0, 0x00000707, 0x00000764,
+	0x0000076f, 0x00000782, 0x000007b2, 0x000007f7,
+	0x00000854, 0x0000088e, 0x000008c3, 0x000008f1,
+	0x000009cc, 0x000009d2, 0x000009df, 0x00000ad2,
+	0x00000b5e, 0x00000bc5, 0x00000bd3, 0x00000be3,
+	0x00000bfc, 0x00000c15, 0x00000c2d, 0x00000c35,
 	// Entry 40 - 5F
-	0x00000c71, 0x00000c80, 0x00000c8e, 0x00000cac,
-	0x00000d15, 0x00000d2f, 0x00000d91, 0x00000dc4,
-	0x00000df6, 0x00000e04, 0x00000e15, 0x00000e1e,
-	0x00000e30, 0x00000e35, 0x00000e3c, 0x00000e58,
-	0x00000e5f, 0x00000e6d, 0x00000e84, 0x00000e8a,
-	0x00000e99, 0x00000eb1, 0x00000eba, 0x00000ef9,
-} // Size: 376 bytes
+	0x00000c53, 0x00000c67, 0x00000c7a, 0x00000c89,
+	0x00000c97, 0x00000cb5, 0x00000d1e, 0x00000d38,
+	0x00000d9a, 0x00000dcd, 0x00000dff, 0x00000e0d,
+	0x00000e1e, 0x00000e27, 0x00000e39, 0x00000e3e,
+	0x00000e45, 0x00000e61, 0x00000e68, 0x00000e76,
+	0x00000e8d, 0x00000e93, 0x00000e9e, 0x00000eac,
+	0x00000ecd, 0x00000ed6, 0x00000eee, 0x00000ef7,
+	0x00000f36,
+} // Size: 396 bytes
 
-const pt_BRData string = "" + // Size: 3833 bytes
+const pt_BRData string = "" + // Size: 3894 bytes
 	"\x02Apenas nós\x02Dezenas\x02Centenas\x02Milhares\x02Milhões\x02Menos de" +
 	" um min atrás\x02%[1]d mins atrás\x02%[1]d horas atrás\x02%[1]d dias atr" +
-	"ás\x14\x01\x81\x01\x00=\x01=\x02Você estimou que há apenas 1 civilizaçã" +
-	"o na Via Láctea.\x00;\x02Você estimou que há %[1]d civilizações na Via L" +
-	"áctea.\x14\x01\x81\x01\x00=\x01D\x02Sua predição é de que há apenas 1 c" +
-	"ivilização na Via Láctea.\x00B\x02Sua predição é de que há %[1]d civiliz" +
-	"ações na Via Láctea.\x14\x01\x81\x01\x00=\x01Y\x02Há uma differença de 1" +
-	" ordem de magnitude a partir da sua predição inicial de %[2]d.\x00^\x02H" +
-	"á uma differença de %[1]d ordens de magnitude a partir da sua predição " +
-	"inicial de %[2]d.\x02Quantas civilizações tecnologicamente avançadas exi" +
-	"stem na Via Láctea?\x02Apenas nós, estamos completamente sozinhos\x02Alg" +
-	"umas dezenas\x02Algumas centenas\x02Alguns milhares\x02Alguns milhões" +
-	"\x02Quantas estrelas existem em nossa galáxia?\x02Em torno de 100 milhõe" +
-	"s\x02Em torno de 500 milhões\x02Em torno de 100 bilhões\x02Em torno de 5" +
-	"00 bilhões\x02Mais de 1 trilhão\x02Aproximadamente qual é a porcentagem " +
-	"de estrelas em nossa galáxia que têm planetas em órbita?\x02Muito poucas" +
-	" estrelas têm planetas em órbita\x02Na média, quantos planetas habitávei" +
-	"s (parecidos com a Terra) existem por sistema planetário?\x02Muito pouco" +
-	"s (menos de um por sistema solar)\x022 ou 3\x024 ou 5\x02Mais de 5\x02Qu" +
-	"al a fração de planetas habitáveis que a vida irá se desenvolver?\x02Uma" +
-	" pequena porcentagem, a vida é muito rara\x02100%%, se as condições fore" +
-	"m favoráveis, a vida é inevitável\x02Qual a fração de planetas com vida " +
-	"na qual vida inteligente irá evoluir?\x02Uma pequena porcentagem\x02Qual" +
-	" a fração de planetas com vida inteligente que irá desenvolver uma civil" +
-	"ização tecnologicamente capaz de se comunicar por rádio?\x02Menos de 1%%" +
-	"\x02Em torno de 10%%\x02100%%, uma civilização tecnologicamente capaz se" +
-	"mpre se desenvolverá se houver vida\x02Qual é o tempo de vida médio de u" +
-	"ma civilização tecnologicamente capaz de comunicação?\x02%[1]d anos\x02%" +
-	"[1]d anos ou mais\x02Você concoda com essa estimativa mais recente?\x02S" +
-	"im, eu estou mais confiante usando o cálculo da Equação de Drake\x02Sim," +
-	" a Equação de Drake inclui fatores que eu não pensei durante minha predi" +
-	"ção inicial\x02Não, eu estou mais confiante no minha predição inicial" +
-	"\x02Não, qualquer predição é tão boa quanto a minha\x02Não haveria outra" +
-	" civilização na galáxia.\x14\x01\x81\x01\x00=\x00G\x02A distância média " +
-	"para outra civilização seria menos de 1 ano-luz.=\x01A\x02A distância mé" +
-	"dia para outra civilização seria de 1 ano-luz.\x00F\x02A distância média" +
-	" para outra civilização seria de %[1]d anos-luz.\x02Sobre\x02Referências" +
-	"\x02Esse projeto foi criado como parte do curso Princípios e Práticas em" +
-	" Ciência da Educação, na Unversidade de Toronto, com a intenção de ser u" +
-	"m recurso gratuito a educadores para introduzir a Equação de Drake para " +
-	"uma ampla audiência.\x02As questões para a Equação de Drake na pesquisa " +
-	"são de LoPresto and Hubble-Zdanowski (2012). O código é aberto usando a " +
-	"Licença MIT.\x02Se você quiser contribuir com o projeto, por exemplo, ad" +
-	"icionando mais traduções, entre em contato:\x02Código Fonte\x02Equação D" +
-	"rake\x02Educação em Astronomia\x02Erro Interno do Servidor\x02Página Não" +
-	" Encontrada\x02Início\x02Resultados para Sessão %[1]s\x02Previsões Inici" +
-	"ais\x02Estimativas Finais\x02Civilizações\x02Participantes\x02Estamos so" +
-	"zinhos no Universo?\x02Estime o número de civilizações alienígenas detec" +
-	"táveis na Via Láctea usando a Equação de Drake.\x02Objetivos de Aprendiz" +
-	"ado:\x02pensar sobre o tamanho e composição da galaxia e como afeta a po" +
-	"ssibilidade de vida inteligente\x02entender e estimar os termos da Equaç" +
-	"ão de Drake\x02comparar sua predição inicial com o valor final\x02Criar" +
-	" Sessão\x02Entra na Sessão\x02Sessões\x02Últimas Sessões\x02Nome\x02Cria" +
-	"do\x02Nenhuma sessão disponível\x02Voltar\x02Sessão %[1]s\x02Compartilhe" +
-	" Endereço:\x02Entre\x02Ver Resultados\x02Equação Drake - %[1]s\x02Próxim" +
-	"o\x02Selecione a opção que melhor concorde com o que você pensa."
+	"ás\x02Sim\x02Não\x14\x01\x81\x01\x00=\x01=\x02Você estimou que há apena" +
+	"s 1 civilização na Via Láctea.\x00;\x02Você estimou que há %[1]d civiliz" +
+	"ações na Via Láctea.\x14\x01\x81\x01\x00=\x01D\x02Sua predição é de que " +
+	"há apenas 1 civilização na Via Láctea.\x00B\x02Sua predição é de que há " +
+	"%[1]d civilizações na Via Láctea.\x14\x01\x81\x01\x00=\x01Y\x02Há uma di" +
+	"fferença de 1 ordem de magnitude a partir da sua predição inicial de %[2" +
+	"]d.\x00^\x02Há uma differença de %[1]d ordens de magnitude a partir da s" +
+	"ua predição inicial de %[2]d.\x02Quantas civilizações tecnologicamente a" +
+	"vançadas existem na Via Láctea?\x02Apenas nós, estamos completamente soz" +
+	"inhos\x02Algumas dezenas\x02Algumas centenas\x02Alguns milhares\x02Algun" +
+	"s milhões\x02Quantas estrelas existem em nossa galáxia?\x02Em torno de 1" +
+	"00 milhões\x02Em torno de 500 milhões\x02Em torno de 100 bilhões\x02Em t" +
+	"orno de 500 bilhões\x02Mais de 1 trilhão\x02Aproximadamente qual é a por" +
+	"centagem de estrelas em nossa galáxia que têm planetas em órbita?\x02Mui" +
+	"to poucas estrelas têm planetas em órbita\x02Na média, quantos planetas " +
+	"habitáveis (parecidos com a Terra) existem por sistema planetário?\x02Mu" +
+	"ito poucos (menos de um por sistema solar)\x022 ou 3\x024 ou 5\x02Mais d" +
+	"e 5\x02Qual a fração de planetas habitáveis que a vida irá se desenvolve" +
+	"r?\x02Uma pequena porcentagem, a vida é muito rara\x02100%%, se as condi" +
+	"ções forem favoráveis, a vida é inevitável\x02Qual a fração de planetas" +
+	" com vida na qual vida inteligente irá evoluir?\x02Uma pequena porcentag" +
+	"em\x02Qual a fração de planetas com vida inteligente que irá desenvolver" +
+	" uma civilização tecnologicamente capaz de se comunicar por rádio?\x02Me" +
+	"nos de 1%%\x02Em torno de 10%%\x02100%%, uma civilização tecnologicament" +
+	"e capaz sempre se desenvolverá se houver vida\x02Qual é o tempo de vida " +
+	"médio de uma civilização tecnologicamente capaz de comunicação?\x02%[1]d" +
+	" anos\x02%[1]d anos ou mais\x02Você concoda com essa estimativa mais rec" +
+	"ente?\x02Sim, eu estou mais confiante usando o cálculo da Equação de Dra" +
+	"ke\x02Sim, a Equação de Drake inclui fatores que eu não pensei durante m" +
+	"inha predição inicial\x02Não, eu estou mais confiante no minha predição " +
+	"inicial\x02Não, qualquer predição é tão boa quanto a minha\x02Não haveri" +
+	"a outra civilização na galáxia.\x14\x01\x81\x01\x00=\x00G\x02A distância" +
+	" média para outra civilização seria menos de 1 ano-luz.=\x01A\x02A distâ" +
+	"ncia média para outra civilização seria de 1 ano-luz.\x00F\x02A distânci" +
+	"a média para outra civilização seria de %[1]d anos-luz.\x02Sobre\x02Refe" +
+	"rências\x02Esse projeto foi criado como parte do curso Princípios e Prát" +
+	"icas em Ciência da Educação, na Unversidade de Toronto, com a intenção d" +
+	"e ser um recurso gratuito a educadores para introduzir a Equação de Drak" +
+	"e para uma ampla audiência.\x02As questões para a Equação de Drake na pe" +
+	"squisa são de LoPresto and Hubble-Zdanowski (2012). O código é aberto us" +
+	"ando a Licença MIT.\x02Se você quiser contribuir com o projeto, por exem" +
+	"plo, adicionando mais traduções, entre em contato:\x02Código Fonte\x02Eq" +
+	"uação Drake\x02Educação em Astronomia\x02Erro Interno do Servidor\x02Pág" +
+	"ina Não Encontrada\x02Início\x02Resultados para Sessão %[1]s\x02Previsõe" +
+	"s Iniciais\x02Estimativas Finais\x02Civilizações\x02Participantes\x02Est" +
+	"amos sozinhos no Universo?\x02Estime o número de civilizações alienígena" +
+	"s detectáveis na Via Láctea usando a Equação de Drake.\x02Objetivos de A" +
+	"prendizado:\x02pensar sobre o tamanho e composição da galaxia e como afe" +
+	"ta a possibilidade de vida inteligente\x02entender e estimar os termos d" +
+	"a Equação de Drake\x02comparar sua predição inicial com o valor final" +
+	"\x02Criar Sessão\x02Entra na Sessão\x02Sessões\x02Últimas Sessões\x02Nom" +
+	"e\x02Criado\x02Nenhuma sessão disponível\x02Voltar\x02Sessão %[1]s\x02Co" +
+	"mpartilhe Endereço:\x02Entre\x02Resultados\x02Estatísticas\x02Estatístic" +
+	"as para Sessão %[1]s\x02Opções\x02Equação Drake - %[1]s\x02Próximo\x02Se" +
+	"lecione a opção que melhor concorde com o que você pensa."
 
-	// Total table size 8223 bytes (8KiB); checksum: 1B7853EA
+	// Total table size 8373 bytes (8KiB); checksum: C8C50D74
