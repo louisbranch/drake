@@ -15,20 +15,20 @@
   </head>
   <body>
     <div class="pure-g center">
-        <div class="pure-u-1 pure-u-md-1-3">
+        <div class="pure-u-1 pure-u-md-1-2 pure-u-xl-1-3">
             <header>
                 <h1><a href="/drake/">{{ .Header }}</a></h1>
             </header>
         </div>
     </div>
     <div class="pure-g center content">
-        <div class="pure-u-1 pure-u-md-1-3">
+        <div class="pure-u-1 pure-u-md-1-2 pure-u-xl-1-3">
         {{ template "content" .Content }}
         </div>
     </div>
     <footer>
         <div class="pure-g center">
-            <div class="pure-u-1 pure-u-md-1-3">
+            <div class="pure-u-1 pure-u-md-1-2 pure-u-xl-1-3">
                 <div class="pure-menu pure-menu-horizontal">
                     <ul class="pure-menu-list">
                         {{ range $lang := .Languages }}
