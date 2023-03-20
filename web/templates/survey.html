@@ -120,8 +120,8 @@
 
     <h3>{{ .Survey.Estimation }}</h3>
     <h4>{{ .Survey.Difference }}</h4>
-    <h3>{{ .Survey.AgreementQuestion }}</h3>
-    {{ range $opt := .Survey.AgreementValues }}
+    <h3>{{ .Survey.LearnGainQuestion }}</h3>
+    {{ range $opt := .Survey.LearnGainValues }}
         <label class="pure-radio">
             <input type="radio" name="learn_gain" value='{{ printf "%.0f" $opt.Value }}' /> {{ $opt.Text }}
         </label>

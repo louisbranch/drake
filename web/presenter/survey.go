@@ -295,11 +295,11 @@ func (s Survey) LValues() []SurveyOption {
 
 }
 
-func (s Survey) AgreementQuestion() string {
+func (s Survey) LearnGainQuestion() string {
 	return s.Printer.Sprintf("Do you agree with your most recent estimation?")
 }
 
-func (s Survey) AgreementValues() []SurveyOption {
+func (s Survey) LearnGainValues() []SurveyOption {
 	return []SurveyOption{
 		{
 			Text:  s.Printer.Sprintf("Yes, I am more confident using the Drake Equation calculation"),

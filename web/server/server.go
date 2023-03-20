@@ -23,6 +23,7 @@ func (srv *Server) NewServeMux() *http.ServeMux {
 
 	mux.HandleFunc("/drake/sessions/", srv.sessions)
 	mux.HandleFunc("/drake/results/", srv.results)
+	mux.HandleFunc("/drake/statistics/", srv.statistics)
 	mux.HandleFunc("/drake/about/", srv.about)
 
 	mux.HandleFunc("/drake/", srv.index)

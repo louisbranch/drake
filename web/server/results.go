@@ -55,7 +55,6 @@ func (srv *Server) results(w http.ResponseWriter, r *http.Request) {
 		}
 
 		w.Header().Set("Content-Type", "application/json")
-		w.WriteHeader(http.StatusOK)
 		err = json.NewEncoder(w).Encode(data)
 		if err != nil {
 			srv.renderError(w, r, err)
