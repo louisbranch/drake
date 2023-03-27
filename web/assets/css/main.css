@@ -4,6 +4,7 @@ body {
     flex-direction: column;
     background-color: #131a2e;
     color: #8ac5d5;
+    font-size: 1.1em;
 }
 
 a, a:visited, .pure-menu-link {
@@ -88,6 +89,7 @@ a.pure-button,
 .pure-menu-link:hover{
     background-color:  #d3a634;
     color: #0c142a;
+    font-weight: bold;
 }
 
 form.pure-form > input {
