@@ -24,18 +24,12 @@ func (srv *Server) NewServeMux() *http.ServeMux {
 	mux.HandleFunc("/drake/results/", srv.results)
 	mux.HandleFunc("/drake/statistics/", srv.statistics)
 	mux.HandleFunc("/drake/about/", srv.about)
+	mux.HandleFunc("/drake/equation/", srv.equation)
 
 	mux.HandleFunc("/drake/", srv.index)
 	mux.HandleFunc("/", srv.astro)
 
 	return mux
-}
-
-func (srv *Server) astro(w http.ResponseWriter, r *http.Request) {
-	_, page := srv.i18n(w, r)
-	page.Layout = "astro"
-
-	srv.render(w, page)
 }
 
 func (srv *Server) index(w http.ResponseWriter, r *http.Request) {
